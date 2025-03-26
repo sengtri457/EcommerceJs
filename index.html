@@ -24,54 +24,239 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <div class="navbar position-sticky top-0 w-100 z-index-100">
-        <div class="container">
-            <div class="container">
-                <a href="#" class="logo">Brand</a>
-                <div class="hamburger" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="menu">
-                    <li><a class="listA" href="#">Home</a></li>
-                    <li class="dropdown">
-                        <button class="dropbtn overflow-scroll">Shop</button>
-                    </li>
-                    <li class="dropdown">
-                        <button class="dropbtn overflow-auto">Products</button>
 
-                    </li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+    <!-- Navbar -->
+    <div class="navbar position-sticky top-0 w-100 z-index-100 p-3">
+        <a href="#" class="logo">Brand</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu gap-lg-3 gap-2">
+            <li><a class="listA" href="#">Laptop</a></li>
+            <li class="dropdown">
+                <a class="listB">Displays / Desktops
+                </a>
+            </li>
+
+            <li class="dropdown">
+                <a class="dropbtn overflow-scroll">Motherboards / Components
+                </a>
+            </li>
+            <li><a href="#">Networking / IoT / Servers
+                </a></li>
+            <li><a href="#">Accessories
+
+                </a></li>
+
+        </ul>
+        <ul class="menu gap-lg-3 gap-2">
+            <li><a class="listA" href="#">Support
+                </a></li>
+            <li><a class="listA position-relative" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+                    aria-controls="offcanvasBottom">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger valueText">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                    </button>
+                </a></li>
+            <li class="dropdown">
+                <a class="dropbtn overflow-scroll" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                        class="fa-solid fa-magnifying-glass"></i></a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="wrapper-ul1 text-left position-absolute w-100 z-3" style="background-color: #ccc;">
+        <div class="container">
+
+            <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                <div class="col-lg-3 col-6 wrapper-item-ul mb-lg-0 mb-3">
+                    <ul class="navbar-nav">
+                        <!-- <a href="">For Home</a> -->
+                        <li><a href="">For Works</a></li>
+                        <li><a href="">For Creator </a></li>
+                        <li><a href="">For Student</a></li>
+                        <li><a href="">For Gaming</a></li>
+                        <li><a href="">Acessory</a></li>
+                        <li><a href="">Software</a></li>
+                        <li><a href="">Al</a></li>
+                        <li><a href="">Technology</a></li>
+                        <li><a href="">Copilot+pc</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 wrapper-item-ul">
+                    <ul class="navbar-nav ">
+                        <a href="" class="title-ul">BY CATEGORY</a>
+                        <li><a href="">Copilot+ PC devices</a></li>
+                        <li><a href="">Tablet and 2-in-1 laptop</a></li>
+                        <li><a href="">Thin and Light</a></li>
+                        <li><a href="">High Performance</a></li>
+                        <li><a href="">Everyday Use</a></li>
+                        <li><a href="">OLED Display</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 wrapper-item-ul ">
+                    <ul class="navbar-nav">
+                        <a href="" class="title-ul">BY BRAND / SERIES</a>
+                        <li><a href="">BY BRAND / SERIES</a></li>
+                        <li><a href="">ProArt </a></li>
+                        <li><a href="">Zenbook</a></li>
+                        <li><a href="">VivoBook</a></li>
+                        <li><a href="">ChromeBook</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 wrapper-item-ul border-0">
+                    <ul class="navbar-nav ">
+                        <!-- <a href="">For Home</a> -->
+                        <li><a href=""><img src="./pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a></li>
+                        <li><a href=""><img src="./pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a></li>
+                        <li><a href=""><img src="./pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-ul text-left position-absolute w-100 z-3" style="background-color: #ccc;">
+        <div class="container">
+
+            <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                <div class="col-lg-3 col-6 wrapper-item-ul mb-lg-0 mb-3">
+                    <ul class="navbar-nav">
+                        <!-- <a href="">For Home</a> -->
+                        <li><a href="">For Works</a></li>
+                        <li><a href="">For Creator </a></li>
+                        <li><a href="">For Student</a></li>
+                        <li><a href="">For Gaming</a></li>
+                        <li><a href="">Acessory</a></li>
+                        <li><a href="">Software</a></li>
+                        <li><a href="">Al</a></li>
+                        <li><a href="">Technology</a></li>
+                        <li><a href="">Copilot+pc</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 wrapper-item-ul">
+                    <ul class="navbar-nav ">
+                        <a href="" class="title-ul">BY CATEGORY</a>
+                        <li><a href="">Copilot+ PC devices</a></li>
+                        <li><a href="">Tablet and 2-in-1 laptop</a></li>
+                        <li><a href="">Thin and Light</a></li>
+                        <li><a href="">High Performance</a></li>
+                        <li><a href="">Everyday Use</a></li>
+                        <li><a href="">OLED Display</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 wrapper-item-ul ">
+                    <ul class="navbar-nav">
+                        <a href="" class="title-ul">BY BRAND / SERIES</a>
+                        <li><a href="">BY BRAND / SERIES</a></li>
+                        <li><a href="">ProArt </a></li>
+                        <li><a href="">Zenbook</a></li>
+                        <li><a href="">VivoBook</a></li>
+                        <li><a href="">ChromeBook</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6 wrapper-item-ul border-0">
+                    <ul class="navbar-nav ">
+                        <!-- <a href="">For Home</a> -->
+                        <li><a href="">For Works</a></li>
+                        <li><a href="">For Creator </a></li>
+                        <li><a href="">For Student</a></li>
+                        <li><a href="">For Gaming</a></li>
+                        <li><a href="">Acessory</a></li>
+                        <li><a href="">Software</a></li>
+                        <li><a href="">Al</a></li>
+                        <li><a href="">Technology</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body p-3">
+                    <div class="input-container">
+                        <input class="input" name="text" type="text" placeholder="Search the internet..." />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body small">
+            <span class="sp"></span>
+            <img src="" alt="" class="spimg">
+            <img src="" alt="" class="spimg1">
+        </div>
+    </div>
+
+
+
+    <br>
+    <div class="container">
+        <button class="increment">+</button>
+        <button class="decrement">-</button>
+    </div>
+
+
+    <br>
+    <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="wrapper-flex d-flex flex-column">
+                    <img src="./pic/fwebp.webp" alt="" style="width:100px ;height: 100px;" id="img1">
+                    <img src="./pic/fwebp (1).webp" alt="" style="width:100px ;height: 100px;" id="img2">
+                    <img src="./pic/fwebp.webp" alt="" style="width:100px ;height: 100px;" id="img3">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img src="./pic/fwebp.webp" alt="" style="width:200px ;height: 200px;" id="imgShow">
             </div>
         </div>
 
-    </div>
-    <div class="wrapper-ul text-left position-absolute  w-100 bg-danger">
-        <ul class="navbar-nav">
-            <a href="">Clothing</a>
-            <li><a href="">All</a></li>
-            <li><a href="">Vest</a></li>
-            <li><a href="">Short</a></li>
-            <li><a href="">Pant</a></li>
-            <li><a href="">T-shirt</a></li>
-            <li><a href="">Jean</a></li>
-            <li><a href="">Pants</a></li>
-            <li><a href="">Jacket</a></li>
-        </ul>
-    </div>
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-        });
-    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 800,
+            });
+        </script>
 </body>
 
 </html>
