@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    overflow: hidden;
+}
+
+:root {
+    --font-button: 1.2rem;
+    --font-small: 1rem;
+    --weight-small: 500;
+    --font-medum: 1.3rem;
+    --weight-medum: 650;
+    --font-large: 2rem;
+    --weight-larger: 800;
+    --color-main: #015FC9;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-fam: "Solway", serif;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #555;
+    text-align: left;
+    background-color: #fffbf2;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+li {
+    padding: 20px;
+    position: relative;
+}
+
+.wrapper-ul ul li {
+    padding: 0px 20px 5px 5px;
+}
+
+.navbar .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #f4f4f4;
+}
+
+/* Dropdown Menu */
+.dropdown .dropbtn {
+    background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.dropdown:hover .dropbtn {
+    color: #f4f4f4;
+}
+
+.dropdown-content {
+    text-align: center;
+    display: block;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Responsive Navbar */
+@media (max-width: 1000px) {
+    .navbar .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+        align-items: start;
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* .navbar .menu li {
+        margin: 10px 0;
+    } */
+    li {
+        padding: 10px 0px;
+    }
+
+    .navbar .menu li a {
+        font-size: 1.2rem;
+    }
+
+    .navbar .menu.active {
+
+        display: flex;
+    }
+
+    .navbar .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .hamburger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: transform 0.3s ease;
+    }
+
+    .navbar .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .navbar .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+.wrapper-ul {
+    transform: translateY(-300px);
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.wrapper-ul.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+
+}
