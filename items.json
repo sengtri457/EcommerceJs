@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "name": "Item 1",
+    "price": 100,
+    "img": "./pic/fwebp.webp"
+  },
+  {
+    "id": 2,
+    "name": "Item 2",
+    "price": 200,
+    "img": "./pic/fwebp.webp"
+  },
+  {
+    "id": 3,
+    "name": "Item 3",
+    "price": 300,
+    "img": "./pic/fwebp.webp"
+  },
+  {
+    "id": 4,
+    "name": "Item 4",
+    "price": 400,
+    "img": "./pic/fwebp.webp"
+  },
+  {
+    "id": 5,
+    "name": "Item 5",
+    "price": 500,
+    "img": "./pic/fwebp.webp"
+  },
+  {
+    "id": 6,
+    "name": "Item 6",
+    "price": 600,
+
+    "img": "./pic/fwebp.webp"
+  },
+  {
+    "id": 7,
+    "name": "Item 7",
+    "price": 700,
+    "img": "./pic/fwebp.webp"
+  },
+  {
+    "id": 8,
+    "name": "Item 8",
+    "price": 800,
+    "img": "./pic/fwebp.webp"
+  },
+  {
+    "id": 9,
+    "name": "Item 9",
+    "price": 900,
+    "img": "./pic/fwebp.webp"
+  },
+  {
+    "id": 10,
+    "name": "Item 10",
+    "price": 1000,
+    "img": "./pic/fwebp.webp"
+  }
+]
