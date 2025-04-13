@@ -53,7 +53,7 @@ window.addEventListener("scroll", () => {
     a.forEach((item) => {
       item.classList.remove("active");
     });
-    dropbtn.classList.removedd("active");
+    dropbtn.classList.remove("active");
   }
 });
 // const img1 = document.getElementById("img1");
@@ -97,7 +97,51 @@ const data = [
   {
     id: 1,
     name: "img1",
+    img: "./pic/h175 (1).png",
+    link: "./login.html",
+  },
+  {
+    id: 2,
+    name: "img2",
+    img: "./pic/h175 (2).png",
+  },
+  {
+    id: 3,
+    name: "img3",
+    img: "./pic/h175 (9).png",
+  },
+  {
+    id: 4,
+    name: "img4",
+    img: "./pic/h175 (4).png",
+  },
+  {
+    id: 5,
+    name: "img1",
+    img: "./pic/h175 (5).png",
+  },
+  {
+    id: 6,
+    name: "img2",
+    img: "./pic/h175 (6).png",
+  },
+  {
+    id: 7,
+    name: "img3",
+    img: "./pic/h175 (7).png",
+  },
+  {
+    id: 8,
+    name: "img4",
+    img: "./pic/h175 (8).png",
+  },
+];
+const data1 = [
+  {
+    id: 1,
+    name: "img1",
     img: "./pic/1730511714186.webp",
+    link: "./login.html",
   },
   {
     id: 2,
@@ -112,7 +156,7 @@ const data = [
   {
     id: 4,
     name: "img4",
-    img: "./pic/20250227031156.webp",
+    img: "./pic/20240918040216.webp",
   },
   {
     id: 5,
@@ -132,42 +176,80 @@ const data = [
   {
     id: 8,
     name: "img4",
-    img: "./pic/20250227031156.webp",
+    img: "./pic/20240918040216.webp",
   },
 ];
-
+const data2 = [
+  {
+    id: 1,
+    name: "img1",
+    img: "./pic/1730511714186.webp",
+    link: "./login.html",
+  },
+  {
+    id: 2,
+    name: "img2",
+    img: "./pic/1731034178744.webp",
+  },
+  {
+    id: 3,
+    name: "img3",
+    img: "./pic/1743463843176.jpg",
+  },
+  {
+    id: 4,
+    name: "img4",
+    img: "./pic/20240918040216.webp",
+  },
+  {
+    id: 5,
+    name: "img1",
+    img: "./pic/1730511714186.webp",
+  },
+  {
+    id: 6,
+    name: "img2",
+    img: "./pic/1731034178744.webp",
+  },
+  {
+    id: 7,
+    name: "img3",
+    img: "./pic/1743463843176.jpg",
+  },
+  {
+    id: 8,
+    name: "img4",
+    img: "./pic/20240918040216.webp",
+  },
+];
 const gallerycontainer = document.querySelector(".gallery-container");
+const gallerycontainer1 = document.querySelector(".gallery-container1");
+const gallerycontainer2 = document.querySelector(".gallery-container2");
 console.log(gallerycontainer);
 gallerycontainer.innerHTML = data
   .map((a) => {
     return ` 
-            <div class="image-card"><img src="${a.img}" alt="${a.name}"></div>
+            <div class="image-card"><a href="${a.link}"><img src="${a.img}" alt="${a.name}">
+            </a></div>
         `;
   })
   .join("");
-
-// const wrapperdata = document.querySelector(".wrapper-data");
-// const initApp = () => {
-//   fetch("items.json")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       wrapperdata.innerHTML = data
-//         .filter((e) => {
-//           return e.id == 1 || e.id == 2 || e.id == 3;
-//         })
-//         .map(
-//           (item) => `<div class="col-lg-4">
-//                         <span>${item.id}</span>
-//                         <p>${item.name}</p>
-//                         <img src="${item.img}" alt="">
-//                      </div>`
-//         )
-//         .join("");
-//       console.log(data);
-//     })
-//     .catch((error) => console.error("Error fetching data:", error));
-// };
-// initApp();
+gallerycontainer1.innerHTML = data1
+  .map((a) => {
+    return ` 
+            <div class="image-card1"><a href="${a.link}"><img src="${a.img}" alt="${a.name}">
+            </a></div>
+        `;
+  })
+  .join("");
+gallerycontainer2.innerHTML = data2
+  .map((a) => {
+    return ` 
+            <div class="image-card2"><a href="${a.link}"><img src="${a.img}" alt="${a.name}">
+            </a></div>
+        `;
+  })
+  .join("");
 
 const buttons = document.querySelectorAll("[data-carousel-button]");
 buttons.forEach((button) => {
@@ -190,64 +272,109 @@ buttons.forEach((button) => {
     delete activeSlide.dataset.active;
   });
 });
+function setupGallery({ galleryId, cardClass, backBtnClass, nextBtnClass }) {
+  let scrollIndex = 0;
+  const gallery = document.getElementById(galleryId);
+  const backBtn = document.querySelector(`.${backBtnClass}`);
+  const nextBtn = document.querySelector(`.${nextBtnClass}`);
 
-let scrollIndex = 0;
-const backBtn = document.querySelector(".backBtn");
+  function scrollToNext() {
+    const cards = gallery.querySelectorAll(`.${cardClass}`);
+    const isMobile = window.innerWidth <= 768;
+    const scrollStep = isMobile ? 1 : 4;
 
-function scrollToNext() {
-  const gallery = document.getElementById("gallery");
-  const imageCards = gallery.querySelectorAll(".image-card");
-  const isMobile = window.innerWidth <= 768; // Check if the screen is a phone
-  const scrollStep = isMobile ? 1 : 4; // Scroll 1 for phone, 4 for larger screens
+    if (scrollIndex < cards.length - scrollStep) {
+      scrollIndex += scrollStep;
 
-  if (scrollIndex < imageCards.length - scrollStep) {
-    scrollIndex += scrollStep;
-    backBtn.classList.add("hidden");
+      // ✅ Show back button only after clicking next
+      backBtn.classList.remove("hidden");
+    }
+
+    const scrollPosition = cards[scrollIndex]?.offsetLeft || 0;
+    gallery.scrollTo({ left: scrollPosition, behavior: "smooth" });
   }
-  const scrollPosition = imageCards[scrollIndex].offsetLeft;
-  gallery.scrollTo({ left: scrollPosition, behavior: "smooth" });
+
+  function scrollToPrevious() {
+    const cards = gallery.querySelectorAll(`.${cardClass}`);
+    const isMobile = window.innerWidth <= 768;
+    const scrollStep = isMobile ? 1 : 4;
+
+    if (scrollIndex > 0) {
+      scrollIndex -= scrollStep;
+    }
+
+    const scrollPosition = cards[scrollIndex]?.offsetLeft || 0;
+    gallery.scrollTo({ left: scrollPosition, behavior: "smooth" });
+
+    // ✅ Hide back button again if back to start
+    if (scrollIndex <= 0) {
+      backBtn.classList.add("hidden");
+    }
+  }
+
+  // Drag functionality
+
+  let isDragging = false;
+  let startX, scrollLeft;
+
+  gallery.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    gallery.classList.add("dragging");
+    startX = e.pageX - gallery.offsetLeft;
+    scrollLeft = gallery.scrollLeft;
+  });
+
+  gallery.addEventListener("mouseleave", () => {
+    isDragging = false;
+    gallery.classList.remove("dragging");
+  });
+
+  gallery.addEventListener("mouseup", () => {
+    isDragging = false;
+    gallery.classList.remove("dragging");
+  });
+
+  gallery.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - gallery.offsetLeft;
+    const walk = (x - startX) * 2;
+    gallery.scrollLeft = scrollLeft - walk;
+  });
+
+  // Button event listeners
+  nextBtn.addEventListener("click", scrollToNext);
+  backBtn.addEventListener("click", scrollToPrevious);
+
+  return {
+    scrollToNext,
+    scrollToPrevious,
+  };
 }
 
-function scrollToPrevious() {
-  const gallery = document.getElementById("gallery");
-  const imageCards = gallery.querySelectorAll(".image-card");
-  const isMobile = window.innerWidth <= 768; // Check if the screen is a phone
-  const scrollStep = isMobile ? 1 : 4; // Scroll 1 for phone, 4 for larger screens
-
-  if (scrollIndex > 0) {
-    scrollIndex -= scrollStep;
-    backBtn.classList.remove("hidden");
-  }
-  const scrollPosition = imageCards[scrollIndex].offsetLeft;
-  gallery.scrollTo({ left: scrollPosition, behavior: "smooth" });
-}
-
-// Add drag functionality
-const gallery = document.getElementById("gallery");
-let isDragging = false;
-let startX, scrollLeft;
-
-gallery.addEventListener("mousedown", (e) => {
-  isDragging = true;
-  gallery.classList.add("dragging");
-  startX = e.pageX - gallery.offsetLeft;
-  scrollLeft = gallery.scrollLeft;
+// Set up galleries
+setupGallery({
+  galleryId: "gallery",
+  cardClass: "image-card",
+  backBtnClass: "backBtn",
+  nextBtnClass: "nextBtn",
 });
 
-gallery.addEventListener("mouseleave", () => {
-  isDragging = false;
-  gallery.classList.remove("dragging");
+setupGallery({
+  galleryId: "gallery1",
+  cardClass: "image-card1",
+  backBtnClass: "backBtn1",
+  nextBtnClass: "nextBtn1",
+});
+setupGallery({
+  galleryId: "gallery2",
+  cardClass: "image-card2",
+  backBtnClass: "backBtn2",
+  nextBtnClass: "nextBtn2",
 });
 
-gallery.addEventListener("mouseup", () => {
-  isDragging = false;
-  gallery.classList.remove("dragging");
-});
+const shopbtn = document.querySelector(".shop-btn");
 
-gallery.addEventListener("mousemove", (e) => {
-  if (!isDragging) return;
-  e.preventDefault();
-  const x = e.pageX - gallery.offsetLeft;
-  const walk = (x - startX) * 2; // Adjust scroll speed
-  gallery.scrollLeft = scrollLeft - walk;
+shopbtn.addEventListener("click", function () {
+  window.location.href = "./html/login.html";
 });

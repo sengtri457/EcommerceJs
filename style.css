@@ -28,8 +28,21 @@ section {
 }
 
 h1 {
+    font-size: clamp(2rem, 5vw, 6rem);
     font-family: 'Lobster Two', cursive;
     font-weight: 700;
+}
+
+
+h2 {
+    font-family: "Product Sans", Poppins;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    /* min: 24px, max: 40px */
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    /* min: 16px, max: 20px */
 }
 
 body {
@@ -632,7 +645,8 @@ h1 {
 
 
 
-.gallery-container {
+.gallery-container,
+.gallery-container1 {
     position: relative;
     width: 100%;
     overflow-x: auto;
@@ -641,18 +655,37 @@ h1 {
     padding: 10px 0;
 }
 
-.image-card {
+
+.image-card,
+.image-card1,
+.image-card2 {
     display: inline-block;
-    width: 300px;
+    width: 280px;
     margin: 0 10px;
 }
 
-.image-card img {
+.image-card img,
+.image-card1 img,
+.image-card2 img {
     width: 100%;
     border-radius: 8px;
+    transition: all 0.4s ease-in-out;
 }
 
-.go-button {
+.image-card img:hover {
+    transform: scale(1.05);
+}
+
+.image-card2 img:hover {
+    transform: scale(1.05);
+}
+
+.image-card1 img:hover {
+    transform: scale(1.05);
+}
+
+.go-button,
+.go-button1 {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #007bff;
@@ -663,17 +696,37 @@ h1 {
     left: 0;
 }
 
+
 .go-button:hover {
     background-color: #0056b3;
 }
 
+.go-button1:hover {
+    background-color: #0056b3;
+}
+
+.go-button2:hover {
+    background-color: #0056b3;
+}
+
+.backBtn,
+.backBtn1,
 .backBtn {
-    display: none;
+    display: block;
     left: 0;
 }
 
+
 .backBtn.hidden {
-    display: block;
+    display: none;
+}
+
+.backBtn1.hidden {
+    display: none;
+}
+
+.backBtn2.hidden {
+    display: none;
 }
 
 /* Buttons on top of images */
@@ -694,7 +747,7 @@ h1 {
 
 .btn-floating-left {
     position: absolute;
-    top: 60%;
+    top: 50%;
     transform: translateY(-50%);
     padding: 10px 14px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -707,7 +760,11 @@ h1 {
     left: 5%;
 }
 
+/* Khmer */
+.Khmer {
+    color: var(--light);
 
+}
 
 
 
