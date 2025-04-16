@@ -98,155 +98,384 @@ const data = [
     id: 1,
     name: "img1",
     img: "./pic/h175 (1).png",
-    link: "./login.html",
+    class: "img1",
+    categoies: "Khmer New Year Sale!",
   },
   {
     id: 2,
     name: "img2",
     img: "./pic/h175 (2).png",
+    class: "img2",
+    categoies: "Khmer New Year Sale1",
   },
   {
     id: 3,
     name: "img3",
     img: "./pic/h175 (9).png",
+    class: "img3",
+    categoies: "Khmer New Year Sale!",
   },
   {
     id: 4,
     name: "img4",
     img: "./pic/h175 (4).png",
+    class: "img4",
+    categoies: "Khmer New Year Sale!",
   },
   {
     id: 5,
     name: "img1",
     img: "./pic/h175 (5).png",
+    class: "img5",
+    categoies: "Khmer New Year Sale!",
   },
   {
     id: 6,
     name: "img2",
     img: "./pic/h175 (6).png",
+    class: "img6",
+    categoies: "Khmer New Year Sale!",
   },
   {
     id: 7,
     name: "img3",
     img: "./pic/h175 (7).png",
+    class: "img7",
+    categoies: "Khmer New Year Sale!",
   },
   {
     id: 8,
     name: "img4",
-    img: "./pic/h175 (8).png",
+    img: "./pic/h175 (1).png",
+    class: "img8",
+    categoies: "Khmer New Year Sale!",
   },
-];
-const data1 = [
   {
-    id: 1,
+    id: 9,
+    name: "img1",
+    img: "./pic/h175 (1).png",
+    link: "./login.html",
+    categoies: "Khmer New Year Sale2",
+  },
+  {
+    id: 10,
+    name: "img2",
+    img: "./pic/1731034178744.webp",
+    categoies: "Khmer New Year Sale2",
+  },
+  {
+    id: 11,
+    name: "img3",
+    img: "./pic/1743463843176.jpg",
+    categoies: "Khmer New Year Sale2",
+  },
+  {
+    id: 12,
+    name: "img4",
+    img: "./pic/20240918040216.webp",
+    categoies: "Khmer New Year Sale2",
+  },
+  {
+    id: 13,
+    name: "img1",
+    img: "./pic/h175 (1).png",
+    categoies: "Khmer New Year Sale2",
+  },
+  {
+    id: 14,
+    name: "img2",
+    img: "./pic/1731034178744.webp",
+    categoies: "Khmer New Year Sale2",
+  },
+  {
+    id: 15,
+    name: "img3",
+    img: "./pic/1743463843176.jpg",
+    categoies: "Khmer New Year Sale2",
+  },
+  {
+    id: 16,
+    name: "img4",
+    img: "./pic/20240918040216.webp",
+    categoies: "Khmer New Year Sale2",
+  },
+  {
+    id: 17,
     name: "img1",
     img: "./pic/1730511714186.webp",
     link: "./login.html",
+    categoies: "Khmer New Year Sale3",
   },
   {
-    id: 2,
+    id: 18,
     name: "img2",
     img: "./pic/1731034178744.webp",
+    categoies: "Khmer New Year Sale3",
   },
   {
-    id: 3,
+    id: 19,
     name: "img3",
     img: "./pic/1743463843176.jpg",
+    categoies: "Khmer New Year Sale3",
   },
   {
-    id: 4,
+    id: 20,
     name: "img4",
     img: "./pic/20240918040216.webp",
+    categoies: "Khmer New Year Sale3",
   },
   {
-    id: 5,
+    id: 21,
     name: "img1",
     img: "./pic/1730511714186.webp",
+    categoies: "Khmer New Year Sale3",
   },
   {
-    id: 6,
+    id: 22,
     name: "img2",
     img: "./pic/1731034178744.webp",
+    categoies: "Khmer New Year Sale3",
   },
   {
-    id: 7,
+    id: 23,
     name: "img3",
     img: "./pic/1743463843176.jpg",
+    categoies: "Khmer New Year Sale3",
   },
   {
-    id: 8,
+    id: 24,
     name: "img4",
     img: "./pic/20240918040216.webp",
+    categoies: "Khmer New Year Sale3",
+  },
+  // Recent Product
+  {
+    id: 25,
+    name: "ASUS Zenbook 14X OLED (UX5401)",
+    price: "223$",
+    img: "./pic/20240918040216.webp",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$235.00",
+  },
+  {
+    id: 26,
+    name: "ASUS Zenbook 14X OLED (UX5401)",
+    price: "123$",
+    img: "./pic/20240918040216.webp",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$125.00",
+  },
+  {
+    id: 27,
+    name: "ASUS Zenbook 14X OLED (UX5401)",
+    price: "300$",
+    img: "./pic/20240918040216.webp",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$335.00",
+  },
+  {
+    id: 28,
+    name: "ASUS Zenbook 14X OLED (UX5401)",
+    price: "$234",
+    img: "./pic/20240918040216.webp",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$255.00",
+  },
+  {
+    id: 29,
+    name: "ASUS Zenbook 14X OLED (UX5401)",
+    price: "$234",
+    img: "./pic/20240918040216.webp",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$255.00",
+  },
+  {
+    id: 30,
+    name: "ASUS Zenbook 14X OLED (UX5401)",
+    price: "$234",
+    img: "./pic/20240918040216.webp",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$255.00",
+  },
+  {
+    id: 31,
+    name: "ASUS Zenbook 14X OLED (UX5401)",
+    price: "$234",
+    img: "./pic/20240918040216.webp",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$255.00",
+  },
+  {
+    id: 32,
+    name: "ASUS Zenbook 14X OLED (UX5401)",
+    price: "$234",
+    img: "./pic/20240918040216.webp",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$255.00",
   },
 ];
-const data2 = [
-  {
-    id: 1,
-    name: "img1",
-    img: "./pic/1730511714186.webp",
-    link: "./login.html",
-  },
-  {
-    id: 2,
-    name: "img2",
-    img: "./pic/1731034178744.webp",
-  },
-  {
-    id: 3,
-    name: "img3",
-    img: "./pic/1743463843176.jpg",
-  },
-  {
-    id: 4,
-    name: "img4",
-    img: "./pic/20240918040216.webp",
-  },
-  {
-    id: 5,
-    name: "img1",
-    img: "./pic/1730511714186.webp",
-  },
-  {
-    id: 6,
-    name: "img2",
-    img: "./pic/1731034178744.webp",
-  },
-  {
-    id: 7,
-    name: "img3",
-    img: "./pic/1743463843176.jpg",
-  },
-  {
-    id: 8,
-    name: "img4",
-    img: "./pic/20240918040216.webp",
-  },
-];
+// const recentProduct = [
+//   {
+//     id: 9,
+//     name: "ASUS Zenbook 14X OLED (UX5401)",
+//     price: "223$",
+//     img: "./pic/20240918040216.webp",
+//     i: "fa fa-star text-primary mr-1",
+//     iHalf: "fa fa-star-half-alt text-primary mr-1",
+//     del: "$235.00",
+//   },
+//   {
+//     id: 10,
+//     name: "ASUS Zenbook 14X OLED (UX5401)",
+//     price: "123$",
+//     img: "./pic/20240918040216.webp",
+//     i: "fa fa-star text-primary mr-1",
+//     iHalf: "fa fa-star-half-alt text-primary mr-1",
+//     del: "$125.00",
+//   },
+//   {
+//     id: 11,
+//     name: "ASUS Zenbook 14X OLED (UX5401)",
+//     price: "300$",
+//     img: "./pic/20240918040216.webp",
+//     i: "fa fa-star text-primary mr-1",
+//     iHalf: "fa fa-star-half-alt text-primary mr-1",
+//     del: "$335.00",
+//   },
+//   {
+//     id: 12,
+//     name: "ASUS Zenbook 14X OLED (UX5401)",
+//     price: "$234",
+//     img: "./pic/20240918040216.webp",
+//     i: "fa fa-star text-primary mr-1",
+//     iHalf: "fa fa-star-half-alt text-primary mr-1",
+//     del: "$255.00",
+//   },
+//   {
+//     id: 13,
+//     name: "ASUS Zenbook 14X OLED (UX5401)",
+//     price: "$234",
+//     img: "./pic/20240918040216.webp",
+//     i: "fa fa-star text-primary mr-1",
+//     iHalf: "fa fa-star-half-alt text-primary mr-1",
+//     del: "$255.00",
+//   },
+//   {
+//     id: 14,
+//     name: "ASUS Zenbook 14X OLED (UX5401)",
+//     price: "$234",
+//     img: "./pic/20240918040216.webp",
+//     i: "fa fa-star text-primary mr-1",
+//     iHalf: "fa fa-star-half-alt text-primary mr-1",
+//     del: "$255.00",
+//   },
+//   {
+//     id: 15,
+//     name: "ASUS Zenbook 14X OLED (UX5401)",
+//     price: "$234",
+//     img: "./pic/20240918040216.webp",
+//     i: "fa fa-star text-primary mr-1",
+//     iHalf: "fa fa-star-half-alt text-primary mr-1",
+//     del: "$255.00",
+//   },
+//   {
+//     id: 16,
+//     name: "ASUS Zenbook 14X OLED (UX5401)",
+//     price: "$234",
+//     img: "./pic/20240918040216.webp",
+//     i: "fa fa-star text-primary mr-1",
+//     iHalf: "fa fa-star-half-alt text-primary mr-1",
+//     del: "$255.00",
+//   },
+// ];
 const gallerycontainer = document.querySelector(".gallery-container");
 const gallerycontainer1 = document.querySelector(".gallery-container1");
 const gallerycontainer2 = document.querySelector(".gallery-container2");
-console.log(gallerycontainer);
+const wrapperrecent = document.querySelector(".wrapper-recent-product");
 gallerycontainer.innerHTML = data
+  .filter((d) => {
+    return d.categoies == "Khmer New Year Sale!";
+  })
+  .map((a) => {
+    return `
+      <div class="image-card">
+        <a href="./html/data.html?id=${a.id}">
+          <img src="${a.img}" class="${a.class}" alt="${a.name}">
+        </a>
+      </div>
+    `;
+  })
+  .join("");
+
+gallerycontainer1.innerHTML = data
+  .filter((e) => {
+    return e.categoies === "Khmer New Year Sale2";
+  })
   .map((a) => {
     return ` 
-            <div class="image-card"><a href="${a.link}"><img src="${a.img}" alt="${a.name}">
-            </a></div>
+             <div class="image-card1">
+        <a href="./html/data.html?id=${a.id}">
+          <img src="${a.img}" class="${a.class}" alt="${a.name}">
+        </a>
+      </div>
         `;
   })
   .join("");
-gallerycontainer1.innerHTML = data1
+gallerycontainer2.innerHTML = data
+  .filter((e) => {
+    return e.categoies == "Khmer New Year Sale3";
+  })
   .map((a) => {
     return ` 
-            <div class="image-card1"><a href="${a.link}"><img src="${a.img}" alt="${a.name}">
-            </a></div>
+              <div class="image-card2">
+        <a href="./html/data.html?id=${a.id}">
+          <img src="${a.img}" class="${a.class}" alt="${a.name}">
+        </a>
+      </div>
         `;
   })
   .join("");
-gallerycontainer2.innerHTML = data2
+wrapperrecent.innerHTML = data
+  .filter((r) => {
+    return r.id >= 25;
+  })
   .map((a) => {
     return ` 
-            <div class="image-card2"><a href="${a.link}"><img src="${a.img}" alt="${a.name}">
-            </a></div>
+           <div class="col-lg-3 col-6 mb-2 mb-lg-0">
+           <article class="wrapper-recent">
+           <div class="wrapper-img position-relative overflow-hidden">
+                            <img src="${a.img}"" class="w-100">
+                            <div class="product-action">
+                                <a class="btn btn-outline-primary btn-square"  href="./html/data.html?id=${a.id}"><i
+                                        class="fa fa-shopping-cart"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href=""><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                        <div class="wrapper-text text-center p-3">
+                            <h5>${a.name}</h5>
+                            <h6 class="d-inline-block">${a.price}</h6>
+                            <h6 class="text-muted ml-2 d-inline-block"><del>${a.del}</del></h6>
+                            <div class="d-flex align-items-center justify-content-center mb-1">
+                                <small class="${a.i}"></small>
+                                <small class="${a.i}"></small>
+                                <small class="${a.i}"></small>
+                                <small class="${a.i}"></small>
+                                <small class="${a.iHalf}"></small>
+                                <small>(99)</small>
+                            </div>
+                        </div>
+                        </article>
+                </div>
         `;
   })
   .join("");
@@ -275,8 +504,9 @@ buttons.forEach((button) => {
 function setupGallery({ galleryId, cardClass, backBtnClass, nextBtnClass }) {
   let scrollIndex = 0;
   const gallery = document.getElementById(galleryId);
-  const backBtn = document.querySelector(`.${backBtnClass}`);
-  const nextBtn = document.querySelector(`.${nextBtnClass}`);
+  const wrapper = gallery.closest(".gallery-wrapper"); // Assuming a wrapper exists
+  const backBtn = wrapper.querySelector(`.${backBtnClass}`);
+  const nextBtn = wrapper.querySelector(`.${nextBtnClass}`);
 
   function scrollToNext() {
     const cards = gallery.querySelectorAll(`.${cardClass}`);
@@ -285,8 +515,6 @@ function setupGallery({ galleryId, cardClass, backBtnClass, nextBtnClass }) {
 
     if (scrollIndex < cards.length - scrollStep) {
       scrollIndex += scrollStep;
-
-      // ✅ Show back button only after clicking next
       backBtn.classList.remove("hidden");
     }
 
@@ -306,14 +534,12 @@ function setupGallery({ galleryId, cardClass, backBtnClass, nextBtnClass }) {
     const scrollPosition = cards[scrollIndex]?.offsetLeft || 0;
     gallery.scrollTo({ left: scrollPosition, behavior: "smooth" });
 
-    // ✅ Hide back button again if back to start
     if (scrollIndex <= 0) {
       backBtn.classList.add("hidden");
     }
   }
 
   // Drag functionality
-
   let isDragging = false;
   let startX, scrollLeft;
 
@@ -373,8 +599,17 @@ setupGallery({
   nextBtnClass: "nextBtn2",
 });
 
-const shopbtn = document.querySelector(".shop-btn");
+// script.js
+// const products = [
+//   { id: 1, name: "Shoes", description: "Stylish running shoes." },
+//   { id: 2, name: "Bag", description: "Leather backpack." },
+// ];
 
-shopbtn.addEventListener("click", function () {
-  window.location.href = "./html/login.html";
-});
+// const params = new URLSearchParams(window.location.search);
+// const id = parseInt(params.get("id"));
+// const product = products.find((p) => p.id === id);
+
+// const pname = document.getElementById("product-name");
+// const pd = document.getElementById("product-description");
+// pname.textContent = products[0].name;
+// pd.textContent = products[0].description;
