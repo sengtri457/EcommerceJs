@@ -56,43 +56,6 @@ window.addEventListener("scroll", () => {
     dropbtn.classList.remove("active");
   }
 });
-// const img1 = document.getElementById("img1");
-// const img2 = document.getElementById("img2");
-// const img3 = document.getElementById("img3");
-// const imgShow = document.getElementById("imgShow");
-
-// img1.addEventListener("click", function () {
-//   imgShow.src = img1.src;
-// });
-// img2.addEventListener("click", function () {
-//   imgShow.src = img2.src;
-// });
-// img3.addEventListener("click", function () {
-//   imgShow.src = img3.src;
-// });
-
-// const increment = document.querySelector(".increment");
-// const decrement = document.querySelector(".decrement");
-// const valueText = document.querySelector(".valueText");
-// const sp = document.querySelector(".sp");
-// const spimg = document.querySelector(".spimg");
-// const spimg1 = document.querySelector(".spimg1");
-// valueText.innerHTML = 0;
-// increment.addEventListener("click", function () {
-//   valueText.innerHTML = parseInt(valueText.innerHTML) + 1;
-//   sp.innerHTML = valueText.innerHTML;
-//   spimg.src = imgShow.src;
-// });
-// decrement.addEventListener("click", function () {
-//   if (valueText.innerHTML <= 0) {
-//     valueText.innerHTML = 0;
-//   } else {
-//     valueText.innerHTML = parseInt(valueText.innerHTML) - 1;
-//     sp.innerHTML = valueText.innerHTML;
-//     spimg.src = "";
-//   }
-// });
-
 const data = [
   {
     id: 1,
@@ -322,80 +285,7 @@ const data = [
     del: "$255.00",
   },
 ];
-// const recentProduct = [
-//   {
-//     id: 9,
-//     name: "ASUS Zenbook 14X OLED (UX5401)",
-//     price: "223$",
-//     img: "./pic/20240918040216.webp",
-//     i: "fa fa-star text-primary mr-1",
-//     iHalf: "fa fa-star-half-alt text-primary mr-1",
-//     del: "$235.00",
-//   },
-//   {
-//     id: 10,
-//     name: "ASUS Zenbook 14X OLED (UX5401)",
-//     price: "123$",
-//     img: "./pic/20240918040216.webp",
-//     i: "fa fa-star text-primary mr-1",
-//     iHalf: "fa fa-star-half-alt text-primary mr-1",
-//     del: "$125.00",
-//   },
-//   {
-//     id: 11,
-//     name: "ASUS Zenbook 14X OLED (UX5401)",
-//     price: "300$",
-//     img: "./pic/20240918040216.webp",
-//     i: "fa fa-star text-primary mr-1",
-//     iHalf: "fa fa-star-half-alt text-primary mr-1",
-//     del: "$335.00",
-//   },
-//   {
-//     id: 12,
-//     name: "ASUS Zenbook 14X OLED (UX5401)",
-//     price: "$234",
-//     img: "./pic/20240918040216.webp",
-//     i: "fa fa-star text-primary mr-1",
-//     iHalf: "fa fa-star-half-alt text-primary mr-1",
-//     del: "$255.00",
-//   },
-//   {
-//     id: 13,
-//     name: "ASUS Zenbook 14X OLED (UX5401)",
-//     price: "$234",
-//     img: "./pic/20240918040216.webp",
-//     i: "fa fa-star text-primary mr-1",
-//     iHalf: "fa fa-star-half-alt text-primary mr-1",
-//     del: "$255.00",
-//   },
-//   {
-//     id: 14,
-//     name: "ASUS Zenbook 14X OLED (UX5401)",
-//     price: "$234",
-//     img: "./pic/20240918040216.webp",
-//     i: "fa fa-star text-primary mr-1",
-//     iHalf: "fa fa-star-half-alt text-primary mr-1",
-//     del: "$255.00",
-//   },
-//   {
-//     id: 15,
-//     name: "ASUS Zenbook 14X OLED (UX5401)",
-//     price: "$234",
-//     img: "./pic/20240918040216.webp",
-//     i: "fa fa-star text-primary mr-1",
-//     iHalf: "fa fa-star-half-alt text-primary mr-1",
-//     del: "$255.00",
-//   },
-//   {
-//     id: 16,
-//     name: "ASUS Zenbook 14X OLED (UX5401)",
-//     price: "$234",
-//     img: "./pic/20240918040216.webp",
-//     i: "fa fa-star text-primary mr-1",
-//     iHalf: "fa fa-star-half-alt text-primary mr-1",
-//     del: "$255.00",
-//   },
-// ];
+
 const gallerycontainer = document.querySelector(".gallery-container");
 const gallerycontainer1 = document.querySelector(".gallery-container1");
 const gallerycontainer2 = document.querySelector(".gallery-container2");

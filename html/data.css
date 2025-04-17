@@ -1,0 +1,243 @@
+  :root {
+      --font-button: 1.2rem;
+      --font-small: 1rem;
+      --weight-small: 500;
+      --font-medum: 1.3rem;
+      --weight-medum: 650;
+      --font-large: 2rem;
+      --weight-larger: 800;
+      --color-main: #2878EB;
+      --blue: #007bff;
+      --white: #fff;
+      --gray-dark: #343a40;
+      --primary: #007bff;
+      --secondary: #fe5d37;
+      --danger: #dc3545;
+      --light: #ECF4FF;
+      --dark: #120F2D;
+  }
+
+  body {
+      background-color: var(--white)
+  }
+
+  .container {
+      display: flex;
+      gap: 20px;
+  }
+
+  .thumbnails {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .thumbnails img {
+      width: 100%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s;
+  }
+
+  .thumbnails img.active {
+      border: 2px solid #000;
+  }
+
+  .main-image {
+
+      width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      opacity: 1;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .slide-animation {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+
+  .buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+  }
+
+  .buttons button {
+      padding: 6px 12px;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      cursor: pointer;
+      outline: none;
+      border: none;
+      background-color: transparent;
+  }
+
+
+
+  .btn-size {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: rgb(0, 0, 0);
+      padding: 0.40rem 2rem;
+      outline: none;
+      border: 1px solid transparent;
+      background: #f5f5f5;
+      transition: all 0.2s ease-in-out;
+      border-radius: 4px;
+  }
+
+  .btn-size:focus {
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .sizeSelected {
+      border: 1px solid rgb(0, 0, 0);
+  }
+
+  .main-display {
+      overflow: hidden;
+  }
+
+  #mainImage {
+      transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .slide-out-left {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+
+  .slide-in-right {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+
+  .show {
+      transform: translateX(0%);
+      opacity: 1;
+  }
+
+
+  .thumbnails img.active {
+      border: 2px solid #3498db;
+      opacity: 1;
+      transform: scale(1.05);
+      transition: all 0.2s ease-in-out;
+  }
+
+  .main-display {
+      position: relative;
+      width: 100%;
+      height: auto;
+  }
+
+  .buttons .next {
+      position: absolute;
+      right: 0%;
+      bottom: 50%;
+  }
+
+  .buttons .Previous {
+      position: absolute;
+      left: 0%;
+      bottom: 50%;
+  }
+
+  .price {
+      padding: 1rem 0rem;
+  }
+
+  .usPrice {
+      font-size: var(--font-medum);
+      font-weight: var(--weight-medum);
+      color: var(--danger);
+  }
+
+  .offPrice {
+      padding: 0rem 0.25rem;
+      font-size: var(--font-medum);
+      font-weight: var(--weight-medum);
+      color: var(--dark);
+  }
+
+  .usPriceoff {
+      font-size: var(--font-medum);
+      font-weight: var(--weight-small);
+      color: var(--gray-dark);
+      text-decoration: line-through;
+  }
+
+  .addToBag {
+      font-size: var(--font-button);
+      background-color: var(--dark);
+      color: var(--light);
+      padding: 0.75rem 2rem;
+  }
+
+  .fav {
+      color: var(--dark);
+      background: #f5f5f5;
+  }
+
+
+
+  /* dropdown info */
+  .wrapper-drop {
+      background: #f5f5f5;
+  }
+
+  .wrapper-info-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+  }
+
+  .wrapper-infoText {
+      overflow: hidden;
+      height: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.4s ease-in-out;
+  }
+
+  .wrapper-infoText.active {
+      height: 200px;
+      transform: translateY(0px);
+      visibility: visible;
+  }
+
+  .wrapper-infoText p {
+      font-size: var(--font-small);
+      font-weight: var(--weight-small);
+      color: var(--dark);
+  }
+
+  .dropdown-header {
+      width: 100%;
+      padding: 15px 10px;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .chevron {
+      transition: all 0.4s ease-in-out;
+  }
+
+  .icon-text {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  }
+
+  .icon-text h3 {
+      font-weight: var(--weight-medum);
+      color: var(--light);
+      background-color: var(--dark);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding: 0.5rem;
+      text-align: center;
+  }

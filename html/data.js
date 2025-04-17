@@ -1,11 +1,36 @@
-let imageList = []; // Will be filled dynamically
-let currentIndex = 0;
-let currentImages = [];
 const dataSmall = [
   {
     id: 1,
     name: "img1",
-    img: ["../pic/h175 (1).png", "../pic/h175 (2).png", "../pic/h175 (9).png"],
+    img: "../pic/T-Shirts (8).jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale!",
+    usPrice: "$8.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+  },
+  {
+    name: "img1",
+    img: "../pic/T-Shirts (7).jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale!",
+  },
+  {
+    name: "img1",
+    img: "../pic/T-Shirts (6).jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale!",
+  },
+  {
+    name: "img1",
+    img: "../pic/T-Shirts (9).jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale!",
+  },
+  {
+    name: "img1",
+    img: "../pic/T-Shirts (10).jpg",
     class: "img1",
     categoies: "Khmer New Year Sale!",
   },
@@ -14,49 +39,49 @@ const dataSmall = [
     name: "img2",
     img: "../pic/h175 (2).png",
     class: "img2",
-    categoies: "Khmer New Year Sale!",
+    // categoies: "Khmer New Year Sale!",
   },
   {
     id: 3,
     name: "img3",
     img: "../pic/h175 (9).png",
     class: "img3",
-    categoies: "Khmer New Year Sale!",
+    // categoies: "Khmer New Year Sale!",
   },
   {
     id: 4,
     name: "img4",
     img: "../pic/h175 (4).png",
     class: "img4",
-    categoies: "Khmer New Year Sale!",
+    // categoies: "Khmer New Year Sale!",
   },
   {
     id: 5,
     name: "img1",
     img: "../pic/h175 (5).png",
     class: "img5",
-    categoies: "Khmer New Year Sale!",
+    // categoies: "Khmer New Year Sale!",
   },
   {
     id: 6,
     name: "img2",
     img: "../pic/h175 (6).png",
     class: "img6",
-    categoies: "Khmer New Year Sale!",
+    // categoies: "Khmer New Year Sale!",
   },
   {
     id: 7,
     name: "img3",
     img: "../pic/h175 (7).png",
     class: "img7",
-    categoies: "Khmer New Year Sale!",
+    // categoies: "Khmer New Year Sale!",
   },
   {
     id: 8,
     name: "img4",
     img: "../pic/h175 (1).png",
     class: "img8",
-    categoies: "Khmer New Year Sale!",
+    // categoies: "Khmer New Year Sale!",
   },
   {
     id: 9,
@@ -230,10 +255,14 @@ const dataSmall = [
     del: "$255.00",
   },
 ];
+
+let imageList = [];
+let currentIndex = 0;
+let currentImages = [];
+
 const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get("id"));
 const product = dataSmall.find((p) => p.id === id);
-
 // Update the main image
 function updateMainImage(index) {
   const mainImage = document.getElementById("mainImage");
@@ -242,17 +271,26 @@ function updateMainImage(index) {
   thumbnails.forEach((img) => img.classList.remove("active"));
   if (thumbnails[index]) thumbnails[index].classList.add("active");
 
-  mainImage.classList.add("fade-out");
+  // Slide out current image
+  mainImage.classList.remove("show");
+  mainImage.classList.add("slide-out-left");
 
   setTimeout(() => {
     mainImage.src = currentImages[index];
+
+    // Slide in new image
     mainImage.onload = () => {
-      mainImage.classList.remove("fade-out");
+      mainImage.classList.remove("slide-out-left");
+      mainImage.classList.add("slide-in-right");
+
+      setTimeout(() => {
+        mainImage.classList.remove("slide-in-right");
+        mainImage.classList.add("show");
+      }, 50); // Small delay to trigger the transition
     };
-  }, 150);
+  }, 300);
 }
 
-// When clicking on a thumbnail
 function selectImage(index) {
   currentIndex = index;
   updateMainImage(index);
@@ -271,58 +309,61 @@ function prevImage() {
 
 window.addEventListener("DOMContentLoaded", () => {
   const thumbnailContainer = document.getElementById("thumbnailContainer");
+  const mainImage = document.getElementById("mainImage");
 
-  if (product) {
-    // 🔥 Get all products in the same category
-    const sameCategoryProducts = dataSmall.filter(
-      (item) => item.categoies === product.categoies
-    );
-
-    // 🔥 Flatten all images from that category
-    imageList = sameCategoryProducts.flatMap((item) =>
-      Array.isArray(item.img) ? item.img : [item.img]
-    );
-
-    // 🔥 Remove duplicates
-    imageList = [...new Set(imageList)];
-
-    // Set currentImages
-    currentImages = imageList;
-    currentIndex = currentImages.findIndex((img) =>
-      Array.isArray(product.img)
-        ? product.img.includes(img)
-        : img === product.img
-    );
-
-    // Fallback if not found
-    if (currentIndex === -1) currentIndex = 0;
-
-    // Set main image
-    const mainImage = document.getElementById("mainImage");
-    mainImage.src = currentImages[currentIndex];
-
-    // Clear and generate new thumbnails
-    thumbnailContainer.innerHTML = "";
-    currentImages.forEach((imgSrc, index) => {
-      const img = document.createElement("img");
-      img.src = imgSrc;
-      img.alt = `Thumbnail ${index + 1}`;
-      img.classList.add("thumbnail");
-      if (index === currentIndex) img.classList.add("active");
-
-      img.addEventListener("click", () => selectImage(index));
-      thumbnailContainer.appendChild(img);
-    });
-
-    // Set product name
-    const productName = document.getElementById("product-name");
-    if (productName) {
-      productName.textContent = product.name;
-    }
-  } else {
+  if (!product) {
     document.body.innerHTML = "<h2>Product not found!</h2>";
+    return;
   }
+  // Use "categoies" since it's what's used in your data — but fix in real data!
+  const category = product.categoies;
+
+  if (!category) {
+    document.body.innerHTML = "<h2>This product has no category!</h2>";
+    return;
+  }
+  // Get all images from products in the same category
+  const sameCategoryItems = dataSmall.filter(
+    (item) => item.categoies === category
+  );
+  imageList = sameCategoryItems.map((item) => item.img);
+
+  // Remove duplicates
+  imageList = [...new Set(imageList)];
+
+  currentImages = imageList;
+  currentIndex = currentImages.indexOf(product.img);
+  if (currentIndex === -1) currentIndex = 0;
+
+  mainImage.src = currentImages[currentIndex];
+
+  // Update product name
+  const udprice = document.querySelector(".usPrice");
+  const offPrice = document.querySelector(".offPrice");
+  const usPriceoff = document.querySelector(".usPriceoff");
+  const typeOfShirt = document.querySelector(".typeOfShirt");
+  console.log(usPriceoff);
+  if (udprice || offPrice || usPriceoff) {
+    udprice.textContent = product.usPrice;
+    offPrice.textContent = product.Priceoff;
+    usPriceoff.textContent = product.usPriceoff;
+    typeOfShirt.textContent = product.typeOfShirt;
+  }
+
+  // Create thumbnails
+  thumbnailContainer.innerHTML = "";
+  currentImages.forEach((imgSrc, index) => {
+    const img = document.createElement("img");
+    img.src = imgSrc;
+    img.alt = `Thumbnail ${index + 1}`;
+    img.classList.add("thumbnail");
+    if (index === currentIndex) img.classList.add("active");
+
+    img.addEventListener("click", () => selectImage(index));
+    thumbnailContainer.appendChild(img);
+  });
 });
+
 // size
 
 const sizexs = document.querySelector(".size-Xs");
@@ -379,4 +420,25 @@ btnSub.addEventListener("click", function () {
   } else {
     result.innerHTML = parseInt(valueText.innerHTML);
   }
+});
+
+// dropdown info
+const headers = document.querySelectorAll(".dropdown-header");
+headers.forEach((header) => {
+  header.addEventListener("click", () => {
+    const content = header.querySelector(".wrapper-infoText"); // Get the next .dropdown-content
+    const chevron = header.querySelector(".chevron");
+
+    // Toggle active class for content
+    content.classList.toggle("active");
+
+    // Toggle icon class
+    if (content.classList.contains("active")) {
+      chevron.classList.remove("fa-chevron-down");
+      chevron.classList.add("fa-chevron-up");
+    } else {
+      chevron.classList.remove("fa-chevron-up");
+      chevron.classList.add("fa-chevron-down");
+    }
+  });
 });

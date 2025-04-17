@@ -47,6 +47,7 @@ h4 {
 }
 
 h5 {
+    color: var(--dark);
     font-family: "Product Sans", Poppins;
     font-size: clamp(1rem, 4vw, 1.2rem);
     /* min: 24px, max: 40px */
