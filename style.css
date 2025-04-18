@@ -675,6 +675,7 @@ h1 {
     display: inline-block;
     width: 280px;
     margin: 0 10px;
+    height: auto;
 }
 
 .image-card img,

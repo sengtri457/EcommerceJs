@@ -1,6 +1,7 @@
 const dataSmall = [
   {
     id: 1,
+    subId: 1,
     name: "img1",
     img: "../pic/T-Shirts (8).jpg",
     class: "img1",
@@ -9,45 +10,179 @@ const dataSmall = [
     usPriceoff: "$14.95",
     Priceoff: "-40%",
     typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+  },
+  {
+    id: 1,
+    subId: 1,
+    name: "img1",
+    img: "../pic/T-Shirts (7).jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale!",
+    similar: "tshirt",
+    usPrice: "$9.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+  },
+  {
+    id: 1,
+    subId: 1,
+    name: "img2",
+    img: "../pic/T-Shirts (6).jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale!",
+    similar: "tshirt",
+    usPrice: "$7.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+  },
+  {
+    // similar
+    id: 1,
+    subId: 1,
+    name: "img4",
+    img: "../pic/T-Shirts (9).jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale!",
+    similar: "tshirt",
+    usPrice: "$5.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+  },
+
+  // {
+  //   name: "img1",
+  //   img: "../pic/T-Shirts (10).jpg",
+  //   class: "img1",
+  //   categoies: "Khmer New Year Sale!",
+  // },
+  {
+    id: 2,
+    subId: 2,
+    name: "img2",
+    img: "../pic/s1.jpg",
+    class: "img2",
+    categoies: "Khmer New Year Sale1",
+    usPrice: "$10.99",
+    usPriceoff: "$20.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
     MaxQuantity: 50,
+    similar: "top",
+  },
+
+  {
+    id: 3,
+    subId: 2,
+    name: "img1",
+    img: "../pic/s2.jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale1",
+    usPrice: "$20.99",
+    usPriceoff: "$30.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 4,
+    subId: 2,
+    name: "img1",
+    img: "../pic/s3.jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale1",
+    usPrice: "$40.99",
+    usPriceoff: "$50.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 5,
+    subId: 2,
+    name: "img1",
+    img: "../pic/s4.jpg",
+    class: "img1",
+    categoies: "Khmer New Year Sale1",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  // {
+  //   name: "img1",
+  //   img: "../pic/T-Shirts (7).jpg",
+  //   class: "img1",
+  //   categoies: "Khmer New Year Sale1",
+  // },
+  // {
+  //   name: "img1",
+  //   img: "../pic/T-Shirts (6).jpg",
+  //   class: "img1",
+  //   categoies: "Khmer New Year Sale1",
+  // },
+  // {
+  //   name: "img1",
+  //   img: "../pic/T-Shirts (9).jpg",
+  //   class: "img1",
+  //   categoies: "Khmer New Year Sale1",
+  // },
+  // {
+  //   name: "img1",
+  //   img: "../pic/T-Shirts (10).jpg",
+  //   class: "img1",
+  //   categoies: "Khmer New Year Sale1",
+  // },
+  {
+    id: 3,
+    name: "img3",
+    img: "../pic/T-Shirts (8).jpg",
+    class: "img3",
+    categoies: "Khmer New Year Sale2",
+    usPrice: "$10.99",
+    usPriceoff: "$20.95",
+    Priceoff: "-50%",
+    typeOfShirt: "Oversied CropTop",
+    MaxQuantity: 60,
+    // categoies: "Khmer New Year Sale!",
   },
   {
     name: "img1",
     img: "../pic/T-Shirts (7).jpg",
     class: "img1",
-    categoies: "Khmer New Year Sale!",
+    categoies: "Khmer New Year Sale2",
   },
   {
     name: "img1",
     img: "../pic/T-Shirts (6).jpg",
     class: "img1",
-    categoies: "Khmer New Year Sale!",
+    categoies: "Khmer New Year Sale2",
   },
   {
     name: "img1",
     img: "../pic/T-Shirts (9).jpg",
     class: "img1",
-    categoies: "Khmer New Year Sale!",
+    categoies: "Khmer New Year Sale2",
   },
   {
     name: "img1",
     img: "../pic/T-Shirts (10).jpg",
     class: "img1",
-    categoies: "Khmer New Year Sale!",
-  },
-  {
-    id: 2,
-    name: "img2",
-    img: "../pic/h175 (2).png",
-    class: "img2",
-    // categoies: "Khmer New Year Sale!",
-  },
-  {
-    id: 3,
-    name: "img3",
-    img: "../pic/h175 (9).png",
-    class: "img3",
-    // categoies: "Khmer New Year Sale!",
+    categoies: "Khmer New Year Sale2",
   },
   {
     id: 4,
@@ -89,49 +224,49 @@ const dataSmall = [
     name: "img1",
     img: "../pic/h175 (1).png",
     link: "./login.html",
-    categoies: "Khmer New Year Sale2",
+    // categoies: "Khmer New Year Sale2",
   },
   {
     id: 10,
     name: "img2",
     img: "../pic/1731034178744.webp",
-    categoies: "Khmer New Year Sale2",
+    // categoies: "Khmer New Year Sale2",
   },
   {
     id: 11,
     name: "img3",
     img: "../pic/1743463843176.jpg",
-    categoies: "Khmer New Year Sale2",
+    // categoies: "Khmer New Year Sale2",
   },
   {
     id: 12,
     name: "img4",
     img: "../pic/20240918040216.webp",
-    categoies: "Khmer New Year Sale2",
+    // categoies: "Khmer New Year Sale2",
   },
   {
     id: 13,
     name: "img1",
     img: "../pic/h175 (1).png",
-    categoies: "Khmer New Year Sale2",
+    // categoies: "Khmer New Year Sale2",
   },
   {
     id: 14,
     name: "img2",
     img: "../pic/1731034178744.webp",
-    categoies: "Khmer New Year Sale2",
+    // categoies: "Khmer New Year Sale2",
   },
   {
     id: 15,
     name: "img3",
     img: "../pic/1743463843176.jpg",
-    categoies: "Khmer New Year Sale2",
+    // categoies: "Khmer New Year Sale2",
   },
   {
     id: 16,
     name: "img4",
     img: "../pic/20240918040216.webp",
-    categoies: "Khmer New Year Sale2",
+    // categoies: "Khmer New Year Sale2",
   },
   {
     id: 17,
@@ -260,7 +395,6 @@ const dataSmall = [
 let imageList = [];
 let currentIndex = 0;
 let currentImages = [];
-
 const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get("id"));
 const product = dataSmall.find((p) => p.id === id);
@@ -271,7 +405,6 @@ function updateMainImage(index) {
 
   thumbnails.forEach((img) => img.classList.remove("active"));
   if (thumbnails[index]) thumbnails[index].classList.add("active");
-
   // Slide out current image
   mainImage.classList.remove("show");
   mainImage.classList.add("slide-out-left");
@@ -291,34 +424,28 @@ function updateMainImage(index) {
     };
   }, 300);
 }
-
 function selectImage(index) {
   currentIndex = index;
   updateMainImage(index);
 }
-
 function nextImage() {
   currentIndex = (currentIndex + 1) % currentImages.length;
   updateMainImage(currentIndex);
 }
-
 function prevImage() {
   currentIndex =
     (currentIndex - 1 + currentImages.length) % currentImages.length;
   updateMainImage(currentIndex);
 }
-
 window.addEventListener("DOMContentLoaded", () => {
   const thumbnailContainer = document.getElementById("thumbnailContainer");
   const mainImage = document.getElementById("mainImage");
-
   if (!product) {
     document.body.innerHTML = "<h2>Product not found!</h2>";
     return;
   }
   // Use "categoies" since it's what's used in your data — but fix in real data!
   const category = product.categoies;
-
   if (!category) {
     document.body.innerHTML = "<h2>This product has no category!</h2>";
     return;
@@ -328,10 +455,8 @@ window.addEventListener("DOMContentLoaded", () => {
     (item) => item.categoies === category
   );
   imageList = sameCategoryItems.map((item) => item.img);
-
   // Remove duplicates
   imageList = [...new Set(imageList)];
-
   currentImages = imageList;
   currentIndex = currentImages.indexOf(product.img);
   if (currentIndex === -1) currentIndex = 0;
@@ -402,6 +527,10 @@ resultQTY.innerHTML = 0;
 result.innerHTML = 0;
 sizeitem.innerHTML = "";
 increment.addEventListener("click", function () {
+  if (resultQTY.innerHTML >= product.MaxQuantity) {
+    alert("Please input Low qty");
+    return;
+  }
   resultQTY.innerHTML = parseInt(resultQTY.innerHTML) + 1;
 });
 decrement.addEventListener("click", function () {
@@ -420,8 +549,6 @@ const offPricecart = document.querySelector(".offPricecart");
 const usPriceoffcart = document.querySelector(".usPriceoffcart");
 const typeOfShirtcart = document.querySelector(".typeOfShirtcart");
 const totalPrice = document.querySelector(".totalPrice");
-console.log(totalPrice);
-
 if (udprice || offPrice || usPriceoff) {
   usPriceoff.textContent = product.usPriceoff;
   udprice.textContent = product.usPrice;
@@ -429,30 +556,27 @@ if (udprice || offPrice || usPriceoff) {
   typeOfShirt.textContent = product.typeOfShirt;
 }
 
+// Bag
+
 let totalQuantity = 0; // Keep track of all items added
 btnSub.addEventListener("click", function () {
   const quantity = parseInt(resultQTY.innerHTML);
   const selectedSize = document.querySelector(".sizeSelected");
-
   if (!selectedSize) {
     alert("Please select a size before adding to cart.");
     return;
   }
-
   if (quantity <= 0) {
     alert("Please choose a quantity greater than 0.");
     return;
   }
-
   // ✅ Update total result
   totalQuantity += quantity;
   result.innerHTML = totalQuantity;
   qtryitem.innerHTML = "Quantity: " + totalQuantity;
   sizeitem.innerHTML += `Your Ordered: [${selectedSize.textContent}: ${quantity}] `;
-
   // ✅ Get selected image
   const selectedImageSrc = document.getElementById("mainImage").src;
-
   // ✅ Show preview
   let previewImg = document.querySelector(".cart-preview-img");
   if (!previewImg) {
@@ -461,7 +585,6 @@ btnSub.addEventListener("click", function () {
     document.body.appendChild(previewImg);
   }
   previewImg.src = selectedImageSrc;
-
   // ✅ Add to cart
   const cartItem = {
     id: product.id,
@@ -473,10 +596,9 @@ btnSub.addEventListener("click", function () {
     udprice: product.price,
     offPrice: product.Priceoff,
     typeOfShirt: product.typeOfShirt,
+    MaxQty: product.MaxQuantity,
   };
-
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
   // ✅ Check if same size already in cart — if so, update quantity
   const existingItem = cart.find(
     (item) => item.id === product.id && item.size === cartItem.size
@@ -487,13 +609,10 @@ btnSub.addEventListener("click", function () {
   } else {
     cart.push(cartItem);
   }
-
   localStorage.setItem("cart", JSON.stringify(cart));
-
   // ✅ Calculate total price for this added item
   const cleanPrice = parseFloat(product.usPrice.replace("$", ""));
   const itemTotalPrice = cleanPrice * totalQuantity;
-
   console.log("Cart item added:", cartItem);
   alert(
     `Added to cart: ${cartItem.name} [Size: ${cartItem.size}, Qty: ${cartItem.quantity}]\n` +
@@ -501,7 +620,6 @@ btnSub.addEventListener("click", function () {
       `Total for this item: $${itemTotalPrice.toFixed(2)}`
   );
   totalPrice.textContent = "Total US $" + itemTotalPrice;
-
   // ✅ Reset input
   resultQTY.innerHTML = 0;
   selectedSize.classList.remove("sizeSelected");
@@ -518,7 +636,6 @@ btnSub.addEventListener("click", function () {
   btnclear.classList.add("active");
   btnclear.addEventListener("click", function () {
     localStorage.removeItem("cart"); // Clear all cart data
-
     // Optional: reset UI elements
     totalQuantity = 0;
     result.innerHTML = 0;
@@ -530,17 +647,42 @@ btnSub.addEventListener("click", function () {
     udpricevart.innerHTML = "";
     totalPrice.innerHTML = "";
     typeOfShirtcart.innerHTML = "No Information";
-
     const previewImg = document.querySelector(".cart-preview-img");
     if (previewImg) {
       previewImg.src = "";
     }
     alert("Cart has been cleared.");
+    btnclear.classList.remove("active");
   });
 });
-// remove
+// similar
 
-// add to cart
+const wrappersimilar = document.querySelector(".wrapper-similar");
+console.log(product.id);
+console.log(id);
+if (product.id == id) {
+  wrappersimilar.innerHTML = dataSmall
+    .filter((e) => {
+      return e.subId == id;
+    })
+    .map((a) => {
+      return ` 
+            <div class="col-lg-3 mb-3 col-6">
+                <div class="image-card-wrapper w-100 overflow-hidden">
+                    <a href="data.html?id=${a.id}">
+                        <img src="${a.img}" class="${a.class}" alt="${a.name}">
+                    </a>
+                </div>
+                <div class="wrapper-similar-text mt-3">
+                    <h5 class="fw-bold text-dark m-0">US ${a.usPrice}</h5>
+                    <p class="fw-light pt-1">${a.typeOfShirt}</p>
+                </div>
+            </div>
+          `;
+    })
+    .join("");
+  console.log(wrappersimilar);
+}
 
 // dropdown info
 const headers = document.querySelectorAll(".dropdown-header");

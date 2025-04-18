@@ -295,3 +295,14 @@
   .btn-clear.active {
       opacity: 1;
   }
+
+  .image-card-wrapper img {
+      width: 100%;
+      height: auto;
+      transition: all 0.4s ease-out;
+      border-radius: 8px;
+  }
+
+  .image-card-wrapper img:hover {
+      transform: scale(1.05);
+  }

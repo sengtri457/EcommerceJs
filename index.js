@@ -69,7 +69,7 @@ const data = [
     name: "img2",
     img: "./pic/h175 (2).png",
     class: "img2",
-    categoies: "Khmer New Year Sale1",
+    categoies: "Khmer New Year Sale!",
   },
   {
     id: 3,
