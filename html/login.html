@@ -2,13 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Shop</title>
+    <style>
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+
+        .cart-button {
+            margin-top: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1> Hello </h1>
+    <h1>Products</h1>
+    <div id="product-list">
+        <div class="product">
+            <h3>Product 1</h3>
+            <p>$10</p>
+            <button class="cart-button" onclick="addToCart('Product 1', 10)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <h3>Product 2</h3>
+            <p>$20</p>
+            <button class="cart-button" onclick="addToCart('Product 2', 20)">Add to Cart</button>
+        </div>
+    </div>
+    <a href="cart.html">🛒 Go to Cart</a>
+
+    <script>
+        function addToCart(name, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existing = cart.find(item => item.name === name);
+            if (existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(name + " added to cart!");
+        }
+    </script>
 </body>
 
 </html>

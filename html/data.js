@@ -9,6 +9,7 @@ const dataSmall = [
     usPriceoff: "$14.95",
     Priceoff: "-40%",
     typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 50,
   },
   {
     name: "img1",
@@ -337,19 +338,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   mainImage.src = currentImages[currentIndex];
 
-  // Update product name
-  const udprice = document.querySelector(".usPrice");
-  const offPrice = document.querySelector(".offPrice");
-  const usPriceoff = document.querySelector(".usPriceoff");
-  const typeOfShirt = document.querySelector(".typeOfShirt");
-  console.log(usPriceoff);
-  if (udprice || offPrice || usPriceoff) {
-    udprice.textContent = product.usPrice;
-    offPrice.textContent = product.Priceoff;
-    usPriceoff.textContent = product.usPriceoff;
-    typeOfShirt.textContent = product.typeOfShirt;
-  }
-
   // Create thumbnails
   thumbnailContainer.innerHTML = "";
   currentImages.forEach((imgSrc, index) => {
@@ -373,17 +361,20 @@ const sizeL = document.querySelector(".size-L");
 
 sizexs.addEventListener("click", () => {
   sizexs.classList.toggle("sizeSelected");
+  sizexs.innerHTML = "XS";
   sizes.classList.remove("sizeSelected");
   sizeM.classList.remove("sizeSelected");
   sizeL.classList.remove("sizeSelected");
 });
 sizes.addEventListener("click", () => {
   sizes.classList.toggle("sizeSelected");
+  sizes.innerHTML = "S";
   sizexs.classList.remove("sizeSelected");
   sizeM.classList.remove("sizeSelected");
   sizeL.classList.remove("sizeSelected");
 });
 sizeM.addEventListener("click", () => {
+  sizeM.innerHTML = "M";
   sizeM.classList.toggle("sizeSelected");
   sizexs.classList.remove("sizeSelected");
   sizes.classList.remove("sizeSelected");
@@ -391,36 +382,165 @@ sizeM.addEventListener("click", () => {
 });
 sizeL.addEventListener("click", () => {
   sizeL.classList.toggle("sizeSelected");
+  sizeL.innerHTML = "L";
   sizexs.classList.remove("sizeSelected");
   sizes.classList.remove("sizeSelected");
   sizeM.classList.remove("sizeSelected");
+  console.log(sizeL.textContent);
 });
 
 const increment = document.querySelector(".increment");
 const decrement = document.querySelector(".decrement");
-const valueText = document.querySelector(".resultQTY");
+const resultQTY = document.querySelector(".resultQTY");
 const btnSub = document.querySelector(".btn-sub");
 const result = document.querySelector(".result");
-valueText.innerHTML = 0;
+const wrapperitems = document.querySelector(".wrapper-items");
+const sizeitem = document.querySelector(".sizeitem");
+const qtryitem = document.querySelector(".qtyitem");
+
+resultQTY.innerHTML = 0;
 result.innerHTML = 0;
+sizeitem.innerHTML = "";
 increment.addEventListener("click", function () {
-  valueText.innerHTML = parseInt(valueText.innerHTML) + 1;
+  resultQTY.innerHTML = parseInt(resultQTY.innerHTML) + 1;
 });
 decrement.addEventListener("click", function () {
-  if (valueText.innerHTML <= 0) {
-    valueText.innerHTML = 0;
+  if (resultQTY.innerHTML <= 0) {
+    resultQTY.innerHTML = 0;
   } else {
-    valueText.innerHTML = parseInt(valueText.innerHTML) - 1;
+    resultQTY.innerHTML = parseInt(resultQTY.innerHTML) - 1;
   }
 });
+const udprice = document.querySelector(".usPrice");
+const offPrice = document.querySelector(".offPrice");
+const usPriceoff = document.querySelector(".usPriceoff");
+const typeOfShirt = document.querySelector(".typeOfShirt");
+const udpricevart = document.querySelector(".usPricecart");
+const offPricecart = document.querySelector(".offPricecart");
+const usPriceoffcart = document.querySelector(".usPriceoffcart");
+const typeOfShirtcart = document.querySelector(".typeOfShirtcart");
+const totalPrice = document.querySelector(".totalPrice");
+console.log(totalPrice);
 
+if (udprice || offPrice || usPriceoff) {
+  usPriceoff.textContent = product.usPriceoff;
+  udprice.textContent = product.usPrice;
+  offPrice.textContent = product.Priceoff;
+  typeOfShirt.textContent = product.typeOfShirt;
+}
+
+let totalQuantity = 0; // Keep track of all items added
 btnSub.addEventListener("click", function () {
-  if (valueText.innerHTML <= 0) {
-    result.innerHTML = 0;
-  } else {
-    result.innerHTML = parseInt(valueText.innerHTML);
+  const quantity = parseInt(resultQTY.innerHTML);
+  const selectedSize = document.querySelector(".sizeSelected");
+
+  if (!selectedSize) {
+    alert("Please select a size before adding to cart.");
+    return;
   }
+
+  if (quantity <= 0) {
+    alert("Please choose a quantity greater than 0.");
+    return;
+  }
+
+  // ✅ Update total result
+  totalQuantity += quantity;
+  result.innerHTML = totalQuantity;
+  qtryitem.innerHTML = "Quantity: " + totalQuantity;
+  sizeitem.innerHTML += `Your Ordered: [${selectedSize.textContent}: ${quantity}] `;
+
+  // ✅ Get selected image
+  const selectedImageSrc = document.getElementById("mainImage").src;
+
+  // ✅ Show preview
+  let previewImg = document.querySelector(".cart-preview-img");
+  if (!previewImg) {
+    previewImg = document.createElement("img");
+    previewImg.classList.add("cart-preview-img");
+    document.body.appendChild(previewImg);
+  }
+  previewImg.src = selectedImageSrc;
+
+  // ✅ Add to cart
+  const cartItem = {
+    id: product.id,
+    name: product.name,
+    size: selectedSize.textContent,
+    quantity: quantity,
+    image: selectedImageSrc,
+    usPriceoff: product.usPriceoff,
+    udprice: product.price,
+    offPrice: product.Priceoff,
+    typeOfShirt: product.typeOfShirt,
+  };
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // ✅ Check if same size already in cart — if so, update quantity
+  const existingItem = cart.find(
+    (item) => item.id === product.id && item.size === cartItem.size
+  );
+
+  if (existingItem) {
+    existingItem.quantity += quantity;
+  } else {
+    cart.push(cartItem);
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  // ✅ Calculate total price for this added item
+  const cleanPrice = parseFloat(product.usPrice.replace("$", ""));
+  const itemTotalPrice = cleanPrice * totalQuantity;
+
+  console.log("Cart item added:", cartItem);
+  alert(
+    `Added to cart: ${cartItem.name} [Size: ${cartItem.size}, Qty: ${cartItem.quantity}]\n` +
+      `Price per item: ${product.usPrice}\n` +
+      `Total for this item: $${itemTotalPrice.toFixed(2)}`
+  );
+  totalPrice.textContent = "Total US $" + itemTotalPrice;
+
+  // ✅ Reset input
+  resultQTY.innerHTML = 0;
+  selectedSize.classList.remove("sizeSelected");
+  // ✅ Display product details
+
+  if (udpricevart || offPricecart || usPriceoffcart) {
+    udpricevart.textContent = product.usPrice;
+    offPricecart.textContent = product.Priceoff;
+    usPriceoffcart.textContent = product.usPriceoff;
+    typeOfShirtcart.textContent = product.typeOfShirt;
+  }
+  const btnclear = document.querySelector(".btn-clear");
+  btnclear.innerHTML = "ClearForm";
+  btnclear.classList.add("active");
+  btnclear.addEventListener("click", function () {
+    localStorage.removeItem("cart"); // Clear all cart data
+
+    // Optional: reset UI elements
+    totalQuantity = 0;
+    result.innerHTML = 0;
+    qtryitem.innerHTML = 0;
+    sizeitem.innerHTML = "";
+    usPriceoffcart.innerHTML = "";
+    offPricecart.innerHTML = "";
+    usPriceoffcart.innerHTML = "";
+    udpricevart.innerHTML = "";
+    totalPrice.innerHTML = "";
+    typeOfShirtcart.innerHTML = "No Information";
+
+    const previewImg = document.querySelector(".cart-preview-img");
+    if (previewImg) {
+      previewImg.src = "";
+    }
+    alert("Cart has been cleared.");
+  });
 });
+// remove
+
+// add to cart
 
 // dropdown info
 const headers = document.querySelectorAll(".dropdown-header");

@@ -168,6 +168,48 @@
       text-decoration: line-through;
   }
 
+  .pricecart {
+      padding: 1rem 0rem;
+  }
+
+  .usPricecart {
+      font-size: var(--font-medum);
+      font-weight: var(--weight-medum);
+      color: var(--danger);
+  }
+
+  .sizeitem {
+      font-size: var(--font-small);
+      font-weight: var(--weight-small);
+      color: var(--dark);
+  }
+
+  .qtyitem {
+      font-size: var(--font-small);
+      font-weight: var(--weight-small);
+      color: var(--dark);
+  }
+
+  .totalPrice {
+      font-size: var(--font-medum);
+      font-weight: var(--weight-medum);
+      color: var(--danger);
+  }
+
+  .offPricecart {
+      padding: 0rem 0.25rem;
+      font-size: var(--font-medum);
+      font-weight: var(--weight-medum);
+      color: var(--dark);
+  }
+
+  .usPriceoffcart {
+      font-size: var(--font-medum);
+      font-weight: var(--weight-small);
+      color: var(--gray-dark);
+      text-decoration: line-through;
+  }
+
   .addToBag {
       font-size: var(--font-button);
       background-color: var(--dark);
@@ -240,4 +282,16 @@
       border-radius: 50%;
       padding: 0.5rem;
       text-align: center;
+  }
+
+  .cart-preview img {
+      width: 100%;
+  }
+
+  .btn-clear {
+      opacity: 0;
+  }
+
+  .btn-clear.active {
+      opacity: 1;
   }

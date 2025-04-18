@@ -1,0 +1,157 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Your Cart</h1>
+    <table id="cart-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p><a href="login.html">⬅️ Continue Shopping</a></p>
+
+    <script>
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const tbody = document.querySelector('#cart-table tbody');
+
+        if (cart.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4">Cart is empty</td></tr>';
+        } else {
+            cart.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+          <td>${item.name}</td>
+          <td>$${item.price}</td>
+          <td>${item.qty}</td>
+          <td>$${(item.price * item.qty).toFixed(2)}</td>
+        `;
+                tbody.appendChild(row);
+            });
+        }
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+        }
+
+        .total {
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-align: right;
+        }
+
+        .btn-remove {
+            background: red;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+
+        .checkout-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Your Cart</h2>
+    <div id="cartContainer"></div>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const cartContainer = document.getElementById("cartContainer");
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            console.log(cart);
+            if (cart.length === 0) {
+                cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+                return;
+            }
+            console.log(cart.length)
+
+            cart.forEach((item) => {
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("cart-item");
+
+                itemDiv.innerHTML = `
+        <img src="${item.img}" alt="${item.name}" width="100" />
+        <div>
+          <h4>${item.name}</h4>
+          <p>Size: ${item.size}</p>
+          <p>Quantity: ${item.quantity}</p>
+          <p>Price: ${item.price}</p>
+        </div>
+      `;
+
+                cartContainer.appendChild(itemDiv);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
