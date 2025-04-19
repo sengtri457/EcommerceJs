@@ -1065,9 +1065,9 @@ footer p {
         height: 10px;
     }
 
-    .image-card {
+    /* .image-card {
         width: 480px;
-    }
+    } */
 
     .input-footer {
 
@@ -1092,6 +1092,12 @@ footer p {
     .btn-square {
         width: 30px;
         height: 30px;
+    }
+
+    .image-card,
+    .image-card1,
+    .image-card2 {
+        width: 90%;
     }
 
 

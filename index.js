@@ -371,7 +371,7 @@ gallerycontainer.innerHTML = data
   })
   .map((a) => {
     return `
-      <div class="image-card">
+      <div class="image-card " data-aos="zoom-in">
         <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
@@ -402,7 +402,7 @@ gallerycontainer1.innerHTML = data
   })
   .map((a) => {
     return ` 
-             <div class="image-card1">
+             <div class="image-card1" data-aos="zoom-in">
          <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
@@ -432,7 +432,7 @@ gallerycontainer2.innerHTML = data
   })
   .map((a) => {
     return ` 
-              <div class="image-card2">
+              <div class="image-card2" data-aos="zoom-in">
         <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
