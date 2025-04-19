@@ -60,7 +60,7 @@ p {
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Helvetica Now Text Medium", Helvetica, Arial, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -673,7 +673,7 @@ h1 {
 .image-card1,
 .image-card2 {
     display: inline-block;
-    width: 280px;
+    width: 22%;
     margin: 0 10px;
     height: auto;
 }
@@ -746,7 +746,7 @@ h1 {
 /* Buttons on top of images */
 .btn-floating {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     padding: 10px 14px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -761,7 +761,7 @@ h1 {
 
 .btn-floating-left {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     padding: 10px 14px;
     background-color: rgba(0, 0, 0, 0.6);
@@ -964,6 +964,12 @@ footer p {
 .btn-outline-primary:hover {
     background-color: var(--light);
     color: var(--color-main);
+}
+
+.offPriceShow {
+    font-weight: var(--weight-small);
+    color: var(--danger);
+    text-decoration: line-through;
 }
 
 

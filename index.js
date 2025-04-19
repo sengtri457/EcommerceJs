@@ -63,156 +63,229 @@ const data = [
     img: "./pic/main1.avif",
     class: "img1",
     categoies: "Khmer New Year Sale!",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
     id: 5,
     name: "img2",
-    img: "./pic/men4.avif",
+    img: "./pic/menn2.avif",
     class: "img2",
     categoies: "Khmer New Year Sale!",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 3,
+    id: 13,
     name: "img3",
-    img: "./pic/man1.avif",
+    img: "./pic/submenn6.avif",
     class: "img3",
     categoies: "Khmer New Year Sale!",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 4,
+    id: 17,
     name: "img4",
-    img: "./pic/men2.avif",
+    img: "./pic/submenn5.avif",
     class: "img4",
     categoies: "Khmer New Year Sale!",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 5,
+    id: 22,
     name: "img1",
-    img: "./pic/men5.avif",
+    img: "./pic/submenn4.avif",
     class: "img5",
     categoies: "Khmer New Year Sale!",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 6,
+    id: 24,
     name: "img2",
-    img: "./pic/men6.avif",
+    img: "./pic/submenn8.avif",
     class: "img6",
     categoies: "Khmer New Year Sale!",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 7,
+    id: 36,
     name: "img3",
-    img: "./pic/men7.avif",
+    img: "./pic/submenn9.avif",
     class: "img7",
     categoies: "Khmer New Year Sale!",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 8,
+    id: 40,
     name: "img4",
-    img: "./pic/men8.avif",
+    img: "./pic/submenn10.avif",
     class: "img8",
     categoies: "Khmer New Year Sale!",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
     id: 9,
     name: "img1",
-    img: "./pic/men8.avif",
+    img: "./pic/submenn2.avif",
     categoies: "Khmer New Year Sale2",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 10,
-    name: "img2",
-    img: "./pic/men7.avif",
-
-    categoies: "Khmer New Year Sale2",
-  },
-  {
-    id: 11,
-    name: "img3",
-    img: "./pic/men6.avif",
-    categoies: "Khmer New Year Sale2",
-  },
-  {
-    id: 12,
-    name: "img4",
-    img: "./pic/men5.avif",
-    categoies: "Khmer New Year Sale2",
-  },
-  {
-    id: 13,
+    id: 9,
     name: "img1",
-    img: "./pic/men4.avif",
-
+    img: "./pic/submenn9.avif",
     categoies: "Khmer New Year Sale2",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 14,
-    name: "img2",
-    img: "./pic/men3.avif",
-
-    categoies: "Khmer New Year Sale2",
-  },
-  {
-    id: 15,
-    name: "img3",
-    img: "./pic/men2.avif",
-    categoies: "Khmer New Year Sale2",
-  },
-  {
-    id: 16,
-    name: "img4",
-    img: "./pic/men7.avif",
-    categoies: "Khmer New Year Sale2",
-  },
-  {
-    id: 17,
+    id: 9,
     name: "img1",
-    img: "./pic/men4.avif",
-    link: "./login.html",
-    categoies: "Khmer New Year Sale3",
+    img: "./pic/submenn7.avif",
+    categoies: "Khmer New Year Sale2",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 18,
-    name: "img2",
-    img: "./pic/men7.avif",
-    categoies: "Khmer New Year Sale3",
-  },
-  {
-    id: 19,
-    name: "img3",
-    img: "./pic/man1.avif",
-    categoies: "Khmer New Year Sale3",
-  },
-  {
-    id: 20,
-    name: "img4",
-    img: "./pic/men2.avif",
-    categoies: "Khmer New Year Sale3",
-  },
-  {
-    id: 21,
+    id: 9,
     name: "img1",
-    img: "./pic/men4.avif",
-    categoies: "Khmer New Year Sale3",
+    img: "./pic/submenn6.avif",
+    categoies: "Khmer New Year Sale2",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 22,
-    name: "img2",
-    img: "./pic/men5.avif",
-    categoies: "Khmer New Year Sale3",
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn2.avif",
+    categoies: "Khmer New Year Sale2",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 23,
-    name: "img3",
-    img: "./pic/men6.avif",
-    categoies: "Khmer New Year Sale3",
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn5.avif",
+    categoies: "Khmer New Year Sale2",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
   {
-    id: 24,
-    name: "img4",
-    img: "./pic/men7.avif",
-    categoies: "Khmer New Year Sale3",
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn4.avif",
+    categoies: "Khmer New Year Sale2",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
   },
+  {
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn2.avif",
+    categoies: "Khmer New Year Sale3",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+  },
+  {
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn9.avif",
+    categoies: "Khmer New Year Sale3",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+  },
+  {
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn7.avif",
+    categoies: "Khmer New Year Sale3",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+  },
+  {
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn6.avif",
+    categoies: "Khmer New Year Sale3",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+  },
+  {
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn3.avif",
+    categoies: "Khmer New Year Sale3",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+  },
+  {
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn5.avif",
+    categoies: "Khmer New Year Sale3",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+  },
+  {
+    id: 9,
+    name: "img1",
+    img: "./pic/submenn4.avif",
+    categoies: "Khmer New Year Sale3",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied CropTop",
+  },
+
   // Recent Product
   {
     id: 25,
@@ -287,11 +360,11 @@ const data = [
     del: "$255.00",
   },
 ];
-
 const gallerycontainer = document.querySelector(".gallery-container");
 const gallerycontainer1 = document.querySelector(".gallery-container1");
 const gallerycontainer2 = document.querySelector(".gallery-container2");
 const wrapperrecent = document.querySelector(".wrapper-recent-product");
+
 gallerycontainer.innerHTML = data
   .filter((d) => {
     return d.categoies == "Khmer New Year Sale!";
@@ -302,6 +375,22 @@ gallerycontainer.innerHTML = data
         <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
+                        <div class="wrapper-similar-text mt-3 overflow-hidden">
+                    <div class="wrapper-hover">
+                        <div class="wrapper-flex-text d-flex justify-content-between align-items-center ">
+                        <h5 class="fw-bold text-dark m-0 price-text">US ${a.usPrice}</h5>
+        <h5 class=" text-dark fw-bolder clickFav" id="offcanvasRightLabel"><i class="fa-regular fa-heart clickHeart"></i>
+        </h5>
+    </div>
+                    <span class="offPriceShow">${a.usPriceoff}</span>
+                                    <div class="flex-img d-flex justify-content-between align-items-center"> 
+                                    <p class="fw-light mb-0">${a.typeOfShirt}</p>
+                                    <a href="data.html?id=${a.id}">
+                        <img src="${a.img}" class="${a.class} img-price" alt="${a.name}" style="width:35px;height: 35px;">
+                    </a>
+                </div>
+                </div>
+                </div>
       </div>
     `;
   })
@@ -314,9 +403,25 @@ gallerycontainer1.innerHTML = data
   .map((a) => {
     return ` 
              <div class="image-card1">
-        <a href="./html/data.html?id=${a.id}">
+         <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
+                        <div class="wrapper-similar-text mt-3 overflow-hidden">
+                    <div class="wrapper-hover">
+                        <div class="wrapper-flex-text d-flex justify-content-between align-items-center ">
+                        <h5 class="fw-bold text-dark m-0 price-text">US ${a.usPrice}</h5>
+        <h5 class=" text-dark fw-bolder clickFav" id="offcanvasRightLabel"><i class="fa-regular fa-heart clickHeart"></i>
+        </h5>
+    </div>
+                    <span class="offPriceShow">${a.usPriceoff}</span>
+                                    <div class="flex-img d-flex justify-content-between align-items-center"> 
+                                    <p class="fw-light mb-0">${a.typeOfShirt}</p>
+                                    <a href="data.html?id=${a.id}">
+                        <img src="${a.img}" class="${a.class} img-price" alt="${a.name}" style="width:35px;height: 35px;">
+                    </a>
+                </div>
+                </div>
+                </div>
       </div>
         `;
   })
@@ -331,13 +436,29 @@ gallerycontainer2.innerHTML = data
         <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
+                        <div class="wrapper-similar-text mt-3 overflow-hidden">
+                    <div class="wrapper-hover">
+                        <div class="wrapper-flex-text d-flex justify-content-between align-items-center ">
+                        <h5 class="fw-bold text-dark m-0 price-text">US ${a.usPrice}</h5>
+        <h5 class=" text-dark fw-bolder clickFav" id="offcanvasRightLabel"><i class="fa-regular fa-heart clickHeart"></i>
+        </h5>
+    </div>
+                    <span class="offPriceShow">${a.usPriceoff}</span>
+                                    <div class="flex-img d-flex justify-content-between align-items-center"> 
+                                    <p class="fw-light mb-0">${a.typeOfShirt}</p>
+                                    <a href="data.html?id=${a.id}">
+                        <img src="${a.img}" class="${a.class} img-price" alt="${a.name}" style="width:35px;height: 35px;">
+                    </a>
+                </div>
+                </div>
+                </div>
       </div>
         `;
   })
   .join("");
 wrapperrecent.innerHTML = data
   .filter((r) => {
-    return r.id >= 25;
+    return r.name == "ASUS Zenbook 14X OLED (UX5401)";
   })
   .map((a) => {
     return ` 
@@ -371,7 +492,16 @@ wrapperrecent.innerHTML = data
         `;
   })
   .join("");
+// Favorite Icon Click
+const clickFav = document.querySelectorAll(".clickFav");
+clickFav.forEach((fav) => {
+  fav.addEventListener("click", function () {
+    const heart = fav.querySelector(".clickHeart");
+    heart.classList.toggle("fa-solid");
+  });
+});
 
+console.dir(clickFav);
 const buttons = document.querySelectorAll("[data-carousel-button]");
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -403,7 +533,7 @@ function setupGallery({ galleryId, cardClass, backBtnClass, nextBtnClass }) {
   function scrollToNext() {
     const cards = gallery.querySelectorAll(`.${cardClass}`);
     const isMobile = window.innerWidth <= 768;
-    const scrollStep = isMobile ? 1 : 4;
+    const scrollStep = isMobile ? 1 : 3;
 
     if (scrollIndex < cards.length - scrollStep) {
       scrollIndex += scrollStep;
@@ -417,7 +547,7 @@ function setupGallery({ galleryId, cardClass, backBtnClass, nextBtnClass }) {
   function scrollToPrevious() {
     const cards = gallery.querySelectorAll(`.${cardClass}`);
     const isMobile = window.innerWidth <= 768;
-    const scrollStep = isMobile ? 1 : 4;
+    const scrollStep = isMobile ? 1 : 3;
 
     if (scrollIndex > 0) {
       scrollIndex -= scrollStep;
