@@ -3,7 +3,7 @@ const dataSmall = [
     id: 1,
     subId: 1,
     name: "img1",
-    img: "../pic/T-Shirts (8).jpg",
+    img: "../pic/main1.avif",
     class: "img1",
     categoies: "Khmer New Year Sale!",
     usPrice: "$8.99",
@@ -14,10 +14,10 @@ const dataSmall = [
     similar: "tshirt",
   },
   {
-    id: 1,
+    id: 2,
     subId: 1,
     name: "img1",
-    img: "../pic/T-Shirts (7).jpg",
+    img: "../pic/main2.avif",
     class: "img1",
     categoies: "Khmer New Year Sale!",
     similar: "tshirt",
@@ -29,10 +29,10 @@ const dataSmall = [
     similar: "tshirt",
   },
   {
-    id: 1,
+    id: 3,
     subId: 1,
     name: "img2",
-    img: "../pic/T-Shirts (6).jpg",
+    img: "../pic/main3.avif",
     class: "img1",
     categoies: "Khmer New Year Sale!",
     similar: "tshirt",
@@ -45,12 +45,76 @@ const dataSmall = [
   },
   {
     // similar
-    id: 1,
+    id: 4,
     subId: 1,
     name: "img4",
-    img: "../pic/T-Shirts (9).jpg",
+    img: "../pic/main4.avif",
     class: "img1",
     categoies: "Khmer New Year Sale!",
+    similar: "tshirt",
+    usPrice: "$5.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+  },
+  {
+    // similar
+    id: 4,
+    subId: 1,
+    name: "img4",
+    img: "../pic/men2.avif",
+    class: "img1",
+    // categoies: "Khmer New Year Sale!",
+    similar: "tshirt",
+    usPrice: "$5.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+  },
+  {
+    // similar
+    id: 4,
+    subId: 1,
+    name: "img4",
+    img: "../pic/men4.avif",
+    class: "img1",
+    // categoies: "Khmer New Year Sale!",
+    similar: "tshirt",
+    usPrice: "$5.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+  },
+  {
+    // similar
+    id: 4,
+    subId: 1,
+    name: "img4",
+    img: "../pic/men5.avif",
+    class: "img1",
+    // categoies: "Khmer New Year Sale!",
+    similar: "tshirt",
+    usPrice: "$5.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+  },
+  {
+    // similar
+    id: 4,
+    subId: 1,
+    name: "img4",
+    img: "../pic/men6.avif",
+    class: "img1",
+    // categoies: "Khmer New Year Sale!",
     similar: "tshirt",
     usPrice: "$5.99",
     usPriceoff: "$14.95",
@@ -67,8 +131,8 @@ const dataSmall = [
   //   categoies: "Khmer New Year Sale!",
   // },
   {
-    id: 2,
-    subId: 2,
+    id: 5,
+    subId: 5,
     name: "img2",
     img: "../pic/s1.jpg",
     class: "img2",
@@ -82,8 +146,8 @@ const dataSmall = [
   },
 
   {
-    id: 3,
-    subId: 2,
+    id: 6,
+    subId: 5,
     name: "img1",
     img: "../pic/s2.jpg",
     class: "img1",
@@ -96,8 +160,8 @@ const dataSmall = [
     similar: "top",
   },
   {
-    id: 4,
-    subId: 2,
+    id: 7,
+    subId: 5,
     name: "img1",
     img: "../pic/s3.jpg",
     class: "img1",
@@ -110,8 +174,8 @@ const dataSmall = [
     similar: "top",
   },
   {
-    id: 5,
-    subId: 2,
+    id: 8,
+    subId: 5,
     name: "img1",
     img: "../pic/s4.jpg",
     class: "img1",
@@ -447,7 +511,8 @@ window.addEventListener("DOMContentLoaded", () => {
   // Use "categoies" since it's what's used in your data — but fix in real data!
   const category = product.categoies;
   if (!category) {
-    document.body.innerHTML = "<h2>This product has no category!</h2>";
+    document.body.innerHTML =
+      '    <a href="../index.html"><img src="../pic/nott.gif" alt="" class="w-100 h-auto"></a>';
     return;
   }
   // Get all images from products in the same category
@@ -570,21 +635,14 @@ btnSub.addEventListener("click", function () {
     alert("Please choose a quantity greater than 0.");
     return;
   }
+
   // ✅ Update total result
   totalQuantity += quantity;
   result.innerHTML = totalQuantity;
-  qtryitem.innerHTML = "Quantity: " + totalQuantity;
-  sizeitem.innerHTML += `Your Ordered: [${selectedSize.textContent}: ${quantity}] `;
+
   // ✅ Get selected image
   const selectedImageSrc = document.getElementById("mainImage").src;
-  // ✅ Show preview
-  let previewImg = document.querySelector(".cart-preview-img");
-  if (!previewImg) {
-    previewImg = document.createElement("img");
-    previewImg.classList.add("cart-preview-img");
-    document.body.appendChild(previewImg);
-  }
-  previewImg.src = selectedImageSrc;
+
   // ✅ Add to cart
   const cartItem = {
     id: product.id,
@@ -599,6 +657,7 @@ btnSub.addEventListener("click", function () {
     MaxQty: product.MaxQuantity,
   };
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
   // ✅ Check if same size already in cart — if so, update quantity
   const existingItem = cart.find(
     (item) => item.id === product.id && item.size === cartItem.size
@@ -610,51 +669,116 @@ btnSub.addEventListener("click", function () {
     cart.push(cartItem);
   }
   localStorage.setItem("cart", JSON.stringify(cart));
-  // ✅ Calculate total price for this added item
+
+  // ✅ Add UI preview
+  const sizeDiv = document.createElement("div");
+  sizeDiv.classList.add("ordered-size");
+  sizeDiv.setAttribute("data-size", selectedSize.textContent);
+  sizeDiv.innerHTML = `Your Ordered: [${selectedSize.textContent}: ${quantity}] 
+    <button class="removeSizeBtn btn-size mt-2" data-size="${selectedSize.textContent}"><i class="bi bi-trash3-fill"></i></button>`;
+  sizeitem.appendChild(sizeDiv);
+  // ✅ Add remove handler
+  sizeDiv
+    .querySelector(".removeSizeBtn")
+    .addEventListener("click", function () {
+      const sizeToRemove = this.getAttribute("data-size");
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart = cart.filter((item) => item.size !== sizeToRemove);
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      sizeDiv.remove();
+
+      // Recalculate totals
+      totalQuantity = 0;
+      let totalCost = 0;
+      cart.forEach((item) => {
+        totalQuantity += item.quantity;
+        const price = parseFloat(item.usPriceoff.replace("$", ""));
+        totalCost += price * item.quantity;
+      });
+
+      result.innerHTML = totalQuantity;
+      qtryitem.innerHTML = "Quantity: " + totalQuantity;
+      totalPrice.innerHTML = "Total US $" + totalCost.toFixed(2);
+      alert(`Removed size ${sizeToRemove} from cart.`);
+      const previewImg1 = document.querySelector(".cart-preview-img");
+      if (previewImg1 && totalQuantity == 0) {
+        previewImg1.src = "";
+      }
+    });
+
+  // ✅ Update quantity and price
+  qtryitem.innerHTML = "Quantity: " + totalQuantity;
+
   const cleanPrice = parseFloat(product.usPrice.replace("$", ""));
   const itemTotalPrice = cleanPrice * totalQuantity;
-  console.log("Cart item added:", cartItem);
-  alert(
-    `Added to cart: ${cartItem.name} [Size: ${cartItem.size}, Qty: ${cartItem.quantity}]\n` +
-      `Price per item: ${product.usPrice}\n` +
-      `Total for this item: $${itemTotalPrice.toFixed(2)}`
-  );
-  totalPrice.textContent = "Total US $" + itemTotalPrice;
-  // ✅ Reset input
-  resultQTY.innerHTML = 0;
-  selectedSize.classList.remove("sizeSelected");
-  // ✅ Display product details
+  totalPrice.textContent = "Total US $" + itemTotalPrice.toFixed(2);
 
+  // ✅ Show preview
+  let previewImg = document.querySelector(".cart-preview-img");
+  if (!previewImg) {
+    previewImg = document.createElement("img");
+    previewImg.classList.add("cart-preview-img");
+    document.body.appendChild(previewImg);
+  }
+  previewImg.src = selectedImageSrc;
+
+  // ✅ Display product details
   if (udpricevart || offPricecart || usPriceoffcart) {
     udpricevart.textContent = product.usPrice;
     offPricecart.textContent = product.Priceoff;
     usPriceoffcart.textContent = product.usPriceoff;
     typeOfShirtcart.textContent = product.typeOfShirt;
   }
+
+  // ✅ Reset input
+  resultQTY.innerHTML = 0;
+  selectedSize.classList.remove("sizeSelected");
+
+  // ✅ Activate clear button
   const btnclear = document.querySelector(".btn-clear");
-  btnclear.innerHTML = "ClearForm";
+  // btnclear.innerHTML = "ClearForm";
   btnclear.classList.add("active");
+
   btnclear.addEventListener("click", function () {
-    localStorage.removeItem("cart"); // Clear all cart data
-    // Optional: reset UI elements
+    localStorage.removeItem("cart");
     totalQuantity = 0;
     result.innerHTML = 0;
     qtryitem.innerHTML = 0;
     sizeitem.innerHTML = "";
     usPriceoffcart.innerHTML = "";
     offPricecart.innerHTML = "";
-    usPriceoffcart.innerHTML = "";
     udpricevart.innerHTML = "";
     totalPrice.innerHTML = "";
-    typeOfShirtcart.innerHTML = "No Information";
+    typeOfShirtcart.textContent = "No Information";
+
     const previewImg = document.querySelector(".cart-preview-img");
     if (previewImg) {
       previewImg.src = "";
     }
+    // Reset size buttons
+    document.querySelector(".size-Xs")?.classList.remove("sizeSelected");
+    document.querySelector(".size-S")?.classList.remove("sizeSelected");
+    document.querySelector(".size-M")?.classList.remove("sizeSelected");
+    document.querySelector(".size-L")?.classList.remove("sizeSelected");
+    document.querySelector(".size-Xs").textContent = "XS";
+    document.querySelector(".size-S").textContent = "S";
+    document.querySelector(".size-M").textContent = "M";
+    document.querySelector(".size-L").textContent = "L";
+
     alert("Cart has been cleared.");
     btnclear.classList.remove("active");
   });
+
+  alert(
+    `Added to cart: ${cartItem.name} [Size: ${cartItem.size}, Qty: ${cartItem.quantity}]\n` +
+      `Price per item: ${product.usPrice}\n` +
+      `Total for this item: $${itemTotalPrice.toFixed(2)}`
+  );
+  console.log(quantity);
+  console.log(totalQuantity);
 });
+
 // similar
 
 const wrappersimilar = document.querySelector(".wrapper-similar");
@@ -667,15 +791,23 @@ if (product.id == id) {
     })
     .map((a) => {
       return ` 
-            <div class="col-lg-3 mb-3 col-6">
+            <div class="col-lg-3 mb-4 col-6">
                 <div class="image-card-wrapper w-100 overflow-hidden">
                     <a href="data.html?id=${a.id}">
                         <img src="${a.img}" class="${a.class}" alt="${a.name}">
                     </a>
                 </div>
-                <div class="wrapper-similar-text mt-3">
-                    <h5 class="fw-bold text-dark m-0">US ${a.usPrice}</h5>
-                    <p class="fw-light pt-1">${a.typeOfShirt}</p>
+                <div class="wrapper-similar-text mt-3 overflow-hidden">
+                    <div class="wrapper-hover">
+                    <h5 class="fw-bold text-dark m-0 price-text">US ${a.usPrice}</h5>
+                                    <div class="flex-img d-flex justify-content-between align-items-center"> 
+                                    <p class="fw-light pt-1 mb-0">${a.typeOfShirt}</p>
+                                    <a href="data.html?id=${a.id}">
+                        <img src="${a.img}" class="${a.class} img-price" alt="${a.name}" style="width:35px;height: 35px;">
+                    </a>
+                               
+                </div>
+                </div>
                 </div>
             </div>
           `;

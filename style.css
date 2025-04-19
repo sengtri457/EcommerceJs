@@ -66,7 +66,7 @@ body {
     line-height: 1.5;
     color: #555;
     text-align: left;
-    background-color: #000000;
+    background-color: #ffffff;
     transition: all 0.4s ease-in-out;
 }
 
@@ -682,7 +682,7 @@ h1 {
 .image-card1 img,
 .image-card2 img {
     width: 100%;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     transition: all 0.4s ease-in-out;
 }
 
@@ -776,7 +776,7 @@ h1 {
 
 /* Khmer */
 .Khmer {
-    color: var(--light);
+    color: var(--dark);
 
 }
 
