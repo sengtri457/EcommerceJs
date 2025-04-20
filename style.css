@@ -40,6 +40,12 @@ h2 {
     /* min: 24px, max: 40px */
 }
 
+h3 {
+    font-family: "Product Sans", Poppins;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    /* min: 24px, max: 40px */
+}
+
 h4 {
     font-family: "Product Sans", Poppins;
     font-size: clamp(1.5rem, 4vw, 1.5rem);

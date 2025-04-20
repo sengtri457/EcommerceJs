@@ -49,6 +49,16 @@ li:hover {
     letter-spacing: 2px;
 }
 
+.h3-men {
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+}
+
+.h3-men:hover {
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
 ::-webkit-scrollbar {
     width: 0;
 }
@@ -100,7 +110,11 @@ li:hover {
 }
 
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 767px) {
+    .navbar {
+        position: relative;
+    }
+
     .wrapper-ul-1 {
         position: relative;
     }
@@ -118,34 +132,95 @@ li:hover {
         min-width: 15%;
     }
 
+    #clothes-flters li:nth-child(1n) {
+        min-width: 20%;
+    }
+
     #clothes-flters li:nth-child(2n) {
         min-width: 50%;
     }
 
     #clothes-flters li:nth-child(3n) {
-        min-width: 30%;
+        min-width: 40%;
     }
 
     #clothes-flters li:nth-child(4n) {
-        min-width: 25%;
+        min-width: 30%;
     }
 
     #clothes-flters li:nth-child(5n) {
-        min-width: 50%;
+        min-width: 60%;
     }
 
     #clothes-flters li:nth-child(6n) {
-        min-width: 25%;
+        min-width: 40%;
     }
 
     #clothes-flters li:nth-child(7n) {
-        min-width: 30%;
+        min-width: 40%;
     }
 
     .wrapper-ul-men {
         position: sticky;
-        top: 10%;
+        top: 0%;
         z-index: 100;
         background-color: var(--white);
+    }
+}
+
+@media screen and (min-width:767px) and (max-width: 1023px) {
+    .navbar {
+        position: relative;
+    }
+
+    .wrapper-ul-men {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: var(--white);
+    }
+
+    .wrapper-ul-1 {
+        position: relative;
+    }
+
+    #clothes-flters {
+        flex-wrap: nowrap;
+        position: relative;
+        overflow: scroll;
+    }
+
+    #clothes-flters li {
+        text-align: left;
+        padding-left: 10px;
+        min-width: 15%;
+    }
+
+    #clothes-flters li:nth-child(1n) {
+        min-width: 10%;
+    }
+
+    #clothes-flters li:nth-child(2n) {
+        min-width: 25%;
+    }
+
+    #clothes-flters li:nth-child(3n) {
+        min-width: 20%;
+    }
+
+    #clothes-flters li:nth-child(4n) {
+        min-width: 20%;
+    }
+
+    #clothes-flters li:nth-child(5n) {
+        min-width: 30%;
+    }
+
+    #clothes-flters li:nth-child(6n) {
+        min-width: 20%;
+    }
+
+    #clothes-flters li:nth-child(7n) {
+        min-width: 20%;
     }
 }

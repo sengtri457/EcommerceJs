@@ -703,7 +703,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const thumbnailContainer = document.getElementById("thumbnailContainer");
   const mainImage = document.getElementById("mainImage");
   if (!product) {
-    document.body.innerHTML = "<h2>Product not found!</h2>";
+    document.body.innerHTML =
+      '<a href="../index.html" classs"m-auto"><img src="../pic/4044.gif" alt="" class="w-100" style="height: 600px;margin"></a> ';
     return;
   }
   // Use "categoies" since it's what's used in your data — but fix in real data!
