@@ -22,23 +22,15 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../html/data.css">
-    <title>Data</title>
+    <link rel="stylesheet" href="./data.css">
+    <link rel="stylesheet" href="./MenSection.css">
+    <title>MenSection</title>
 </head>
-<style>
-    /* body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        padding: 30px;
-    } */
-</style>
 
 <body>
-
     <!-- Navbar -->
     <div class="navbar position-fi top-0 w-100 p-3">
-        <a href="../index.html" class="logo"><img src="../pic/logo-001.svg" alt=""></a>
+        <a href="../index.html" class="logo "><i class="bi bi-infinity"></i></a>
         <div class="hamburger" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -48,11 +40,9 @@
             <li><a class="listA nav-link" href="#">New
                 </a></li>
             <li class="dropdown">
-                <a class="listB  nav-link" href="./MenSection.html">Men
-
+                <a class="listB  nav-link">Men
                 </a>
             </li>
-
             <li class="dropdown">
                 <a class="listC  nav-link">Women
                 </a>
@@ -60,18 +50,18 @@
             <li><a href="#" class=" nav-link">Kids
                 </a></li>
             <li><a href="#" class="
-                     nav-link">Accessories
+                         nav-link">Accessories
                 </a></li>
         </ul>
         <ul class="menu gap-lg-3 gap-0 ">
             <li><a class="listA nav-link" href="">Support
                 </a></li>
             <li><a class="listA position-relative nav-link shop-btn" href="#" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result">
-                        99+
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger valueText">
+                        0
                     </span>
                     </button>
                 </a></li>
@@ -120,11 +110,11 @@
                     <div class="col-lg-3 col-6 wrapper-item-ul border-0">
                         <ul class="navbar-nav ">
                             <!-- <a href="">For Home</a> -->
-                            <li><a href=""><img src="../pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a>
+                            <li><a href=""><img src="./pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a>
                             </li>
-                            <li><a href=""><img src="../pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a>
+                            <li><a href=""><img src="./pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a>
                             </li>
-                            <li><a href=""><img src="../pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a>
+                            <li><a href=""><img src="./pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a>
                             </li>
                         </ul>
                     </div>
@@ -254,191 +244,68 @@
         </div>
     </div>
     <!-- offcanvas -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header pb-0">
-            <h5 class="offcanvas-title text-dark fw-bolder" id="offcanvasRightLabel"><i class="fa-regular fa-heart"></i>
-            </h5>
-            <button type="button" class="btn-close fw-bolder" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body wrapper-items pt-0">
-            <hr class="text-bg-dark border-2 ">
-            <article class="pricecart p-0 mt-2">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h5 class="text-dark fw-bold">Ordered Review</h5>
-                        <span class="usPricecart"></span>
-                        <span class="offPricecart "></span>
-                        <span class="usPriceoffcart"></span><br>
-                        <span class="totalPrice"></span>
-                        <h5 class="typeOfShirtcart " style="color: black;padding: 0.5rem 0rem;"></h5>
-                        <h5 class="sizeitem"></h5>
-                        <h5 class="qtyitem"></h5>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="cart-preview w-100">
-                            <h5 class="text-dark fw-bold text-right">Cart Preview</h5>
-                            <img class="cart-preview-img" src="" width="100" />
-                            <p class="cart-preview-size"></p>
-                            <p class="cart-preview-qty"></p>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn-clear btn-size"><i class="bi bi-trash3-fill"></i></button>
-            </article>
+        <div class="offcanvas-body small">
+            <span class="sp"></span>
+            <img src="" alt="" class="spimg">
+            <img src="" alt="" class="spimg1">
         </div>
     </div>
     <!-- eend Nav -->
-    <!-- start Product -->
-    <div class="container-fluid container-xxl">
-        <div class="row" data-aos="zoom-in">
-            <div class="col-lg-5 col-12">
-                <div class="row">
-                    <div class="col-lg-3 col-2">
-                        <div class="thumbnails" id="thumbnailContainer"></div>
-                    </div>
-                    <div class="col-lg-9 col-10">
-                        <div class="main-display">
-                            <img id="mainImage" src="" alt="Main Image" class="w-100  mainimg">
-                            <div class="buttons">
-                                <button class="Previous" onclick="prevImage()"><i
-                                        class="fa-solid fa-chevron-left"></i></button>
-                                <button class="next" onclick="nextImage()"><i
-                                        class="fa-solid fa-chevron-right"></i></button>
+    <div class="container-fluid d-block">
+    </div>
+    <div class="container-fluid d-block ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2">
+                    <ul id="clothes-flters" class="position-fixed">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <article class="similar mt-4">
+                                    <h3 class="fw-bold">Men Section</h3>
+                                </article>
                             </div>
                         </div>
-                    </div>
+                        <li data-id="all" class="custom-cursor-on-hover active ">
+                            All
+                        </li>
+                        <li data-id="Oversied T-Shirt" class="custom-cursor-on-hover">
+                            T-Shirt & Shirt
+                        </li>
+                        <li data-id="Hoddies" class="custom-cursor-on-hover">
+                            Hoddies
+                        </li>
+                        <li data-id="jacket" class="custom-cursor-on-hover">
+                            Jacket
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="col-lg-5 col-12">
-                <article class="price">
-                    <span class="usPrice"></span>
-                    <span class="offPrice "></span>
-                    <span class="usPriceoff"></span>
-                    <h5 class="typeOfShirt " style="color: black;padding: 0.5rem 0rem;"></h5>
-                </article>
-                <article class="size">
-                    <h5 style="color: black;padding: 0.5rem 0rem 0rem 0rem">Size</h5>
-                    <button class="btn-size size-Xs">XS</button>
-                    <button class="btn-size size-S">S</button>
-                    <button class="btn-size size-M">M</button>
-                    <button class="btn-size size-L">L</button>
-                </article>
-                <br>
-                <article>
-                    <h5 style="color: black;padding: 0.5rem 0rem;">Quantity</h5>
-                    <button class="btn-size decrement">-</button>
-                    <button class="btn-size resultQTY">0</button>
-                    <button class="btn-size increment">+</button>
-
-                </article>
-                <div class="row mt-3 mt-lg-0">
-                    <div class="col-lg-10">
-                        <article class="add mt-lg-5">
-                            <button class="btn-size w-100 addToBag btn-sub btn-add-to-cart" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add To bag</button>
-                        </article>
-                    </div>
-                    <div class="col-lg-2 px-lg-0 pt-2">
-                        <article class="add mt-lg-5">
-                            <button class="btn-size w-100 addToBag fav"><i class="fa-regular fa-heart"></i></button>
-                        </article>
-                    </div>
-                </div>
-                <!-- dropdown info -->
-                <div class="container my-4">
-                    <div class="row w-100 wrapper-drop">
-                        <div class="col-lg-12">
-                            <!-- Dropdown Item 1 -->
-                            <div class="dropdown-header">
-                                <div class="wrapper-info-header">
-                                    <h5 style="color: black;padding: 0.5rem 0rem;">Model info</h5>
-                                    <i class="fa-solid fa-chevron-down chevron"></i>
-                                </div>
-                                <div class="wrapper-infoText">
-                                    <div class="icon-text">
-                                        <h3>
-                                            <i class="bi bi-truck"></i>
-                                        </h3>
-                                        <div class="w-100">
-                                            <h6 class="m-0 fw-bold mb-1">Fast Delivery</h6>
-                                            <p>From 1 - 2 days</p>
-                                        </div>
-                                    </div>
-                                    <div class=" icon-text">
-                                        <h3>
-                                            <i class="bi bi-headset"></i>
-                                        </h3>
-                                        <div class="w-100">
-                                            <h6 class="m-0 fw-bold mb-1">Support hotline</h6>
-                                            <p>(+855) 081 999 716</p>
-                                        </div>
-                                    </div>
-                                    <div class="icon-text">
-                                        <h3>
-                                            <i class="bi bi-credit-card"></i>
-                                        </h3>
-                                        <div class="w-100">
-                                            <h6 class="m-0 fw-bold mb-1">Easy payment</h6>
-                                            <p>Many forms</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="dropdown-header">
-                                <div class="wrapper-info-header">
-                                    <h5 style="color: black;padding: 0.5rem 0rem;">Model info</h5>
-                                    <i class="fa-solid fa-chevron-down chevron"></i>
-                                </div>
-                                <div class="wrapper-infoText d-block overflow-hidden">
-                                    <div class="w-100">
-                                        <br>
-                                        <h6 class="m-0 fw-light mb-1 text-dark">Model is 161 cm tall / 43 kg weight
-                                            and is
-                                            wearing size S.</h6><br><br>
-                                        <p>Code. 2222410990</p><br>
-                                        <p>Oversized t-shirt featuring short sleeves with front graphic <br> design
-                                            printed
-                                            and round neck
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="col-lg-10">
+                    <div class="row wrapper-similar" data-aos="fade-up">
+                        <!-- <div class="col-lg-3 mb-3 col-6 ">
+                        <div class="image-card-wrapper w-100 overflow-hidden">
+                            <a href="data.html?id=${a.id}">
+                                <img src="${a.img}" class="${a.class}" alt="${a.name}">
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-0">
-            </div>
-        </div>
-        <!-- end dropdown info -->
-        <!-- end items -->
-        <article class="similar mt-4 mb-4">
-            <h3 class="fw-bold">Similar item</h3>
-        </article>
-        <div class="row wrapper-similar" data-aos="fade-up">
-            <div class="col-lg-3 mb-3 col-6 ">
-                <div class="image-card-wrapper w-100 overflow-hidden">
-                    <a href="data.html?id=${a.id}">
-                        <img src="${a.img}" class="${a.class}" alt="${a.name}">
-                    </a>
-                </div>
-                <div class="wrapper-similar-text mt-5">
-                    <!-- <div class="wrapper-hover">
-                        <img src="" alt="" style="width: 100px;height: 100px;" class="img-price">
-                        <h5 class="fw-bold"></h5>
-                    <p class="fw-light"></p>
+                        <div class="wrapper-similar-text mt-5">
+                        </div>
                     </div> -->
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 
-
-    <img id="product-img" class="img-fluid" />
-    <!-- <h2 id="product-name"></h2> -->
     <script src="../index.js">
     </script>
-    <script src="data.js"></script>
+    <script src="./MenSection.js"></script>
+    <!-- <script src="data.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

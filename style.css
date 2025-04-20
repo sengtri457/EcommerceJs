@@ -1102,3 +1102,11 @@ footer p {
 
 
 }
+
+.btn-clear {
+    opacity: 0;
+}
+
+.btn-clear.active {
+    opacity: 1;
+}

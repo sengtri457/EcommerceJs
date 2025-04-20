@@ -288,13 +288,6 @@
       width: 100%;
   }
 
-  .btn-clear {
-      opacity: 0;
-  }
-
-  .btn-clear.active {
-      opacity: 1;
-  }
 
   .img-price {
       opacity: 0;
