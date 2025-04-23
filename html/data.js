@@ -1534,6 +1534,34 @@ const dataSmall = [
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$255.00",
   },
+
+  // Women
+  {
+    id: 200,
+    subId: 40,
+    name: "img1",
+    img: "../pic/womenshort1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale29",
+    usPrice: "$40.99",
+    usPriceoff: "$60.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Pants And Tights",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subleg1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale29",
+    usPrice: "$30.99",
+    usPriceoff: "$50.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Legging",
+    MaxQuantity: 50,
+    similar: "top",
+  },
 ];
 
 let imageList = [];
