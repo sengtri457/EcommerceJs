@@ -35,6 +35,51 @@ toggleHover(
   document.querySelector(".listC"),
   document.querySelector(".wrapper-ul2")
 );
+toggleHover(
+  document.querySelector(".listD"),
+  document.querySelector(".wrapper-ul3")
+);
+toggleHover(
+  document.querySelector(".listE"),
+  document.querySelector(".wrapper-ul4")
+);
+
+const searchData = [
+  {
+    id: 1,
+    name: "MenSection",
+  },
+  {
+    id: 2,
+    name: "WoemenSection",
+  },
+];
+const inputsearch = document.querySelector(".input-search");
+const searchButton = document.querySelector(".search-button"); // Assuming a button with this class exists
+
+function handleSearch() {
+  const inputValue = inputsearch.value.toLowerCase();
+  const matchedItem = searchData.find(
+    (key) => inputValue === key.name.toLowerCase()
+  );
+  if (matchedItem) {
+    window.location.href = `./html/${matchedItem.name}.html`;
+  } else {
+    alert("No matching section found.");
+  }
+}
+inputsearch.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    handleSearch();
+  }
+});
+window.addEventListener("DOMContentLoaded", () => {
+  inputsearch.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  });
+});
 
 // nav fix
 const navbar = document.querySelector(".navbar");

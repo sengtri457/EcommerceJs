@@ -109,6 +109,14 @@ li:hover {
     position: fixed;
 }
 
+.wrapper-ul,
+.wrapper-ul1,
+.wrapper-ul2,
+.wrapper-ul3,
+.wrapper-ul4 {
+    background-color: #ffffff;
+}
+
 
 @media screen and (max-width: 767px) {
     .navbar {

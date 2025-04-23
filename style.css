@@ -121,7 +121,9 @@ h1 {
 
 .wrapper-ul ul li,
 .wrapper-ul1 ul li,
-.wrapper-ul2 ul li {
+.wrapper-ul2 ul li,
+.wrapper-ul3 ul li,
+.wrapper-ul4 ul li {
     padding: 0px 20px 5px 5px;
 }
 
@@ -207,19 +209,64 @@ h1 {
 
 
 .wrapper-ul {
+    height: 0;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     transition: all 0.4s ease-in-out;
-    overflow: hidden;
     z-index: -1;
     opacity: 0;
     visibility: hidden;
     /* padding: 10px; */
 }
 
+
+
+.wrapper-ul3 {
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    /* padding: 10px; */
+}
+
+.wrapper-ul3.active {
+    height: 300px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+
+}
+
+.wrapper-ul4 {
+    height: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    /* padding: 10px; */
+}
+
+.wrapper-ul4.active {
+    height: 300px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+
+}
+
 .wrapper-ul.active {
+    height: 300px;
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
@@ -227,6 +274,7 @@ h1 {
 }
 
 .wrapper-ul2 {
+    height: 0;
     position: absolute;
     top: 100%;
     left: 0;
@@ -240,12 +288,18 @@ h1 {
 }
 
 .wrapper-ul2.active {
+    height: 300px;
     opacity: 1;
     visibility: visible;
 
 }
 
+.container-wrapper {
+    width: 75%;
+}
+
 .wrapper-ul1 {
+    height: 0;
     position: absolute;
     top: 100%;
     left: 0;
@@ -262,6 +316,7 @@ h1 {
 .wrapper-ul1.active {
     opacity: 1;
     visibility: visible;
+    height: 300px;
 
 }
 
@@ -290,7 +345,7 @@ h1 {
 }
 
 .wrapper-item-ul ul li a:hover {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 /* .wrapper-item-ul ul li:hover {
@@ -307,14 +362,16 @@ h1 {
 }
 
 .title-ul:hover {
-    letter-spacing: 2px;
+    transform: skew(-10deg);
     color: var(--dark);
 }
 
 
 .wrapper-ul,
 .wrapper-ul1,
-.wrapper-ul2 {
+.wrapper-ul2,
+.wrapper-ul3,
+.wrapper-ul4 {
     background-color: var(--light);
 }
 
@@ -1018,6 +1075,89 @@ footer p {
 
 
 @media (max-width: 1000px) {
+    .container-wrapper {
+        width: 100%;
+    }
+
+    .wrapper-ul {
+        text-align: left;
+        top: 100px;
+        height: 380px;
+        overflow: scroll;
+    }
+
+    .wrapper-item-ul ul li a {
+        font-size: 0.7rem;
+    }
+
+    .wrapper-item-ul ul li a:hover {
+        letter-spacing: 0;
+    }
+
+    .wrapper-ul1 {
+        text-align: left;
+        top: 70px;
+        height: 380px;
+        overflow: scroll;
+        background-color: var(--light);
+        z-index: 9999;
+    }
+
+    .wrapper-item-ul1 ul li a {
+        font-size: 0.7rem;
+    }
+
+    .wrapper-item-ul1 ul li a:hover {
+        letter-spacing: 0;
+    }
+
+    .wrapper-ul2 {
+        text-align: left;
+        top: 0;
+        height: 380px;
+        overflow: scroll;
+    }
+
+    .wrapper-item-ul2 ul li a {
+        font-size: 0.7rem;
+    }
+
+    .wrapper-item-ul2 ul li a:hover {
+        letter-spacing: 0;
+    }
+
+    .wrapper-ul3 {
+        text-align: left;
+        top: 0;
+        height: 380px;
+        overflow: scroll;
+    }
+
+    .wrapper-item-ul3 ul li a {
+        font-size: 0.7rem;
+    }
+
+    .wrapper-item-ul3 ul li a:hover {
+        letter-spacing: 0;
+    }
+
+    .wrapper-ul4 {
+        text-align: left;
+        top: 70px;
+        height: 380px;
+        overflow: scroll;
+        background-color: var(--light);
+        z-index: 9999;
+    }
+
+    .wrapper-item-ul4 ul li a {
+        font-size: 0.7rem;
+    }
+
+    .wrapper-item-ul4 ul li a:hover {
+        letter-spacing: 0;
+    }
+
     .navbar .menu {
         display: none;
         width: 100%;
