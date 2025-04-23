@@ -72,7 +72,7 @@ body {
     line-height: 1.5;
     color: #555;
     text-align: left;
-    background-color: #ffffff;
+    background-color: var(--light);
     transition: all 0.4s ease-in-out;
 }
 
@@ -131,6 +131,11 @@ h1 {
     font-size: var(--font-small);
     transition: color 0.3s ease;
     padding: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar .menu a:hover {
+    text-decoration: underline;
 }
 
 .nav-link {
@@ -211,7 +216,7 @@ h1 {
     z-index: -1;
     opacity: 0;
     visibility: hidden;
-
+    /* padding: 10px; */
 }
 
 .wrapper-ul.active {
@@ -274,7 +279,7 @@ h1 {
 .wrapper-item-ul ul li a {
     font-size: var(--font-small);
     font-weight: var(--weight-small);
-    color: var(--light);
+    color: var(--dark);
     transition: all 0.4s ease-in-out;
     text-decoration: none;
     padding: 10px;
@@ -293,16 +298,24 @@ h1 {
 } */
 
 .title-ul {
+    font-size: var(--font-small);
+    font-weight: var(--weight-medum);
     color: var(--gray);
     padding-left: 1rem;
     padding-bottom: 0.5rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.title-ul:hover {
+    letter-spacing: 2px;
+    color: var(--dark);
 }
 
 
 .wrapper-ul,
 .wrapper-ul1,
 .wrapper-ul2 {
-    background-color: var(--dark);
+    background-color: var(--light);
 }
 
 
