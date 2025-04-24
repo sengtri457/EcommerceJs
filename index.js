@@ -86,21 +86,35 @@ const navbar = document.querySelector(".navbar");
 const a = document.querySelectorAll(".nav-link");
 const dropbtn = document.querySelector(".dropbtn");
 console.log(a);
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 40) {
+//     navbar.classList.add("active");
+//     dropbtn.classList.add("active");
+//     a.forEach((item) => {
+//       item.classList.add("active");
+//     });
+//   } else {
+//     navbar.classList.remove("active");
+//     a.forEach((item) => {
+//       item.classList.remove("active");
+//     });
+//     dropbtn.classList.remove("active");
+//   }
+// });
+let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 40) {
-    navbar.classList.add("active");
-    dropbtn.classList.add("active");
-    a.forEach((item) => {
-      item.classList.add("active");
-    });
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > lastScrollY) {
+    // Scrolling down
+    navbar.style.transform = "translateY(-80px)";
   } else {
-    navbar.classList.remove("active");
-    a.forEach((item) => {
-      item.classList.remove("active");
-    });
-    dropbtn.classList.remove("active");
+    // Scrolling up
+    navbar.style.transform = "translateY(0)";
   }
+
+  lastScrollY = currentScrollY;
 });
+
 const data = [
   {
     id: 1,
@@ -334,75 +348,96 @@ const data = [
   // Recent Product
   {
     id: 25,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
+    name: "Oversied Tshirt",
     price: "223$",
-    img: "./pic/20240918040216.webp",
+    img: "./pic/main1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$235.00",
+    categoies: "Recent Product",
   },
   {
     id: 26,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
+    name: "Oversied Tshirt",
     price: "123$",
-    img: "./pic/20240918040216.webp",
+    img: "./pic/main1.avif",
+
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$125.00",
+    categoies: "Recent Product",
   },
   {
     id: 27,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
+    name: "Oversied Tshirt",
+
     price: "300$",
-    img: "./pic/20240918040216.webp",
+    img: "./pic/main1.avif",
+
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$335.00",
+    categoies: "Recent Product",
   },
   {
     id: 28,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
+    name: "Oversied Tshirt",
+
     price: "$234",
-    img: "./pic/20240918040216.webp",
+    img: "./pic/main1.avif",
+
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$255.00",
+    categoies: "Recent Product",
   },
   {
     id: 29,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
+    name: "Oversied Tshirt",
+
     price: "$234",
-    img: "./pic/20240918040216.webp",
+    img: "./pic/main1.avif",
+
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$255.00",
+    categoies: "Recent Product",
   },
   {
     id: 30,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
+    name: "Oversied Tshirt",
+
     price: "$234",
-    img: "./pic/20240918040216.webp",
+    img: "./pic/main1.avif",
+
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$255.00",
+    categoies: "Recent Product",
   },
   {
     id: 31,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
+    name: "Oversied Tshirt",
+
     price: "$234",
-    img: "./pic/20240918040216.webp",
+    img: "./pic/main1.avif",
+
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$255.00",
+    categoies: "Recent Product",
   },
   {
     id: 32,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
+    name: "Oversied Tshirt",
+
     price: "$234",
-    img: "./pic/20240918040216.webp",
+    img: "./pic/main1.avif",
+
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$255.00",
+    categoies: "Recent Product",
   },
 ];
 const gallerycontainer = document.querySelector(".gallery-container");
@@ -503,7 +538,7 @@ gallerycontainer2.innerHTML = data
   .join("");
 wrapperrecent.innerHTML = data
   .filter((r) => {
-    return r.name == "ASUS Zenbook 14X OLED (UX5401)";
+    return r.categoies == "Recent Product";
   })
   .map((a) => {
     return ` 
