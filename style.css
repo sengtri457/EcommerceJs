@@ -25,18 +25,21 @@ section {
     --danger: #dc3545;
     --light: #ECF4FF;
     --dark: #120F2D;
+    --podium-cds-typography-960-to-1919-display2: 800 4.75rem / .9 'Nike Futura ND', 'Helvetica Now Text Medium', Helvetica, Arial, sans-serif;
 }
 
 h1 {
     font-size: clamp(2rem, 5vw, 6rem);
-    font-family: 'Lobster Two', cursive;
-    font-weight: 700;
+    font-family: "Modak", system-ui;
+    font-weight: 500;
 }
 
 
 h2 {
     font-family: "Product Sans", Poppins;
+    font-weight: var(--weight-medum);
     font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: black;
     /* min: 24px, max: 40px */
 }
 
@@ -691,11 +694,28 @@ h1 {
 /* categories */
 .wrapper-btn {
     position: absolute;
-    bottom: 10%;
-    left: 40%;
+    bottom: 5%;
+    left: 25%;
     margin: auto;
     transition: all 0.4s ease-in-out;
     opacity: 0;
+}
+
+.wrapper-btn button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    background-color: var(--dark);
+    color: var(--light);
+    box-shadow: none;
+    border: none;
+}
+
+.wrapper-btn button:hover {
+
+    background-color: var(--light);
+    color: var(--dark);
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px var(--dark);
 }
 
 .wrapper-categories img {
@@ -755,9 +775,9 @@ h1 {
     bottom: 0;
     text-align: left;
     background: linear-gradient(to right,
-            #0c1526,
-            rgba(0, 0, 0, 0.5),
-            #0c1526);
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4));
 
     z-index: 1;
 }
@@ -856,12 +876,20 @@ h1 {
 }
 
 .carousel-indicators [data-bs-target] {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 5px 0;
-    background: var(--color-main);
+    background: var(--dark);
     border: 5px solid #FFFFFF;
     border-radius: 25px;
+}
+
+.log-brand img {
+    transition: all 0.4s ease-in-out;
+}
+
+.log-brand:hover>img {
+    transform: translateY(-10px);
 }
 
 @keyframes zoomInOut {
@@ -1192,14 +1220,7 @@ footer {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-footer h4,
-h5 {
-    color: var(--color-main);
-}
 
-footer p {
-    color: var(--light);
-}
 
 .list-unstyled li {
     margin-bottom: 0.5rem;

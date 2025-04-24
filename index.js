@@ -272,7 +272,7 @@ const data = [
     usPrice: "$30.99",
     usPriceoff: "$40.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied CropTop",
+    typeOfShirt: "Oversied Polo",
   },
   {
     id: 84,
@@ -347,96 +347,164 @@ const data = [
 
   // Recent Product
   {
-    id: 25,
-    name: "Oversied Tshirt",
+    id: 500,
+    name: "Air Jordan 5 Retro",
     price: "223$",
-    img: "./pic/main1.avif",
+    img: "./pic/jordanP1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$235.00",
     categoies: "Recent Product",
   },
   {
-    id: 26,
-    name: "Oversied Tshirt",
-    price: "123$",
-    img: "./pic/main1.avif",
-
+    id: 501,
+    name: "Tatum3",
+    price: "125$",
+    img: "./pic/jordanP2.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$205.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 502,
+    name: "Air Jordan 1 Low G",
+    price: "140$",
+    img: "./pic/jordanP3.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$195.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 503,
+    name: "Air Jordan 3 Retro",
+    price: "200$",
+    img: "./pic/jordanP4.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$305.00",
+    categoies: "Recent Product",
+  },
+  // bag
+  {
+    id: 504,
+    name: "Nike Utility Power",
+    price: "100$",
+    img: "./pic/bagP1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$125.00",
     categoies: "Recent Product",
   },
   {
-    id: 27,
-    name: "Oversied Tshirt",
-
-    price: "300$",
-    img: "./pic/main1.avif",
-
+    id: 505,
+    name: "Nike Academy Team",
+    price: "57$",
+    img: "./pic/bagP2.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$335.00",
+    del: "$100.00",
     categoies: "Recent Product",
   },
   {
-    id: 28,
-    name: "Oversied Tshirt",
-
-    price: "$234",
-    img: "./pic/main1.avif",
-
+    id: 506,
+    name: "Nike Brasilia",
+    price: "70$",
+    img: "./pic/bagP3.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$85.00",
     categoies: "Recent Product",
   },
   {
-    id: 29,
-    name: "Oversied Tshirt",
-
-    price: "$234",
-    img: "./pic/main1.avif",
-
+    id: 507,
+    name: "Nike Brasilia 9.5",
+    price: "100$",
+    img: "./pic/bagP4.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$125.00",
     categoies: "Recent Product",
   },
   {
-    id: 30,
-    name: "Oversied Tshirt",
-
-    price: "$234",
-    img: "./pic/main1.avif",
-
+    id: 89,
+    name: "Women Short",
+    price: "30$",
+    img: "./pic/womenshort1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$125.00",
     categoies: "Recent Product",
   },
   {
-    id: 31,
-    name: "Oversied Tshirt",
-
-    price: "$234",
-    img: "./pic/main1.avif",
-
+    id: 87,
+    name: "Women Short",
+    price: "50.99$",
+    img: "./pic/skirt1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$70.00",
     categoies: "Recent Product",
   },
   {
-    id: 32,
-    name: "Oversied Tshirt",
-
-    price: "$234",
-    img: "./pic/main1.avif",
-
+    id: 91,
+    name: "Women Fleece",
+    price: "20.99$",
+    img: "./pic/fleecec1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$40.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 86,
+    name: "Women Hoddies",
+    price: "30.99$",
+    img: "./pic/hoddiewomen1.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$60.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 68,
+    name: "Oversied Polo",
+    price: "30.99$",
+    img: "./pic/subpolomen2-3.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$40.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 68,
+    name: "Oversied White Polo",
+    price: "40.99$",
+    img: "./pic/subpolomen3-3.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$50.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 1,
+    name: "Oversied Tshirt",
+    price: "8.99$",
+    img: "./pic/main1.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$15.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 24,
+    name: "Oversied Tshirt",
+    price: "30.99$",
+    img: "./pic/submenn8.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$45.00",
     categoies: "Recent Product",
   },
 ];
@@ -451,7 +519,7 @@ gallerycontainer.innerHTML = data
   })
   .map((a) => {
     return `
-      <div class="image-card " data-aos="zoom-in">
+      <div class="image-card overflow-hidden" data-aos="zoom-in">
         <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
@@ -482,7 +550,7 @@ gallerycontainer1.innerHTML = data
   })
   .map((a) => {
     return ` 
-             <div class="image-card1" data-aos="zoom-in">
+             <div class="image-card1 overflow-hidden" data-aos="zoom-in">
          <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
@@ -512,7 +580,7 @@ gallerycontainer2.innerHTML = data
   })
   .map((a) => {
     return ` 
-              <div class="image-card2" data-aos="zoom-in">
+              <div class="image-card2 overflow-hidden" data-aos="zoom-in">
         <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
@@ -542,7 +610,7 @@ wrapperrecent.innerHTML = data
   })
   .map((a) => {
     return ` 
-           <div class="col-lg-3 col-6 mb-2 mb-lg-0">
+           <div class="col-lg-3 col-6 mb-3 mb-lg-4 " data-aos="zoom-in">
            <article class="wrapper-recent">
            <div class="wrapper-img position-relative overflow-hidden">
                             <img src="${a.img}"" class="w-100">
