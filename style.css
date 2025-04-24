@@ -1397,6 +1397,9 @@ footer {
 
 
 @media (max-width: 1000px) {
+
+
+
     .btn-53 .original {
         font-size: 0.8rem;
     }
@@ -1600,7 +1603,7 @@ footer {
     .image-card,
     .image-card1,
     .image-card2 {
-        width: 90%;
+        width: 80%;
     }
 
 
@@ -1612,4 +1615,13 @@ footer {
 
 .btn-clear.active {
     opacity: 1;
+}
+
+@media screen and (min-width:767px) and (max-width: 1023px) {
+
+    .image-card,
+    .image-card1,
+    .image-card2 {
+        width: 30%;
+    }
 }
