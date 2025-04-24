@@ -47,11 +47,11 @@ toggleHover(
 const searchData = [
   {
     id: 1,
-    name: "MenSection",
+    name: "Men",
   },
   {
     id: 2,
-    name: "WoemenSection",
+    name: "Women",
   },
 ];
 const inputsearch = document.querySelector(".input-search");
@@ -63,7 +63,7 @@ function handleSearch() {
     (key) => inputValue === key.name.toLowerCase()
   );
   if (matchedItem) {
-    window.location.href = `./html/${matchedItem.name}.html`;
+    window.location.href = `./html/${matchedItem.name}Section.html`;
   } else {
     alert("No matching section found.");
   }
