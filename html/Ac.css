@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    overflow: hidden;
+}
+
+:root {
+    --font-button: 1.2rem;
+    --font-small: 1rem;
+    --weight-small: 500;
+    --font-medum: 1.3rem;
+    --weight-medum: 650;
+    --font-large: 2rem;
+    --weight-larger: 800;
+    --color-main: #2878EB;
+    --blue: #007bff;
+    --white: #fff;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #fe5d37;
+    --danger: #dc3545;
+    --light: #ECF4FF;
+    --dark: #120F2D;
+}
+
+.list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.list a {
+    font-size: var(--font-small);
+    text-decoration: none;
+    color: var(--dark);
+    border: 1px solid var(--dark);
+    padding: 0.5rem 1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+li {
+    transition: all 0.4s ease-in-out;
+}
+
+li:hover {
+    letter-spacing: 2px;
+}
+
+.h3-men {
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+}
+
+.h3-men:hover {
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+
+#clothes-flters li {
+    width: 100%;
+    cursor: pointer;
+    margin: 20px -3px 5px -3px;
+    color: var(--dark);
+    font-size: var(--font-small);
+    line-height: 15px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+/* #clothes-flters li:hover {
+    color: var(--light);
+    background-color: var(--color-main);
+} */
+.fa-person {
+    margin-right: 10px;
+}
+
+#clothes-flters {
+    padding: 0;
+    margin: -15px 0 30px 0;
+    list-style: none;
+    text-align: left;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#clothes-flters li.active {
+    color: var(--color-main);
+    transition: all 0.3s ease-in-out;
+}
+
+#clothes-flters li:hover {
+    color: var(--color-main);
+}
+
+.wrapper-ul-1 {
+    position: fixed;
+}
+
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        position: relative;
+    }
+
+    .wrapper-ul-1 {
+        position: relative;
+    }
+
+    #clothes-flters {
+        flex-wrap: nowrap;
+        position: relative;
+        overflow: scroll;
+
+    }
+
+    #clothes-flters li {
+        text-align: left;
+        padding-left: 10px;
+        min-width: 15%;
+    }
+
+    #clothes-flters li:nth-child(1n) {
+        min-width: 20%;
+    }
+
+    #clothes-flters li:nth-child(2n) {
+        min-width: 50%;
+    }
+
+    #clothes-flters li:nth-child(3n) {
+        min-width: 40%;
+    }
+
+    #clothes-flters li:nth-child(4n) {
+        min-width: 30%;
+    }
+
+    #clothes-flters li:nth-child(5n) {
+        min-width: 60%;
+    }
+
+    #clothes-flters li:nth-child(6n) {
+        min-width: 40%;
+    }
+
+    #clothes-flters li:nth-child(7n) {
+        min-width: 40%;
+    }
+
+    .wrapper-ul-men {
+        position: sticky;
+        top: 0%;
+        z-index: 100;
+        background-color: var(--white);
+    }
+}
+
+@media screen and (min-width:767px) and (max-width: 1023px) {
+    .navbar {
+        position: relative;
+    }
+
+    .wrapper-ul-men {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: var(--white);
+    }
+
+    .wrapper-ul-1 {
+        position: relative;
+    }
+
+    #clothes-flters {
+        flex-wrap: nowrap;
+        position: relative;
+        overflow: scroll;
+    }
+
+    #clothes-flters li {
+        text-align: left;
+        padding-left: 10px;
+        min-width: 15%;
+    }
+
+    #clothes-flters li:nth-child(1n) {
+        min-width: 10%;
+    }
+
+    #clothes-flters li:nth-child(2n) {
+        min-width: 25%;
+    }
+
+    #clothes-flters li:nth-child(3n) {
+        min-width: 20%;
+    }
+
+    #clothes-flters li:nth-child(4n) {
+        min-width: 20%;
+    }
+
+    #clothes-flters li:nth-child(5n) {
+        min-width: 30%;
+    }
+
+    #clothes-flters li:nth-child(6n) {
+        min-width: 20%;
+    }
+
+    #clothes-flters li:nth-child(7n) {
+        min-width: 20%;
+    }
+}
