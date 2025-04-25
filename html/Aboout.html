@@ -9,31 +9,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
         href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&amp;family=Inter:wght@600&amp;family=Lobster+Two:wght@700&amp;display=swap"
         rel="stylesheet">
     <!-- CSS Libraries -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Modak&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ruslan+Display&family=Titan+One&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Index</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../html/data.css">
+    <title>About</title>
 </head>
+<style>
+    .bg-about {
+
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../pic/headquarter.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 6rem);
+        font-family: "Modak", system-ui;
+        font-weight: 500;
+    }
+</style>
 
 <body>
     <!-- Navbar -->
     <div class="navbar  top-0 w-100 p-3">
         <div class="container p-2">
-            <a href="#" class="logo"><img src="../pic/Logo_NIKE.svg" alt="" style="width: 100px;"></a>
+            <a href="../index.html" class="logo"><img src="../pic/Logo_NIKE.svg" alt="" style="width: 100px;"></a>
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
@@ -53,8 +65,7 @@
                 <li><a href="./html/KidSection.html" class="listD nav-link">Kids
                     </a></li>
                 <li><a href="#" class=" listE
-
-                 nav-link">Accessories
+                         nav-link">Accessories
                     </a></li>
             </ul>
             <ul class="menu gap-lg-2 gap-0 ">
@@ -294,301 +305,56 @@
         </div>
     </div>
     <!-- end nav -->
-    <!-- start carousel -->
-    <div id="carouselExampleCaptions"
-        class="carousel slide position-relative carousel-slide pointer-event opacity-100 overflow-hidden"
-        data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class=""
-                aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"
-                class="active" aria-current="true"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"
-                class=""></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item">
-                <img src="./pic/banner3.avif" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-flex justify-content-center align-items-center">
-                    <div class="wrapper-caption ">
-                        <div data-aos="fade-down" class="aos-init aos-animate">
-                            <h5 class=" text-uppercase mb-md-3">Best Online Shop</h5>
-                            <h1 class="text-white mb-md-4">The Shoe That Make Fast Faster</h1>
-                            <div class="wrapper-btn-53 text-center m-auto">
-                                <button class="btn-53 m-auto">
-                                    <div class="original">Shop Now</div>
-                                    <div class="letters">
-                                        <span>G</span>
-                                        <span>E</span>
-                                        <span>T</span>
-                                        <span>S</span>
-                                        <span>T</span>
-                                        <span>A</span>
-                                        <span>R</span>
-                                        <span>T</span>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item active">
-                <img src="./pic/nikebanner.avif" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-flex justify-content-center align-items-center">
-                    <div class="wrapper-caption ">
-                        <h5 class=" text-uppercase mb-md-3">Best Online Shop</h5>
-                        <h1 class="text-white mb-md-4">Making Big Moves</h1>
-                        <div class="wrapper-btn-53 text-center m-auto">
-                            <button class="btn-53 m-auto">
-                                <div class="original">Shop Now</div>
-                                <div class="letters">
-                                    <span>G</span>
-                                    <span>E</span>
-                                    <span>T</span>
-                                    <span>S</span>
-                                    <span>T</span>
-                                    <span>A</span>
-                                    <span>R</span>
-                                    <span>T</span>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="./pic/nikebanner2.avif" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-flex justify-content-center align-items-center">
-                    <div class="wrapper-caption ">
-                        <h5 class="text-uppercase mb-md-3">Best Online Shop</h5>
-                        <h1 class="text-white mb-md-4">Add items, select sizes and quantities.</h1>
-                        <div class="wrapper-btn-53 text-center m-auto">
-                            <button class="btn-53 m-auto">
-                                <div class="original">Shop Now</div>
-                                <div class="letters">
-                                    <span>G</span>
-                                    <span>E</span>
-                                    <span>T</span>
-                                    <span>S</span>
-                                    <span>T</span>
-                                    <span>A</span>
-                                    <span>R</span>
-                                    <span>T</span>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end carousel -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body p-3">
-                    <div class="input-container">
-                        <input class="input input-search" name="text" type="text"
-                            placeholder="Search the internet..." />
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- offcanvas -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header pb-0">
-            <h5 class="offcanvas-title text-dark fw-bolder" id="offcanvasRightLabel"><i class="fa-regular fa-heart"></i>
-            </h5>
-            <button type="button" class="btn-close fw-bolder" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body wrapper-items pt-0">
-            <hr class="text-bg-dark border-2 ">
-            <article class="pricecart p-0 mt-2">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h5 class="text-dark fw-bold">Ordered Review</h5>
-                        <span class="usPricecart"></span>
-                        <span class="offPricecart "></span>
-                        <span class="usPriceoffcart"></span><br>
-                        <span class="totalPrice"></span>
-                        <h5 class="typeOfShirtcart " style="color: black;padding: 0.5rem 0rem;"></h5>
-                        <h5 class="sizeitem"></h5>
-                        <h5 class="qtyitem"></h5>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="cart-preview w-100">
-                            <h5 class="text-dark fw-bold text-right">Cart Preview</h5>
-                            <img class="cart-preview-img" src="" width="100" />
-                            <p class="cart-preview-size"></p>
-                            <p class="cart-preview-qty"></p>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn-clear btn-size"><i class="bi bi-trash3-fill"></i></button>
-            </article>
-        </div>
-    </div>
-    <!-- eend Nav -->
-    <!-- staer brand -->
-    <div class="container mt-5" data-aos="fade-down">
-        <div class="row row-cols-5 align-items-center log-brand">
-            <div class="col log-brand">
-                <img src="./pic/adidas.jpg" alt="" class="w-75 ">
-            </div>
-            <div class="col log-brand">
-                <img src="./pic/Logo_NIKE.svg" alt="" class="w-75 ">
-            </div>
-            <div class="col log-brand">
-                <img src="./pic/ouma.jpg" alt="" class="w-75 ">
-            </div>
-            <div class="col log-brand">
-                <img src="./pic/chanel.jpg" alt="" class="w-75 ">
-            </div>
-            <div class="col log-brand">
-                <img src="./pic/north.png" alt="" class="w-100 ">
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- end brand -->
-    <!-- staert categories -->
-    <div class="container mt-4 mb-4 container-xxl" data-aos="fade-up">
-        <div class="container text-center pb-5">
-            <h2>What We Have For You!</h2>
-        </div>
-        <div class="row wrapper-cate d-flex justify-content-center">
-            <div class="col-lg-3 col-6 mb-lg-0 mb-3">
-                <div class="wrapper-categories position-relative">
-                    <img src="./pic/shoes2.avif" alt="" class="w-100 h-auto">
-                    <div class="wrapper-btn">
-                        <a href="./html/ShoesMen.html">
-                            <button>Shop Now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class=" col-lg-3 col-6 mb-lg-0 mb-3">
-                <div class="wrapper-categories position-relative">
-                    <img src="./pic/asshirt.avif" alt="" class="w-100">
-                    <div class="wrapper-btn">
-                        <a href="./html/MenSection.html">
-                            <button>Shop Now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class=" col-lg-3 col-6 mb-lg-0 mb-3">
-                <div class="wrapper-categories position-relative">
-                    <img src="./pic/asho.avif" alt="" class="w-100">
-                    <div class="wrapper-btn">
-                        <a href="./html/MenSection.html">
-                            <button>Shop Now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class=" col-lg-3 col-6 mb-lg-0 mb-3">
-                <div class="wrapper-categories position-relative">
-                    <img src="./pic/aspants.avif" alt="" class="w-100">
-                    <div class="wrapper-btn">
-                        <a href="./html/MenSection.html">
-                            <button>Shop Now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ad start -->
-    <section class="advertisting mt-5 pt-lg-5">
-        <div class="row">
-            <div class="col-12">
-                <a href="./html/MenSection.html">
-                    <video width="100%" height="auto" autoplay loop controls muted>
-                        <source src="./pic/8533114-uhd_3840_2160_25fps.mp4" type="video/mp4">
-                    </video>
-                </a>
-            </div>
-        </div>
+    <section class="bg-about">
+        <div class="container d-block py-5 mb-5 m-auto">
+            <div class="container d-block py-5">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <h1 class="text-uppercase">About Us</h1>
+                        <p class="lead text-white">We are a team of passionate individuals dedicated to providing the
+                            best </p>
     </section>
-    <!-- end Ad -->
-    <div class="container-fluid container-xxl  mt-3">
-        <section class="wrapper-Khmer row">
-            <div class="col-12">
-                <div class="container-fluid mt-4">
-                    <h2 class="Khmer">Khmer New Year Sale!</h2>
-                </div>
-                <div class="gallery-wrapper position-relative">
-                    <button class="backBtn btn-floating-left hidden"><i class="bi bi-chevron-left"></i></button>
-                    <button class="nextBtn btn-floating"><i class="bi bi-chevron-right"></i></button>
-                    <div id="gallery" class="gallery-container position-relative ">
-                    </div>
-                </div>
+    <article>
+        <div class="container d-block mt-5">
+            <p>Everything we do is rooted in sport. Sport plays an increasingly important role in more and more people’s
+                lives, on and
+                off the field of play. It is central to every culture and society, and is core to our health and
+                happiness.
+            </p>
+            <br><br>
+            <h2>OUR PURPOSE</h2>
+            <div class="wrapper-pro mt-5 mb-5">
+                <img src="../pic/purpose_en_zs9gg0.jpg" alt="" class="w-100 h-auto">
             </div>
-        </section>
-    </div>
-    <div class="container-fluid container-xxl mt-3">
-        <section class="wrapper-Khmer row">
-            <div class="col-12">
-                <div class="container-fluid mt-4">
-                    <h2 class="Khmer">Lunar New Year Sale!</h2>
-                </div>
-                <div class="gallery-wrapper position-relative">
-                    <button class="backBtn1 btn-floating-left hidden"><i class="bi bi-chevron-left"></i></button>
-                    <button class="nextBtn1 btn-floating"><i class="bi bi-chevron-right"></i></button>
-                    <div id="gallery1" class="gallery-container1 position-relative ">
-                    </div>
-                </div>
+            <p class="mb-5">Our purpose, ‘Through sport, we have the power to change lives,’ guides the way we run our
+                company, how
+                we work with our
+                partners, how we create our products, and how we engage with our consumers. We will always strive to
+                expand the
+                boundaries of human possibility, to include and unite people in sport, and to create a more sustainable
+                world.</p>
+            <h2>OUR MISSION</h2>
+            <div class="wrapper-pro mt-5 mb-5">
+                <img src="../pic/Misson-en-03-2024_x6irvw.png" alt="" class="w-100 h-auto">
             </div>
-        </section>
-    </div>
-    <div class="container-fluid container-xxl mt-3">
-        <section class="wrapper-Khmer row">
-            <div class="col-12">
-                <div class="container-fluid mt-4">
-                    <h2 class="Khmer">New Year Sale!</h2>
-                </div>
-                <div class="gallery-wrapper position-relative">
-                    <button class="backBtn2 btn-floating-left hidden"><i class="bi bi-chevron-left"></i></button>
-                    <button class="nextBtn2 btn-floating"><i class="bi bi-chevron-right"></i></button>
-                    <div id="gallery2" class="gallery-container position-relative gallery-container2">
-                    </div>
-                </div>
-        </section>
-    </div>
-    <!-- recent Product -->
-    <section class="recent-product mt-5 container-xxl">
-        <div class="container-fluid">
-            <div class="title-recent-product p-2 mb-2">
-                <h2>Most Rating Product</h2>
-            </div>
-            <div class="container-fluid">
-                <div class="row wrapper-recent-product">
-                    <div class="col-lg-3 col-6 mb-2 mb-lg-0">
-                    </div>
-                </div>
-            </div>
+            <p>Athletes do not settle for average. And neither do we. We have a clear mission: To be the best sports
+                brand in the
+                world. Every day, we come to work to create and sell the best sports products in the world, and to offer
+                the best
+                service and consumer experience – and to do it all in a sustainable way. We are the best when we are the
+                credible,
+                inclusive, and sustainable leader in our industry.
+            </p>
         </div>
-    </section>
-
-
-
-
-
-    <!-- product.html -->
-    <h1 id="product-name" style="color: white;"></h1>
-
-    <section class="about-us" style="padding: 2rem;">
-        <div class="container ">
+    </article>
+    <section class="about-us" style="padding: 2rem; margin-top: 4rem;">
+        <div class="container d-block ">
             <div
                 class="wrapper-about m-auto text-center d-flex justify-content-center align-items-center flex-column gap-5">
-                <a href="#"><img src="./pic/Logo_NIKE.svg" alt="" style="width: 100px; height: auto;"></a>
+                <a href="#"><img src="../pic/Logo_NIKE.svg" alt="" style="width: 100px; height: auto;"></a>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="./html/Aboout.html">Our Story</a>
+                        <a href="../index.html">Home</a>
                     </li>
                 </ul>
             </div>
@@ -596,7 +362,7 @@
     </section>
     <!-- footer start -->
     <footer>
-        <div class="container mt-lg-5 ">
+        <div class="container  d-block mt-lg-5 ">
             <div class="row d-flex justify-content-center ">
                 <div class="col-lg-2 col-6">
                     <h4 class="mb-3">Product</h4>
@@ -669,7 +435,7 @@
         </div>
     </footer>
     <section class="under-footer bg-dark p-5 text-white">
-        <div class="container">
+        <div class="container d-block">
             <div class="wrapper-underd d-flex align-items-center gap-3 justify-content-center">
                 <div class="u1">
                     <p>Your Privacy Choices
@@ -686,20 +452,7 @@
         </div>
     </section>
     <!-- footer end -->
-
-
-
-
-
-    <script src=" index.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-        });
-    </script>
+    <script src="../index.js"></script>
 </body>
 
 </html>

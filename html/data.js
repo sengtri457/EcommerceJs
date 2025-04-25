@@ -1953,7 +1953,7 @@ const dataSmall = [
   {
     id: 300,
     subId: 301,
-    subId:302,
+    subId: 302,
     name: "img1",
     img: "../pic/subkid1.avif",
     class: "img1",
@@ -2021,7 +2021,7 @@ const dataSmall = [
     similar: "tshirt",
     section: "Kid",
   },
-   { 
+  {
     name: "img1",
     img: "../pic/subkidsport2.avif",
     class: "img1",
@@ -2034,7 +2034,7 @@ const dataSmall = [
     similar: "tshirt",
     section: "Kid",
   },
-   { 
+  {
     name: "img1",
     img: "../pic/subkidsport3.avif",
     class: "img1",
@@ -2047,7 +2047,7 @@ const dataSmall = [
     similar: "tshirt",
     section: "Kid",
   },
-   { 
+  {
     name: "img1",
     img: "../pic/subkidsport4.avif",
     class: "img1",
@@ -2119,7 +2119,7 @@ const dataSmall = [
     id: 303,
     subId: 300,
     subId: 302,
-    subId:301,
+    subId: 301,
     name: "img1",
     img: "../pic/subkidblack1.avif",
     class: "img1",
@@ -2339,7 +2339,6 @@ const dataSmall = [
     section: "Men",
   },
   {
-   
     name: "img1",
     img: "../pic/subkidyellow3.avif",
     class: "img1",
@@ -2380,7 +2379,6 @@ const dataSmall = [
     similar: "tshirt",
     section: "Men",
   },
-
 ];
 
 let imageList = [];
