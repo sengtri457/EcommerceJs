@@ -2259,7 +2259,14 @@ btnSub.addEventListener("click", function () {
     document.querySelector(".size-S").textContent = "S";
     document.querySelector(".size-M").textContent = "M";
     document.querySelector(".size-L").textContent = "L";
-
+    // Clear localStorage for orders
+    const orders = JSON.parse(localStorage.getItem("orders")) || [];
+    const updatedOrders = orders.filter((order) => order.id !== product.id);
+    localStorage.setItem("orders", JSON.stringify(updatedOrders));
+    // If on dashboard.html, reload the page to reflect changes
+    if (window.location.pathname.includes("dashboard.html")) {
+      location.reload();
+    }
     alert("Cart has been cleared.");
     btnclear.classList.remove("active");
   });
@@ -2271,6 +2278,13 @@ btnSub.addEventListener("click", function () {
   );
   console.log(quantity);
   console.log(totalQuantity);
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const orderItem = {
+    ...cartItem,
+    date: Date.now(),
+  };
+  orders.push(orderItem);
+  localStorage.setItem("orders", JSON.stringify(orders));
 });
 // similar
 const wrappersimilar = document.querySelector(".wrapper-similar");
@@ -2309,6 +2323,7 @@ if (product.id == id) {
           `;
     })
     .join("");
+
   console.log(wrappersimilar);
 }
 

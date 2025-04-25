@@ -29,47 +29,66 @@
 
 <body>
     <!-- Navbar -->
-    <div class="navbar position-fi top-0 w-100 p-3">
-        <a href="../index.html" class="logo"><img src="../pic/Logo_NIKE.svg" alt="" style="width: 100px;"></a>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="menu gap-lg-3 gap-2">
-            <li><a class="listA nav-link" href="#">New
-                </a></li>
-            <li class="dropdown">
-                <a class="listB  nav-link">Men
-                </a>
-            </li>
-            <li class="dropdown">
-                <a class="listC  nav-link">Women
-                </a>
-            </li>
-            <li><a href="#" class=" nav-link">Kids
-                </a></li>
-            <li><a href="#" class="
+    <div class="navbar  top-0 w-100 p-3">
+        <div class="container p-2">
+            <a href="../index.html" class="logo"><img src="../pic/Logo_NIKE.svg" alt="" style="width: 100px;"></a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu gap-lg-3 gap-2">
+                <li><a class="listA nav-link" href="#">New
+                    </a></li>
+                <li class="dropdown">
+                    <a class="listB  nav-link">Men
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="./womenSection.html" class="listC  nav-link">Women
+                    </a>
+                </li>
+                <li><a href="#" class="listD nav-link">Kids
+                    </a></li>
+                <li><a href="#" class=" listE
                          nav-link">Accessories
-                </a></li>
-        </ul>
-        <ul class="menu gap-lg-3 gap-0 ">
-            <li><a class="listA nav-link" href="">Support
-                </a></li>
-            <li><a class="listA position-relative nav-link shop-btn" href="#" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger valueText">
-                        0
-                    </span>
-                    </button>
-                </a></li>
-            <li class="dropdown">
-                <a class="dropbtn overflow-scroll" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                        class="fa-solid fa-magnifying-glass"></i></a>
-            </li>
-        </ul>
+                    </a></li>
+            </ul>
+            <ul class="menu gap-lg-2 gap-0 ">
+                <li>
+                    <!-- From Uiverse.io by boryanakrasteva -->
+                    <!-- From Uiverse.io by Shaidend -->
+                    <div class="InputContainer">
+                        <input placeholder="Search" class="inputt" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                        <label class="labelforsearch" for="input">
+                            <svg class="searchIcon" viewBox="0 0 512 512">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                                </path>
+                            </svg>
+                        </label>
+                    </div>
+                </li>
+                <li><a class=" nav-link" href="./login.html"><i class="fa-solid fa-user"
+                            style="margin-right: 0.5rem;"></i> Login
+                    </a></li>
+                <li><a class="listA position-relative nav-link shop-btn" href="#" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="padding: 5px;">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px"
+                            height="24px" fill="none">
+                            <path stroke="currentColor" stroke-width="1.5"
+                                d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5">
+                            </path>
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result">
+                            0
+                        </span>
+                        </button>
+                    </a></li>
+            </ul>
+        </div>
         <div class="wrapper-ul1 ">
             <div class="container-lg container-fluid">
                 <div class="container-lg">
@@ -77,8 +96,8 @@
                         <div class="wrapper-item row pt-3 pb-3 justify-content-center">
                             <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
                                 <ul class="navbar-nav">
-                                    <a href="./html/MenSection.html" class="title-ul">Clothing</a>
-                                    <li><a href="">All clothes</a></li>
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./MenSection.html">All clothes</a></li>
                                     <li><a href="">Tops and T-Shirts</a></li>
                                     <li><a href="">Shorts</a></li>
                                     <li><a href="">Hoodies and Pullovers</a></li>
@@ -89,8 +108,8 @@
                             </div>
                             <div class="col-4 wrapper-item-ul">
                                 <ul class="navbar-nav ">
-                                    <a href="" class="title-ul">Shoes</a>
-                                    <li><a href="">All Shoes</a></li>
+                                    <a href="./ShoesMen.html" class="title-ul">Shoes</a>
+                                    <li><a href="./ShoesMen.html">All Shoes</a></li>
                                     <li><a href="">Basketball</a></li>
                                     <li><a href="">Life Style</a></li>
                                     <li><a href="">Jordan</a></li>
@@ -117,8 +136,8 @@
                         <div class="wrapper-item row pt-3 pb-3 justify-content-center">
                             <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
                                 <ul class="navbar-nav">
-                                    <a href="./html/MenSection.html" class="title-ul">Clothing</a>
-                                    <li><a href="">All clothes</a></li>
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./MenSection.html">All clothes</a></li>
                                     <li><a href="">Tops and T-Shirts</a></li>
                                     <li><a href="">Shorts</a></li>
                                     <li><a href="">Hoodies and Pullovers</a></li>
@@ -157,8 +176,8 @@
                         <div class="wrapper-item row pt-3 pb-3 justify-content-center">
                             <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
                                 <ul class="navbar-nav">
-                                    <a href="./html/MenSection.html" class="title-ul">Clothing</a>
-                                    <li><a href="">All clothes</a></li>
+                                    <a href="./womenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./womenSection.html">All clothes</a></li>
                                     <li><a href="">Tops and T-Shirts</a></li>
                                     <li><a href="">Shorts</a></li>
                                     <li><a href="">Hoodies and Pullovers</a></li>
@@ -197,7 +216,7 @@
                         <div class="wrapper-item row pt-3 pb-3 justify-content-center">
                             <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
                                 <ul class="navbar-nav">
-                                    <a href="./html/MenSection.html" class="title-ul">Clothing</a>
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
                                     <li><a href="">All clothes</a></li>
                                     <li><a href="">Tops and T-Shirts</a></li>
                                     <li><a href="">Shorts</a></li>
@@ -237,7 +256,7 @@
                         <div class="wrapper-item row pt-3 pb-3 justify-content-center">
                             <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
                                 <ul class="navbar-nav">
-                                    <a href="./html/MenSection.html" class="title-ul">Clothing</a>
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
                                     <li><a href="">All clothes</a></li>
                                     <li><a href="">Tops and T-Shirts</a></li>
                                     <li><a href="">Shorts</a></li>
@@ -271,6 +290,7 @@
             </div>
         </div>
     </div>
+    <!-- end nav -->
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

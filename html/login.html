@@ -2,56 +2,165 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Shop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
     <style>
-        .product {
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px;
-            width: 200px;
+        /* From Uiverse.io by Yaya12085 */
+        .form {
+            background-color: #fff;
+            display: block;
+            padding: 1rem;
+            max-width: 350px;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
-        .cart-button {
-            margin-top: 10px;
-            background: #28a745;
-            color: white;
-            border: none;
-            padding: 5px 10px;
+        .form-title {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 600;
+            text-align: center;
+            color: #000;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .input-container input,
+        .form button {
+            outline: none;
+            border: 1px solid #e5e7eb;
+            margin: 8px 0;
+        }
+
+        .input-container input {
+            background-color: #fff;
+            padding: 1rem;
+            padding-right: 3rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            width: 300px;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .input-container span {
+            display: grid;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            place-content: center;
+        }
+
+        .input-container span svg {
+            color: #9CA3AF;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .submit {
+            display: block;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            background-color: #4F46E5;
+            color: #ffffff;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 500;
+            width: 100%;
+            border-radius: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .signup-link {
+            color: #6B7280;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            text-align: center;
+        }
+
+        .signup-link a {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-    <h1>Products</h1>
-    <div id="product-list">
-        <div class="product">
-            <h3>Product 1</h3>
-            <p>$10</p>
-            <button class="cart-button" onclick="addToCart('Product 1', 10)">Add to Cart</button>
-        </div>
-        <div class="product">
-            <h3>Product 2</h3>
-            <p>$20</p>
-            <button class="cart-button" onclick="addToCart('Product 2', 20)">Add to Cart</button>
+    <div class="contianer m-auto">
+        <div class="row m-auto">
+            <div class="col-12">
+                <!-- From Uiverse.io by Yaya12085 -->
+                <form class="form m-auto mt-5">
+                    <p class="form-title">Sign in to your account</p>
+                    <div class="input-container">
+                        <input placeholder="Enter email" type="email" class="email">
+                        <span>
+                            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                                    stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="input-container">
+                        <input placeholder="Enter password" type="password" class="pass">
+                        <span>
+                            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round"
+                                    stroke-linecap="round"></path>
+                                <path
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                                    stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <button class="submit" type="submit">
+                        Sign in
+                    </button>
+                    <p class="signup-link">
+                        No account?
+                        <a href="">Sign up</a>
+                    </p>
+                </form>
+            </div>
         </div>
     </div>
-    <a href="cart.html">🛒 Go to Cart</a>
-
     <script>
-        function addToCart(name, price) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existing = cart.find(item => item.name === name);
-            if (existing) {
-                existing.qty += 1;
+        const email = document.querySelector(".email");
+        const pass = document.querySelector(".pass");
+        const submit = document.querySelector(".submit")
+
+        submit.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (email.value == "admin" && pass.value == "123") {
+                sessionStorage.setItem("islogin", "2025");
+                window.location.href = "./DashBoard.html";
+                console.log(sessionStorage.getItem("islogin"));
             } else {
-                cart.push({ name, price, qty: 1 });
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Invalid email or password!',
+                })
             }
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert(name + " added to cart!");
-        }
+        })
+
+
     </script>
-</body>
 
 </html>
+
+</script>
+</body>
