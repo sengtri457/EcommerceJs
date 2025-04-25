@@ -106,7 +106,7 @@ window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
   if (currentScrollY > lastScrollY) {
     // Scrolling down
-    navbar.style.transform = "translateY(-80px)";
+    navbar.style.transform = "translateY(-92px)";
   } else {
     // Scrolling up
     navbar.style.transform = "translateY(0)";
