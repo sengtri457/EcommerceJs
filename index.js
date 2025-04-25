@@ -35,27 +35,86 @@ toggleHover(
   document.querySelector(".listC"),
   document.querySelector(".wrapper-ul2")
 );
+toggleHover(
+  document.querySelector(".listD"),
+  document.querySelector(".wrapper-ul3")
+);
+toggleHover(
+  document.querySelector(".listE"),
+  document.querySelector(".wrapper-ul4")
+);
+
+const searchData = [
+  {
+    id: 1,
+    name: "Men",
+  },
+  {
+    id: 2,
+    name: "Women",
+  },
+];
+const inputsearch = document.querySelector(".input-search");
+const searchButton = document.querySelector(".search-button"); // Assuming a button with this class exists
+
+function handleSearch() {
+  const inputValue = inputsearch.value.toLowerCase();
+  const matchedItem = searchData.find(
+    (key) => inputValue === key.name.toLowerCase()
+  );
+  if (matchedItem) {
+    window.location.href = `./html/${matchedItem.name}Section.html`;
+  } else {
+    alert("No matching section found.");
+  }
+}
+inputsearch.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    handleSearch();
+  }
+});
+window.addEventListener("DOMContentLoaded", () => {
+  inputsearch.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  });
+});
 
 // nav fix
 const navbar = document.querySelector(".navbar");
 const a = document.querySelectorAll(".nav-link");
 const dropbtn = document.querySelector(".dropbtn");
 console.log(a);
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > 40) {
+//     navbar.classList.add("active");
+//     dropbtn.classList.add("active");
+//     a.forEach((item) => {
+//       item.classList.add("active");
+//     });
+//   } else {
+//     navbar.classList.remove("active");
+//     a.forEach((item) => {
+//       item.classList.remove("active");
+//     });
+//     dropbtn.classList.remove("active");
+//   }
+// });
+let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 40) {
-    navbar.classList.add("active");
-    dropbtn.classList.add("active");
-    a.forEach((item) => {
-      item.classList.add("active");
-    });
+  const currentScrollY = window.scrollY;
+  if (currentScrollY > lastScrollY) {
+    // Scrolling down
+    navbar.style.transform = "translateY(-80px)";
   } else {
-    navbar.classList.remove("active");
-    a.forEach((item) => {
-      item.classList.remove("active");
-    });
-    dropbtn.classList.remove("active");
+    // Scrolling up
+    navbar.style.transform = "translateY(0)";
   }
+
+  lastScrollY = currentScrollY;
 });
+
 const data = [
   {
     id: 1,
@@ -213,7 +272,7 @@ const data = [
     usPrice: "$30.99",
     usPriceoff: "$40.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied CropTop",
+    typeOfShirt: "Oversied Polo",
   },
   {
     id: 84,
@@ -288,76 +347,165 @@ const data = [
 
   // Recent Product
   {
-    id: 25,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
+    id: 500,
+    name: "Air Jordan 5 Retro",
     price: "223$",
-    img: "./pic/20240918040216.webp",
+    img: "./pic/jordanP1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$235.00",
+    categoies: "Recent Product",
   },
   {
-    id: 26,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
-    price: "123$",
-    img: "./pic/20240918040216.webp",
+    id: 501,
+    name: "Tatum3",
+    price: "125$",
+    img: "./pic/jordanP2.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$205.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 502,
+    name: "Air Jordan 1 Low G",
+    price: "140$",
+    img: "./pic/jordanP3.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$195.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 503,
+    name: "Air Jordan 3 Retro",
+    price: "200$",
+    img: "./pic/jordanP4.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$305.00",
+    categoies: "Recent Product",
+  },
+  // bag
+  {
+    id: 504,
+    name: "Nike Utility Power",
+    price: "100$",
+    img: "./pic/bagP1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
     del: "$125.00",
+    categoies: "Recent Product",
   },
   {
-    id: 27,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
-    price: "300$",
-    img: "./pic/20240918040216.webp",
+    id: 505,
+    name: "Nike Academy Team",
+    price: "57$",
+    img: "./pic/bagP2.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$335.00",
+    del: "$100.00",
+    categoies: "Recent Product",
   },
   {
-    id: 28,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
-    price: "$234",
-    img: "./pic/20240918040216.webp",
+    id: 506,
+    name: "Nike Brasilia",
+    price: "70$",
+    img: "./pic/bagP3.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$85.00",
+    categoies: "Recent Product",
   },
   {
-    id: 29,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
-    price: "$234",
-    img: "./pic/20240918040216.webp",
+    id: 507,
+    name: "Nike Brasilia 9.5",
+    price: "100$",
+    img: "./pic/bagP4.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$125.00",
+    categoies: "Recent Product",
   },
   {
-    id: 30,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
-    price: "$234",
-    img: "./pic/20240918040216.webp",
+    id: 89,
+    name: "Women Short",
+    price: "30$",
+    img: "./pic/womenshort1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$125.00",
+    categoies: "Recent Product",
   },
   {
-    id: 31,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
-    price: "$234",
-    img: "./pic/20240918040216.webp",
+    id: 87,
+    name: "Women Short",
+    price: "50.99$",
+    img: "./pic/skirt1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$70.00",
+    categoies: "Recent Product",
   },
   {
-    id: 32,
-    name: "ASUS Zenbook 14X OLED (UX5401)",
-    price: "$234",
-    img: "./pic/20240918040216.webp",
+    id: 91,
+    name: "Women Fleece",
+    price: "20.99$",
+    img: "./pic/fleecec1.avif",
     i: "fa fa-star text-primary mr-1",
     iHalf: "fa fa-star-half-alt text-primary mr-1",
-    del: "$255.00",
+    del: "$40.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 86,
+    name: "Women Hoddies",
+    price: "30.99$",
+    img: "./pic/hoddiewomen1.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$60.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 68,
+    name: "Oversied Polo",
+    price: "30.99$",
+    img: "./pic/subpolomen2-3.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$40.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 68,
+    name: "Oversied White Polo",
+    price: "40.99$",
+    img: "./pic/subpolomen3-3.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$50.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 1,
+    name: "Oversied Tshirt",
+    price: "8.99$",
+    img: "./pic/main1.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$15.00",
+    categoies: "Recent Product",
+  },
+  {
+    id: 24,
+    name: "Oversied Tshirt",
+    price: "30.99$",
+    img: "./pic/submenn8.avif",
+    i: "fa fa-star text-primary mr-1",
+    iHalf: "fa fa-star-half-alt text-primary mr-1",
+    del: "$45.00",
+    categoies: "Recent Product",
   },
 ];
 const gallerycontainer = document.querySelector(".gallery-container");
@@ -371,7 +519,7 @@ gallerycontainer.innerHTML = data
   })
   .map((a) => {
     return `
-      <div class="image-card " data-aos="zoom-in">
+      <div class="image-card overflow-hidden" data-aos="zoom-in">
         <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
@@ -402,7 +550,7 @@ gallerycontainer1.innerHTML = data
   })
   .map((a) => {
     return ` 
-             <div class="image-card1" data-aos="zoom-in">
+             <div class="image-card1 overflow-hidden" data-aos="zoom-in">
          <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
@@ -432,7 +580,7 @@ gallerycontainer2.innerHTML = data
   })
   .map((a) => {
     return ` 
-              <div class="image-card2" data-aos="zoom-in">
+              <div class="image-card2 overflow-hidden" data-aos="zoom-in">
         <a href="./html/data.html?id=${a.id}">
           <img src="${a.img}" class="${a.class}" alt="${a.name}">
         </a>
@@ -458,11 +606,11 @@ gallerycontainer2.innerHTML = data
   .join("");
 wrapperrecent.innerHTML = data
   .filter((r) => {
-    return r.name == "ASUS Zenbook 14X OLED (UX5401)";
+    return r.categoies == "Recent Product";
   })
   .map((a) => {
     return ` 
-           <div class="col-lg-3 col-6 mb-2 mb-lg-0">
+           <div class="col-lg-3 col-6 mb-3 mb-lg-4 " data-aos="zoom-in">
            <article class="wrapper-recent">
            <div class="wrapper-img position-relative overflow-hidden">
                             <img src="${a.img}"" class="w-100">
@@ -498,29 +646,6 @@ clickFav.forEach((fav) => {
   fav.addEventListener("click", function () {
     const heart = fav.querySelector(".clickHeart");
     heart.classList.toggle("fa-solid");
-  });
-});
-
-console.dir(clickFav);
-const buttons = document.querySelectorAll("[data-carousel-button]");
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const offset = button.dataset.carouselButton === "next" ? 1 : -1;
-    const carousel = button.closest("[data-carousel]");
-    if (!carousel) return;
-
-    const slides = carousel.querySelector("[data-slides]");
-    if (!slides) return;
-
-    const activeSlide = slides.querySelector("[data-active]");
-    if (!activeSlide) return;
-
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-    if (newIndex < 0) newIndex = slides.children.length - 1;
-    if (newIndex >= slides.children.length) newIndex = 0;
-
-    slides.children[newIndex].dataset.active = true;
-    delete activeSlide.dataset.active;
   });
 });
 function setupGallery({ galleryId, cardClass, backBtnClass, nextBtnClass }) {
