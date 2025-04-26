@@ -25,221 +25,273 @@
     <link rel="stylesheet" href="../html/data.css">
     <title>Data</title>
 </head>
-<style>
-    /* body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        padding: 30px;
-    } */
-</style>
 
 <body>
 
     <!-- Navbar -->
-    <div class="navbar position-fi top-0 w-100 p-3">
-        <a href="../index.html" class="logo"><img src="../pic/Logo_NIKE.svg" alt="" style="width: 100px;"></a>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- Navbar -->
+    <div class="navbar  top-0 w-100 p-3">
+        <div class="container p-2">
+            <a href="../index.html" class="logo"><img src="../pic/Logo_NIKE.svg" alt="" style="width: 100px;"></a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu gap-lg-3 gap-2">
+                <li><a class="listA nav-link" href="#">New
+                    </a></li>
+                <li class="dropdown">
+                    <a class="listB  nav-link">Men
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="./html/womenSection.html" class="listC  nav-link">Women
+                    </a>
+                </li>
+                <li><a href="#" class="listD nav-link">Kids
+                    </a></li>
+                <li><a href="#" class=" listE
+                         nav-link">Accessories
+                    </a></li>
+            </ul>
+            <ul class="menu gap-lg-2 gap-0 ">
+                <li>
+                    <!-- From Uiverse.io by boryanakrasteva -->
+                    <!-- From Uiverse.io by Shaidend -->
+                    <div class="InputContainer">
+                        <input placeholder="Search" class="inputt" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                        <label class="labelforsearch" for="input">
+                            <svg class="searchIcon" viewBox="0 0 512 512">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                                </path>
+                            </svg>
+                        </label>
+                    </div>
+                </li>
+                <li><a class=" nav-link" href="./login.html"><i class="fa-solid fa-user"
+                            style="margin-right: 0.5rem;"></i> Login
+                    </a></li>
+                <li><a class="listA position-relative nav-link shop-btn" href="#" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="padding: 5px;">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px"
+                            height="24px" fill="none">
+                            <path stroke="currentColor" stroke-width="1.5"
+                                d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5">
+                            </path>
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result">
+                            0
+                        </span>
+                        </button>
+                    </a></li>
+            </ul>
         </div>
-        <ul class="menu gap-lg-3 gap-2">
-            <li><a class="listA nav-link" href="#">New
-                </a></li>
-            <li class="dropdown">
-                <a class="listB  nav-link" href="./MenSection.html">Men
-
-                </a>
-            </li>
-
-            <li class="dropdown">
-                <a class="listC  nav-link">Women
-                </a>
-            </li>
-            <li><a href="#" class=" nav-link">Kids
-                </a></li>
-            <li><a href="#" class="
-                     nav-link">Accessories
-                </a></li>
-        </ul>
-        <ul class="menu gap-lg-3 gap-0 ">
-            <li><a class="listA nav-link" href="">Support
-                </a></li>
-            <li><a class="listA position-relative nav-link shop-btn" href="#" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result">
-                        99+
-                    </span>
-                    </button>
-                </a></li>
-            <li class="dropdown">
-                <a class="dropbtn overflow-scroll" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                        class="fa-solid fa-magnifying-glass"></i></a>
-            </li>
-        </ul>
         <div class="wrapper-ul1 ">
-            <div class="container d-block">
-                <div class="wrapper-item row pt-3 pb-3 justify-content-center">
-                    <div class="col-lg-3 col-6 wrapper-item-ul mb-lg-0 mb-3">
-                        <ul class="navbar-nav">
-                            <li><a href="">For Works</a></li>
-                            <li><a href="">For Creator </a></li>
-                            <li><a href="">For Student</a></li>
-                            <li><a href="">For Gaming</a></li>
-                            <li><a href="">Acessory</a></li>
-                            <li><a href="">Software</a></li>
-                            <li><a href="">Al</a></li>
-                            <li><a href="">Technology</a></li>
-                            <li><a href="">Copilot+pc</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 wrapper-item-ul">
-                        <ul class="navbar-nav ">
-                            <a href="" class="title-ul">BY CATEGORY</a>
-                            <li><a href="">Copilot+ PC devices</a></li>
-                            <li><a href="">Tablet and 2-in-1 laptop</a></li>
-                            <li><a href="">Thin and Light</a></li>
-                            <li><a href="">High Performance</a></li>
-                            <li><a href="">Everyday Use</a></li>
-                            <li><a href="">OLED Display</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 wrapper-item-ul ">
-                        <ul class="navbar-nav">
-                            <a href="" class="title-ul">BY BRAND / SERIES</a>
-                            <li><a href="">BY BRAND / SERIES</a></li>
-                            <li><a href="">ProArt </a></li>
-                            <li><a href="">Zenbook</a></li>
-                            <li><a href="">VivoBook</a></li>
-                            <li><a href="">ChromeBook</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 wrapper-item-ul border-0">
-                        <ul class="navbar-nav ">
-                            <!-- <a href="">For Home</a> -->
-                            <li><a href=""><img src="../pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a>
-                            </li>
-                            <li><a href=""><img src="../pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a>
-                            </li>
-                            <li><a href=""><img src="../pic/fwebp.webp" alt="" style="width: 100px;height: 100px;"></a>
-                            </li>
-                        </ul>
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./MenSection.html">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="./ShoesMen.html" class="title-ul">Shoes</a>
+                                    <li><a href="./ShoesMen.html">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="wrapper-ul text-left position-absolute w-100 z-3">
-            <div class="container d-block">
-                <div class="wrapper-item row pt-3 pb-3 justify-content-center">
-                    <div class="col-lg-3 col-6 wrapper-item-ul mb-lg-0 mb-3">
-                        <ul class="navbar-nav">
-                            <!-- <a href="">For Home</a> -->
-                            <li><a href="">For Works</a></li>
-                            <li><a href="">For Creator </a></li>
-                            <li><a href="">For Student</a></li>
-                            <li><a href="">For Gaming</a></li>
-                            <li><a href="">Acessory</a></li>
-                            <li><a href="">Software</a></li>
-                            <li><a href="">Al</a></li>
-                            <li><a href="">Technology</a></li>
-                            <li><a href="">Copilot+pc</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 wrapper-item-ul">
-                        <ul class="navbar-nav ">
-                            <a href="" class="title-ul">BY CATEGORY</a>
-                            <li><a href="">Copilot+ PC devices</a></li>
-                            <li><a href="">Tablet and 2-in-1 laptop</a></li>
-                            <li><a href="">Thin and Light</a></li>
-                            <li><a href="">High Performance</a></li>
-                            <li><a href="">Everyday Use</a></li>
-                            <li><a href="">OLED Display</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 wrapper-item-ul ">
-                        <ul class="navbar-nav">
-                            <a href="" class="title-ul">BY BRAND / SERIES</a>
-                            <li><a href="">BY BRAND / SERIES</a></li>
-                            <li><a href="">ProArt </a></li>
-                            <li><a href="">Zenbook</a></li>
-                            <li><a href="">VivoBook</a></li>
-                            <li><a href="">ChromeBook</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 wrapper-item-ul border-0">
-                        <ul class="navbar-nav ">
-                            <!-- <a href="">For Home</a> -->
-                            <li><a href="">For Works</a></li>
-                            <li><a href="">For Creator </a></li>
-                            <li><a href="">For Student</a></li>
-                            <li><a href="">For Gaming</a></li>
-                            <li><a href="">Acessory</a></li>
-                            <li><a href="">Software</a></li>
-                            <li><a href="">Al</a></li>
-                            <li><a href="">Technology</a></li>
-                        </ul>
+        <div class="wrapper-ul text-left z-3 ">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./MenSection.html">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="wrapper-ul2 text-left position-absolute w-100 z-3">
-            <div class="container d-block">
-                <div class="wrapper-item row pt-3 pb-3 justify-content-center">
-                    <div class="col-lg-3 col-6 wrapper-item-ul mb-lg-0 mb-3">
-                        <ul class="navbar-nav">
-                            <!-- <a href="">For Home</a> -->
-                            <li><a href="">For Works</a></li>
-                            <li><a href="">For Creator </a></li>
-                            <li><a href="">For Student</a></li>
-                            <li><a href="">For Gaming</a></li>
-                            <li><a href="">Acessory</a></li>
-                            <li><a href="">Software</a></li>
-                            <li><a href="">Al</a></li>
-                            <li><a href="">Technology</a></li>
-                            <li><a href="">Copilot+pc</a></li>
-                        </ul>
+        <div class="wrapper-ul2 text-left z-3">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./womenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./womenSection.html">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-6 wrapper-item-ul">
-                        <ul class="navbar-nav ">
-                            <a href="" class="title-ul">BY CATEGORY</a>
-                            <li><a href="">Copilot+ PC devices</a></li>
-                            <li><a href="">Tablet and 2-in-1 laptop</a></li>
-                            <li><a href="">Thin and Light</a></li>
-                            <li><a href="">High Performance</a></li>
-                            <li><a href="">Everyday Use</a></li>
-                            <li><a href="">OLED Display</a></li>
-                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul3 text-left z-3">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-3 col-6 wrapper-item-ul ">
-                        <ul class="navbar-nav">
-                            <a href="" class="title-ul">BY BRAND / SERIES</a>
-                            <li><a href="">BY BRAND / SERIES</a></li>
-                            <li><a href="">ProArt </a></li>
-                            <li><a href="">Zenbook</a></li>
-                            <li><a href="">VivoBook</a></li>
-                            <li><a href="">ChromeBook</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 col-6 wrapper-item-ul border-0">
-                        <ul class="navbar-nav ">
-                            <!-- <a href="">For Home</a> -->
-                            <li><a href="">For Works</a></li>
-                            <li><a href="">For Creator </a></li>
-                            <li><a href="">For Student</a></li>
-                            <li><a href="">For Gaming</a></li>
-                            <li><a href="">Acessory</a></li>
-                            <li><a href="">Software</a></li>
-                            <li><a href="">Al</a></li>
-                            <li><a href="">Technology</a></li>
-                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul4 text-left z-3">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- end nav -->
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -331,17 +383,12 @@
                     <button class="btn-size increment">+</button>
 
                 </article>
-                <div class="row mt-3 mt-lg-0">
-                    <div class="col-lg-10">
-                        <article class="add mt-lg-5">
-                            <button class="btn-size w-100 addToBag btn-sub btn-add-to-cart" data-bs-toggle="offcanvas"
-                                data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Add To bag</button>
-                        </article>
-                    </div>
-                    <div class="col-lg-2 px-lg-0 pt-2">
-                        <article class="add mt-lg-5">
-                            <button class="btn-size w-100 addToBag fav"><i class="fa-regular fa-heart"></i></button>
-                        </article>
+                <div class="row">
+                    <div class="col-lg-8 mt-4 col-8">
+                        <button class="btn btn-outline-dark btn-sub bg-dark text-white w-100" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            Add To Card
+                        </button>
                     </div>
                 </div>
                 <!-- dropdown info -->
@@ -354,7 +401,7 @@
                                     <h5 style="color: black;padding: 0.5rem 0rem;">Model info</h5>
                                     <i class="fa-solid fa-chevron-down chevron"></i>
                                 </div>
-                                <div class="wrapper-infoText">
+                                <div class="wrapper-infoText overflow-scroll">
                                     <div class="icon-text">
                                         <h3>
                                             <i class="bi bi-truck"></i>
@@ -386,7 +433,7 @@
                             </div>
                             <div class="dropdown-header">
                                 <div class="wrapper-info-header">
-                                    <h5 style="color: black;padding: 0.5rem 0rem;">Model info</h5>
+                                    <h5 style="color: black;padding: 0.5rem 0rem;">More info</h5>
                                     <i class="fa-solid fa-chevron-down chevron"></i>
                                 </div>
                                 <div class="wrapper-infoText d-block overflow-hidden">
@@ -402,6 +449,15 @@
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="dropdown-header">
+                                <div class="wrapper-info-header">
+                                    <h5 style="color: black;padding: 0.5rem 0rem;">Size Chart</h5>
+                                    <a href="./size.html" class="text-dark">
+                                        <i class="fa-solid fa-chevron-down chevron"></i>
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                     </div>

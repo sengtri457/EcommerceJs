@@ -166,6 +166,15 @@ li:hover {
         z-index: 100;
         background-color: var(--white);
     }
+
+}
+
+.wrapper-ul,
+.wrapper-ul1,
+.wrapper-ul2,
+.wrapper-ul3,
+.wrapper-ul4 {
+    background-color: #ffffff;
 }
 
 @media screen and (min-width:767px) and (max-width: 1023px) {

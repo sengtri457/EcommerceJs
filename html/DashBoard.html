@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    tr,
+    td {
+        color: white;
+    }
+
+    #totalOrders {
+        padding: 0.7rem 1.5rem;
+        color: white;
+    }
+
+    #totalAmount {
+        padding: 0.7rem 1.5rem;
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4 text-white">Order Dashboard</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card bg-dark text-white">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0 text-white">Orders List</h5>
+                        <div>
+                            <span class="badge bg-primary" id="totalOrders">Total Orders: 0</span>
+                            <span class="badge bg-success ms-2" id="totalAmount">Total Amount: $0</span>
+                        </div>
+                    </div>
+                    <div class="card-body text-white">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Product</th>
+                                        <th>Size</th>
+                                        <th>Quantity</th>
+                                        <th>Price</th>
+                                        <th>Total</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ordersList">
+                                    <!-- Orders will be displayed here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let islogin = sessionStorage.getItem("islogin");
+        if (islogin != "2025") {
+            sessionStorage.clear();
+            window.location.href = "./login.html";
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get orders from localStorage
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            const ordersTable = document.getElementById('ordersList');
+            const totalOrdersSpan = document.getElementById('totalOrders');
+            const totalAmountSpan = document.getElementById('totalAmount');
+
+            // Calculate totals
+            let totalAmount = 0;
+
+            // Display orders
+            orders.forEach((order, index) => {
+                const row = document.createElement('tr');
+                const price = parseFloat(order.usPriceoff?.replace('$', '') || 0);
+                const total = price * order.quantity;
+                totalAmount += total;
+
+                row.innerHTML = `
+                    <td>${order.id || index + 1}</td>
+                    <td>
+                        <img src="${order.image}" alt="${order.typeOfShirt}" width="50" class="me-2">
+                        ${order.typeOfShirt}
+                    </td>
+                    <td>${order.size}</td>
+                    <td>${order.quantity}</td>
+                    <td>$${price.toFixed(2)}</td>
+                    <td>$${total.toFixed(2)}</td>
+                    <td>${new Date(order.date || Date.now()).toLocaleDateString()}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" onclick="deleteOrder(${index})">
+                            <i class="bi bi-trash"></i>
+                        </button>
+                    </td>
+                `;
+                ordersTable.appendChild(row);
+            });
+
+            // Update totals display
+            totalOrdersSpan.textContent = `Total Orders: ${orders.length}`;
+            totalAmountSpan.textContent = `Total Amount: $${totalAmount.toFixed(2)}`;
+        });
+
+        function deleteOrder(index) {
+            const orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orders.splice(index, 1);
+            localStorage.setItem('orders', JSON.stringify(orders));
+            location.reload();
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
