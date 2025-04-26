@@ -459,7 +459,7 @@ const displayItems = (items) => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  displayItems(dataSmall.filter((item) => item.id >= 500));
+  displayItems(dataSmall.filter((item) => item.id >= 504));
 });
 
 li.forEach((item) => {
@@ -468,7 +468,7 @@ li.forEach((item) => {
     const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
 
     if (categories === "all") {
-      displayItems(dataSmall.filter((item) => item.id >= 500));
+      displayItems(dataSmall.filter((item) => item.id >= 504));
     } else {
       displayItems(newdata);
     }
@@ -483,7 +483,7 @@ li.forEach((item) => {
     const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
 
     if (categories === "all") {
-      displayItems(dataSmall.filter((item) => item.id >= 500));
+      displayItems(dataSmall.filter((item) => item.id >= 504));
     } else {
       displayItems(newdata);
     }

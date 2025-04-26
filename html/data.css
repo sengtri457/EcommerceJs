@@ -97,6 +97,12 @@
       border-radius: 5px;
   }
 
+  .btnFav {
+      font-size: var(--font-small);
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+  }
+
   .sizeSelected {
       border: 1px solid rgb(0, 0, 0);
   }
@@ -330,4 +336,31 @@
 
   .image-card-wrapper img:hover {
       transform: scale(1.05);
+  }
+
+  .typeOfShirt {
+      font-size: var(--font-small);
+      padding: 0.4rem 0rem 0.4rem 0rem;
+  }
+
+  .nameP {
+      font-size: var(--font-medum);
+      padding: 0.4rem 0rem 0rem 0rem;
+  }
+
+  .h2No {
+      animation: zoomInOut 3s infinite;
+      transition: all 0.4s ease-in-out;
+  }
+
+  @keyframes zoomInOut {
+
+      0%,
+      100% {
+          transform: scale(1);
+      }
+
+      50% {
+          transform: scale(1.2);
+      }
   }
