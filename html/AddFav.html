@@ -114,7 +114,7 @@
             }
 
             favoritesContainer.innerHTML = favorites.map(item => `
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4 carddel" data-aos="zoom-in">
                 <div class="card" data-id="${item.id}" data-size="${item.size}">
                     <img src="${item.img}" class="card-img-top" alt="${item.typeOfShirt}">
                     <div class="card-body">
@@ -145,47 +145,36 @@
                 }
             });
         });
+
         function removeFavorite(id, size) {
             let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
             favorites = favorites.filter(item => !(item.id === id && item.size === size));
             localStorage.setItem('favorites', JSON.stringify(favorites));
-            console.log(favorites)
+            console.log(favorites);
             // Update the favorites count
-            favorites.innerHTML = ""
+            document.getElementById('favCount').textContent = favorites.length;
 
-            // Re-render the favorites list
-            const favoritesContainer = document.getElementById('favoritesContainer');
+            // Remove the card from the DOM
+            const cardToRemove = document.querySelector(`.card[data-id="${id}"][data-size="${size}"]`);
+            if (cardToRemove) {
+                cardToRemove.parentElement.remove();
+            }
+
+            // Show a message if no favorites are left
             if (favorites.length === 0) {
                 favoritesContainer.innerHTML = `
-                    <div class="col-12 text-center">
-                        <p>No favorites yet!</p>
-                        <a href="../index.html" class="btn btn-primary">Continue Shopping</a>
-                    </div>`;
-            } else {
-                favoritesContainer.innerHTML = favorites.map(item => `
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="card">
-                            <img src="${item.img}" class="card-img-top" alt="${item.typeOfShirt}">
-                            <div class="card-body">
-                                <h5 class="card-title">${item.typeOfShirt}</h5>
-                                <p class="card-text">
-                                    <span class="price">${item.price}</span>
-                                    <span class="price-off">${item.usPriceoff}</span>
-                                    <br>
-                                    <small>Size: ${item.size}</small>
-                                </p>
-                                <button class="btn btn-danger btn-sm remove-fav" onclick="removeFavorite('${item.id}', '${item.size}')">
-                                    <i class="bi bi-trash"></i> Remove
-                                </button>
-                                <a href="data.html?id=${item.id}" class="btn btn-primary btn-sm">
-                                    View Details
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                `).join('');
+            <div class="col-12 text-center">
+                <p>No favorites yet!</p>
+                <a href="../index.html" class="btn btn-primary">Continue Shopping</a>
+            </div>`;
             }
         }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+        });
     </script>
 </body>
 
