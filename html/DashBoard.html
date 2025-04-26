@@ -32,6 +32,7 @@
 <body>
     <div class="container mt-5">
         <h2 class="mb-4 text-white">Order Dashboard</h2>
+        <button class="logout btn btn-primary mb-3">LogOut</button>
         <div class="row">
             <div class="col-md-12">
                 <div class="card bg-dark text-white">
@@ -74,6 +75,10 @@
             sessionStorage.clear();
             window.location.href = "./login.html";
         }
+        document.querySelector('.logout').addEventListener('click', function () {
+            sessionStorage.clear();
+            window.location.href = "./login.html";
+        });
         document.addEventListener('DOMContentLoaded', function () {
             // Get orders from localStorage
             const orders = JSON.parse(localStorage.getItem('orders')) || [];

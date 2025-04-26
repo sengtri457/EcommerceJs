@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../html/data.css">
     <title>Fav</title>
-</head>>
+</head>
 <style>
     /* Add these styles for the toast notification */
     .toast-notification {
@@ -91,6 +91,7 @@
             </span>
         </div>
     </nav>
+    - Add this inside the container div -->
     <div class="container mt-5">
         <h2>My Favorites</h2>
         <div class="row" id="favoritesContainer">
@@ -101,68 +102,90 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const favoritesContainer = document.getElementById('favoritesContainer');
-            const favCount = document.getElementById('favCount');
             const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-            // Update favorite count
-            favCount.textContent = favorites.length;
+            if (favorites.length === 0) {
+                favoritesContainer.innerHTML = `
+            <div class="col-12 text-center">
+                <p>No favorites yet!</p>
+                <a href="../index.html" class="btn btn-primary">Continue Shopping</a>
+            </div>`;
+                return;
+            }
 
+            favoritesContainer.innerHTML = favorites.map(item => `
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card" data-id="${item.id}" data-size="${item.size}">
+                    <img src="${item.img}" class="card-img-top" alt="${item.typeOfShirt}">
+                    <div class="card-body">
+                        <h5 class="card-title">${item.typeOfShirt}</h5>
+                        <p class="card-text">
+                            <span class="price">${item.price}</span>
+                            <span class="price-off">${item.usPriceoff}</span>
+                            <br>
+                            <small>Size: ${item.size}</small>
+                        </p>
+                        <button class="btn btn-danger btn-sm remove-fav">
+                            <i class="bi bi-trash"></i> Remove
+                        </button>
+                        <a href="data.html?id=${item.id}" class="btn btn-primary btn-sm">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+            favoritesContainer.addEventListener('click', function (event) {
+                if (event.target.closest('.remove-fav')) {
+                    const card = event.target.closest('.card');
+                    const id = card.getAttribute('data-id');
+                    const size = card.getAttribute('data-size');
+                    removeFavorite(id, size);
+                }
+            });
+        });
+        function removeFavorite(id, size) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            favorites = favorites.filter(item => !(item.id === id && item.size === size));
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            console.log(favorites)
+            // Update the favorites count
+            favorites.innerHTML = ""
+
+            // Re-render the favorites list
+            const favoritesContainer = document.getElementById('favoritesContainer');
             if (favorites.length === 0) {
                 favoritesContainer.innerHTML = `
                     <div class="col-12 text-center">
                         <p>No favorites yet!</p>
                         <a href="../index.html" class="btn btn-primary">Continue Shopping</a>
                     </div>`;
-                return;
-            }
-
-            favoritesContainer.innerHTML = favorites.map(item => `
-                <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <img src="${item.img}" class="card-img-top" alt="${item.typeOfShirt}">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${item.typeOfShirt}</h5>
-                            <div class="price-container mb-3">
-                                <span class="price">${item.price}</span>
-                                <span class="price-off text-decoration-line-through text-muted ms-2">${item.priceOff}</span>
-                            </div>
-                            <div class="mt-auto">
-                                <button class="btn btn-danger btn-sm remove-fav w-100 mb-2" data-id="${item.id}">
+            } else {
+                favoritesContainer.innerHTML = favorites.map(item => `
+                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                        <div class="card">
+                            <img src="${item.img}" class="card-img-top" alt="${item.typeOfShirt}">
+                            <div class="card-body">
+                                <h5 class="card-title">${item.typeOfShirt}</h5>
+                                <p class="card-text">
+                                    <span class="price">${item.price}</span>
+                                    <span class="price-off">${item.usPriceoff}</span>
+                                    <br>
+                                    <small>Size: ${item.size}</small>
+                                </p>
+                                <button class="btn btn-danger btn-sm remove-fav" onclick="removeFavorite('${item.id}', '${item.size}')">
                                     <i class="bi bi-trash"></i> Remove
                                 </button>
-                                <a href="data.html?id=${item.id}" class="btn btn-primary btn-sm w-100">
+                                <a href="data.html?id=${item.id}" class="btn btn-primary btn-sm">
                                     View Details
                                 </a>
                             </div>
                         </div>
                     </div>
-                </div>
-            `).join('');
-
-            // Add remove functionality
-            document.querySelectorAll('.remove-fav').forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const id = this.dataset.id;
-                    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-                    favorites = favorites.filter(item => item.id !== id);
-                    localStorage.setItem('favorites', JSON.stringify(favorites));
-
-                    // Update count
-                    favCount.textContent = favorites.length;
-
-                    // Remove from DOM
-                    this.closest('.col-lg-3').remove();
-
-                    if (favorites.length === 0) {
-                        favoritesContainer.innerHTML = `
-                            <div class="col-12 text-center">
-                                <p>No favorites yet!</p>
-                                <a href="../index.html" class="btn btn-primary">Continue Shopping</a>
-                            </div>`;
-                    }
-                });
-            });
-        });
+                `).join('');
+            }
+        }
     </script>
 </body>
 

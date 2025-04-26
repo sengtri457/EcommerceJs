@@ -2756,7 +2756,75 @@ if (product.id == id) {
 
   console.log(wrappersimilar);
 }
+// Add after your existing code
 
+function addToFavorites() {
+  const mainImage = document.getElementById("mainImage");
+  const selectedSize = document.querySelector(".sizeSelected");
+
+  if (!selectedSize) {
+    alert("Please select a size first");
+    return;
+  }
+
+  const favoriteItem = {
+    id: product.id,
+    name: product.name,
+    img: mainImage.src,
+    typeOfShirt: product.typeOfShirt,
+    price: product.usPrice,
+    priceOff: product.Priceoff,
+    usPriceoff: product.usPriceoff,
+    size: selectedSize.textContent,
+  };
+
+  // Get existing favorites
+  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+  // Check if item already exists
+  const existingIndex = favorites.findIndex(
+    (item) => item.id === favoriteItem.id && item.size === favoriteItem.size
+  );
+
+  if (existingIndex !== -1) {
+    // Item exists, remove it
+    favorites.splice(existingIndex, 1);
+    showToast("Removed from favorites");
+    document.querySelector(".btnFav i").classList.remove("fa-solid");
+    document.querySelector(".btnFav i").classList.add("fa-regular");
+  } else {
+    // Add new item
+    favorites.push(favoriteItem);
+    showToast("Added to favorites");
+    document.querySelector(".btnFav i").classList.remove("fa-regular");
+    document.querySelector(".btnFav i").classList.add("fa-solid");
+  }
+
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+function showToast(message) {
+  const toast = document.createElement("div");
+  toast.className = "toast-notification";
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.remove();
+  }, 2000);
+  window.location.href = "./AddFav.html";
+}
+
+// Check if item is in favorites on page load
+document.addEventListener("DOMContentLoaded", function () {
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  const isInFavorites = favorites.some((item) => item.id === product.id);
+
+  if (isInFavorites) {
+    document.querySelector(".btnFav i").classList.remove("fa-regular");
+    document.querySelector(".btnFav i").classList.add("fa-solid");
+  }
+});
 // dropdown info
 const headers = document.querySelectorAll(".dropdown-header");
 headers.forEach((header) => {
