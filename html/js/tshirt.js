@@ -3,7 +3,7 @@ const dataSmall = [
     id: 1,
     subId: 5,
     name: "Black Tee",
-    img: "../pic/main1.avif",
+    img: "../../pic/main1.avif",
     class: "img1",
     categoies: "Khmer New Year Sale!",
     usPrice: "$8.99",
@@ -18,13 +18,13 @@ const dataSmall = [
     id: 17,
     subId: 13,
     name: "White Pants",
-    img: "../pic/submenn5.avif",
+    img: "../../pic/submenn5.avif",
     class: "img1",
     categoies: "Khmer New Year Sale4",
     usPrice: "$30.99",
     usPriceoff: "$40.95",
     Priceoff: "-40%",
-    typeOfShirt: "Hoddies",
+    typeOfShirt: "long",
     MaxQuantity: 50,
     similar: "top",
   },
@@ -32,13 +32,13 @@ const dataSmall = [
     id: 13,
     // subId: 17,
     name: "Style Hoddies",
-    img: "../pic/submenn6-1.avif",
+    img: "../../pic/submenn6-1.avif",
     class: "img1",
     categoies: "Khmer New Year Sale3",
     usPrice: "$40.99",
     usPriceoff: "$50.95",
     Priceoff: "-40%",
-    typeOfShirt: "Hoddies",
+    typeOfShirt: "long",
     MaxQuantity: 50,
     similar: "top",
   },
@@ -46,13 +46,13 @@ const dataSmall = [
     id: 22,
     subId: 5,
     name: "Crop Polo",
-    img: "../pic/submenn2.avif",
+    img: "../../pic/submenn2.avif",
     class: "img2",
     categoies: "Khmer New Year Sale5",
     usPrice: "$10.99",
     usPriceoff: "$20.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied T-Shirt",
+    typeOfShirt: "Polo",
     MaxQuantity: 50,
     similar: "top",
   },
@@ -60,7 +60,7 @@ const dataSmall = [
     id: 24,
     subId: 40,
     name: "Crop Jacket",
-    img: "../pic/submenn8.avif",
+    img: "../../pic/submenn8.avif",
     class: "img1",
     categoies: "Khmer New Year Sale6",
     usPrice: "$20.99",
@@ -73,7 +73,7 @@ const dataSmall = [
 
   // {
   //   name: "img1",
-  //   img: "../pic/T-Shirts (10).jpg",
+  //   img: "../../pic/T-Shirts (10).jpg",
   //   class: "img1",
   //   categoies: "Khmer New Year Sale!",
   // },
@@ -81,13 +81,13 @@ const dataSmall = [
     id: 5,
     subId: 22,
     name: "Oversied Polo",
-    img: "../pic/menn2.avif",
+    img: "../../pic/menn2.avif",
     class: "img2",
     categoies: "Khmer New Year Sale1",
     usPrice: "$10.99",
     usPriceoff: "$20.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied T-Shirt",
+    typeOfShirt: "Sleeve",
     MaxQuantity: 50,
     similar: "top",
   },
@@ -95,7 +95,7 @@ const dataSmall = [
     id: 36,
     subId: 13,
     name: "Color Hoddies",
-    img: "../pic/submenn9.avif",
+    img: "../../pic/submenn9.avif",
     class: "img1",
     categoies: "Khmer New Year Sale7",
     usPrice: "$30.99",
@@ -110,7 +110,7 @@ const dataSmall = [
     id: 40,
     subId: 24,
     name: "Crop Jacket",
-    img: "../pic/submenn10.avif",
+    img: "../../pic/submenn10.avif",
     class: "img1",
     categoies: "Khmer New Year Sale8",
     usPrice: "$30.99",
@@ -125,7 +125,7 @@ const dataSmall = [
     id: 51,
     subId: 17,
     name: "Track Jacket",
-    img: "../pic/track.avif",
+    img: "../../pic/track.avif",
     class: "img1",
     categoies: "Khmer New Year Sale9",
     usPrice: "$50.99",
@@ -139,7 +139,7 @@ const dataSmall = [
     id: 45,
     subId: 24,
     name: "Swim Pants",
-    img: "../pic/swim.avif",
+    img: "../../pic/swim.avif",
     class: "img1",
     categoies: "Khmer New Year Sale8",
     usPrice: "$10.99",
@@ -154,7 +154,7 @@ const dataSmall = [
     id: 56,
     subId: 1,
     name: "Crop Tshirt",
-    img: "../pic/tshirtmen1.avif",
+    img: "../../pic/tshirtmen1.avif",
     class: "img1",
     categoies: "Khmer New Year Sale10",
     usPrice: "$60.99",
@@ -167,7 +167,7 @@ const dataSmall = [
   {
     id: 60,
     name: "Green Jacket",
-    img: "../pic/jacketmen1.avif",
+    img: "../../pic/jacketmen1.avif",
     categoies: "Khmer New Year Sale2",
     usPrice: "$70.99",
     usPriceoff: "$90.95",
@@ -178,13 +178,13 @@ const dataSmall = [
     id: 64,
     subId: 22,
     name: "Crop Polo",
-    img: "../pic/subpolomen1.avif",
+    img: "../../pic/subpolomen1.avif",
     class: "img1",
     categoies: "Khmer New Year Sale13",
     usPrice: "$10.99",
     usPriceoff: "$20.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied T-Shirt",
+    typeOfShirt: "Polo",
     MaxQuantity: 50,
     similar: "top",
   },
@@ -192,13 +192,13 @@ const dataSmall = [
     id: 68,
     subId: 22,
     name: "Color Polo",
-    img: "../pic/subpolomen2-3.avif",
+    img: "../../pic/subpolomen2-3.avif",
     class: "img1",
     categoies: "Khmer New Year Sale14",
     usPrice: "$20.99",
     usPriceoff: "$30.95",
     Priceoff: "-10%",
-    typeOfShirt: "Oversied T-Shirt",
+    typeOfShirt: "Polo",
     MaxQuantity: 50,
     similar: "top",
   },
@@ -206,13 +206,13 @@ const dataSmall = [
     id: 72,
     subId: 22,
     name: "White Polo",
-    img: "../pic/subpolomen3-3.avif",
+    img: "../../pic/subpolomen3-3.avif",
     class: "img1",
     categoies: "Khmer New Year Sale15",
     usPrice: "$10.99",
     usPriceoff: "$20.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied T-Shirt",
+    typeOfShirt: "Polo",
     MaxQuantity: 50,
     similar: "top",
   },
@@ -220,7 +220,7 @@ const dataSmall = [
     id: 76,
     subId: 40,
     name: "Sweater",
-    img: "../pic/pants2.avif",
+    img: "../../pic/pants2.avif",
     class: "img1",
     categoies: "Khmer New Year Sale16",
     usPrice: "$40.99",
@@ -233,7 +233,7 @@ const dataSmall = [
   {
     id: 92,
     name: "Nike Club",
-    img: "../pic/s5.avif",
+    img: "../../pic/s5.avif",
     class: "img1",
     categoies: "Khmer New Year Sale92",
     usPrice: "$60.99",
@@ -246,7 +246,7 @@ const dataSmall = [
   {
     id: 93,
     name: "Nike Club",
-    img: "../pic/s6.avif",
+    img: "../../pic/s6.avif",
     class: "img1",
     categoies: "Khmer New Year Sale93",
     usPrice: "$60.99",
@@ -259,7 +259,7 @@ const dataSmall = [
   {
     id: 94,
     name: "Nike 24.7 PerfectStretch",
-    img: "../pic/s7.avif",
+    img: "../../pic/s7.avif",
     class: "img1",
     categoies: "Khmer New Year Sale94",
     usPrice: "$95.99",
@@ -272,7 +272,7 @@ const dataSmall = [
   {
     id: 95,
     name: "Nike 24.7 Club",
-    img: "../pic/s9.avif",
+    img: "../../pic/s9.avif",
     class: "img1",
     categoies: "Khmer New Year Sale95",
     usPrice: "$55.99",
@@ -285,7 +285,7 @@ const dataSmall = [
   {
     id: 96,
     name: "Nike 24.7 Club",
-    img: "../pic/s10.avif",
+    img: "../../pic/s10.avif",
     class: "img1",
     categoies: "Khmer New Year Sale96",
     usPrice: "$95.99",
@@ -298,7 +298,7 @@ const dataSmall = [
   {
     id: 97,
     name: "Nike Life",
-    img: "../pic/s11.avif",
+    img: "../../pic/s11.avif",
     class: "img1",
     categoies: "Khmer New Year Sale97",
     usPrice: "$85.99",
@@ -311,7 +311,7 @@ const dataSmall = [
   {
     id: 98,
     name: "Nike Teach",
-    img: "../pic/tr1.avif",
+    img: "../../pic/tr1.avif",
     class: "img1",
     categoies: "Khmer New Year Sale98",
     usPrice: "$130.99",
@@ -324,7 +324,7 @@ const dataSmall = [
   {
     id: 99,
     name: "Nike Form",
-    img: "../pic/tr2.avif",
+    img: "../../pic/tr2.avif",
     class: "img1",
     categoies: "Khmer New Year Sale99",
     usPrice: "$160.99",
@@ -337,7 +337,7 @@ const dataSmall = [
   {
     id: 100,
     name: "Nike Air",
-    img: "../pic/tr3.avif",
+    img: "../../pic/tr3.avif",
     class: "img1",
     categoies: "Khmer New Year Sale100",
     usPrice: "$60.99",
@@ -350,7 +350,7 @@ const dataSmall = [
   {
     id: 101,
     name: "Nike Form",
-    img: "../pic/tr4.avif",
+    img: "../../pic/tr4.avif",
     class: "img1",
     categoies: "Khmer New Year Sale101",
     usPrice: "$70.99",
@@ -363,7 +363,7 @@ const dataSmall = [
   {
     id: 102,
     name: "Nike Court",
-    img: "../pic/tr5.avif",
+    img: "../../pic/tr5.avif",
     class: "img1",
     categoies: "Khmer New Year Sale102",
     usPrice: "$90.99",
@@ -373,41 +373,64 @@ const dataSmall = [
     MaxQuantity: 50,
     similar: "top",
   },
+  {
+    id: 103,
+    subId: 104,
+    name: "Nike Sportswear",
+    img: "../../pic/gra1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale103",
+    usPrice: "$40.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-60%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 104,
+    subId: 105,
+    name: "Nike Sportswear",
+    img: "../../pic/gra2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale104",
+    usPrice: "$30.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-70%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 105,
+    subId: 104,
+    name: "Nike Sportswear",
+    img: "../../pic/sgra3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale105",
+    usPrice: "$40.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-60%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 106,
+    subId: 103,
+    name: "Nike Sportswear",
+    img: "../../pic/gra4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale104",
+    usPrice: "$50.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-50%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 50,
+    similar: "top",
+  },
 ];
 const wrappersimilar = document.querySelector(".wrapper-similar");
-// wrappersimilar.innerHTML = dataSmall
-//   .filter((e) => {
-//     return e.section == "Men";
-//   })
-//   .map((a) => {
-//     return `
-//             <div class="col-lg-4 mb-4 col-6">
-//                 <div class="image-card-wrapper w-100 overflow-hidden">
-//                     <a href="data.html?id=${a.id}">
-//                         <img src="${a.img}" class="${a.class}" alt="${a.name}">
-//                     </a>
-//                 </div>
-//                 <div class="wrapper-similar-text mt-3 overflow-hidden">
-//                     <div class="wrapper-hover">
-//                     <div class="wrapper-flex-text d-flex justify-content-between align-items-center ">
-//                         <h5 class="fw-bold text-dark m-0 price-text">US ${a.usPrice}</h5>
-//         <h5 class=" text-dark fw-bolder clickFav" id="offcanvasRightLabel"><i class="fa-regular fa-heart clickHeart"></i>
-//         </h5>
-//     </div>
-//     <span class="offPriceShow">${a.usPriceoff}</span>
-//                                     <div class="flex-img d-flex justify-content-between align-items-center">
-//                                     <p class="fw-light pt-1 mb-0">${a.typeOfShirt}</p>
-//                                     <a href="data.html?id=${a.id}">
-//                         <img src="${a.img}" class="${a.class} img-price" alt="${a.name}" style="width:35px;height: 35px;">
-//                     </a>
-//                 </div>
-//                 </div>
-//                 </div>
-//             </div>
-//           `;
-//   })
-//   .join("");
-
 //   btn-filter
 const ul = document.querySelector(".clothes-flters");
 const li = document.querySelectorAll(".custom-cursor-on-hover");
