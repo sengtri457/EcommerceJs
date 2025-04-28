@@ -987,6 +987,10 @@ h1 {
     display: inline-flex;
 }
 
+.btn-53 .letters a {
+    text-decoration: none;
+}
+
 .btn-53 span {
     opacity: 0;
     transform: translateY(-15px);
@@ -1470,7 +1474,9 @@ footer>h4 {
 
 @media (max-width: 1000px) {
 
-
+    .carousel-item img {
+        height: 300px;
+    }
 
     .btn-53 .original {
         font-size: 0.8rem;
