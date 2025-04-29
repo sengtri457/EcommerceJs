@@ -73,7 +73,7 @@
                         </label>
                     </div>
                 </li>
-                <li><a class=" nav-link" href="./login.html"><i class="fa-solid fa-user"
+                <li><a class=" nav-link" href="./Register.html"><i class="fa-solid fa-user"
                             style="margin-right: 0.5rem;"></i> Login
                     </a></li>
                 <li><a class="listA position-relative nav-link shop-btn" href="#" data-bs-toggle="offcanvas"
@@ -85,7 +85,7 @@
                             </path>
                         </svg>
                         <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result">
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result totalOrders">
                             0
                         </span>
                         </button>
@@ -102,11 +102,8 @@
                                     <a href="./MenSection.html" class="title-ul">Clothing</a>
                                     <li><a href="./MenSection.html">All clothes</a></li>
                                     <li><a href="./tshirtMen.html">Tops and T-Shirts</a></li>
-                                    <li><a href="">Shorts</a></li>
-                                    <li><a href="">Hoodies and Pullovers</a></li>
-                                    <li><a href="">Jackets & Vests</a></li>
-                                    <li><a href="">Pants and Tights</a></li>
-                                    <li><a href="">Swimwear</a></li>
+                                    <li><a href="./Short.html">Shorts</a></li>
+                                    <li><a href="./Hoodie.html">Hoodies and Pullovers</a></li>
                                 </ul>
                             </div>
                             <div class="col-4 wrapper-item-ul">
@@ -308,15 +305,18 @@
         </div>
     </div>
     <!-- offcanvas -->
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header pb-0">
+            <h5 class="offcanvas-title text-dark fw-bolder" id="offcanvasRightLabel"><i class="fa-regular fa-heart"></i>
+            </h5>
+            <button type="button" class="btn-close fw-bolder" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body small">
-            <span class="sp"></span>
-            <img src="" alt="" class="spimg">
-            <img src="" alt="" class="spimg1">
+        <div class="offcanvas-body wrapper-items pt-0">
+            <hr class="text-bg-dark border-2 ">
+            <article class="pricecart p-0 mt-2">
+                <div class="row wrapper-canvas">
+                </div>
+            </article>
         </div>
     </div>
     <!-- eend Nav -->
@@ -324,13 +324,13 @@
         <div class="container-fluid d-block ">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-2 wrapper-ul-men">
+                    <div class="col-lg-3 wrapper-ul-men">
                         <div class="wrapper-ul-1">
                             <div class="row">
                                 <article class="similar mt-4 mb-4 mb-lg-0">
                                     <h3 class="fw-bold h3-men" style="margin-right: 10px;">
                                         <a href="#">
-                                            <i class="fa-solid fa-person"></i>Women
+                                            <i class="fa-solid fa-person"></i>Women Section
                                         </a>
                                     </h3>
                                 </article>
@@ -363,7 +363,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-10">
+                    <div class="col-lg-9">
                         <div class="row wrapper-similar" data-aos="fade-up">
                             <!-- <div class="col-lg-3 mb-3 col-6 ">
                         <div class="image-card-wrapper w-100 overflow-hidden">

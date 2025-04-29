@@ -617,7 +617,7 @@ wrapperrecent.innerHTML = data
                             <div class="product-action">
                                 <a class="btn btn-outline-primary btn-square"  href="./html/data.html?id=${a.id}"><i
                                         class="fa fa-shopping-cart"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-primary btn-square btnFav" href=""s><i class="far fa-heart"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fa fa-sync-alt"></i></a>
                                 <a class="btn btn-outline-primary btn-square" href=""><i class="fa fa-search"></i></a>
                             </div>
@@ -751,9 +751,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Get orders from localStorage
   const orders = JSON.parse(localStorage.getItem("orders")) || [];
   // const ordersTable = document.getElementById("ordersList");
-  const totalOrdersSpan = document.getElementById("totalOrders");
-  const totalAmountSpan = document.getElementById("totalAmount");
-  const wrappecanvas = document.querySelector(".wrapper-canvas");
+  const totalOrdersSpan = document.querySelectorAll(".totalOrders");
+  // const totalAmountSpan = document.getElementById("totalAmount");
+  const wrappecanvas = document.querySelectorAll(".wrapper-canvas");
   console.log(orders);
 
   // Calculate totals
@@ -765,61 +765,47 @@ document.addEventListener("DOMContentLoaded", function () {
     const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
     const total = price * order.quantity;
     totalAmount += total;
-
-    wrappecanvas.innerHTML = `<div class="col-lg-6">
-                        <h5 class="text-dark fw-bold">Ordered Review</h5>
-                        <span class="usPricecart1">$${price.toFixed(2)}</span>
-                        <span class="offPricecart1"></span>
-                        <span class="usPriceoffcart1"></span><br>
-                        <span class="totalPrice1" id="totalAmount"></span>
-                        <h5 class="typeOfShirtcart1" style="color: black;padding: 0.5rem 0rem;">${
-                          order.typeOfShirt
-                        }</h5>
-                        <h5 class="sizeitem1">Size:${order.size}</h5>
-                        <h5 class="qtyitem1">Quantity:${order.quantity}</h5>
-                        <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
-                               <i class="bi bi-trash"></i>
-                           </button>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="cart-preview w-100">
-                            <h5 class="text-dark fw-bold text-right">Cart Preview</h5>
-                            <img class="cart-preview-img" src="${
-                              order.image
-                            }" width="100" />
-                        </div>
-                    </div>
-                        `;
-
-    // row.innerHTML = `
-    //                 <td data-aos="zoom-in">${order.id || index + 1}</td>
-    //                 <td>
-    //                     <img src="${order.image}" alt="${
-    //   order.typeOfShirt
-    // }" width="50" class="me-2">
-    //                     ${order.typeOfShirt}
-    //                 </td>
-    //                 <td>${order.size}</td>
-    //                 <td>${order.quantity}</td>
-    //                 <td>$${price.toFixed(2)}</td>
-    //                 <td>$${total.toFixed(2)}</td>
-    //                 <td>${new Date(
-    //                   order.date || Date.now()
-    //                 ).toLocaleDateString()}</td>
-    //                 <td>
-    //                     <button class="btn btn-danger btn-sm" onclick="deleteOrder(${index})">
-    //                         <i class="bi bi-trash"></i>
-    //                     </button>
-    //                 </td>
-    //             `;
-    // ordersTable.appendChild(row);
+    wrappecanvas.forEach((e) => {
+      e.innerHTML = `<div class="col-lg-6 col-6">
+                      <h5 class="text-dark fw-bold">Ordered Review</h5>
+                      <br/>
+                      <span class="usPricecart">Price: $${price.toFixed(
+                        2
+                      )}</span>
+                      <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
+                      <h5 class="typeOfShirtcart" style="color: black;padding: 0.5rem 0rem;">${
+                        order.typeOfShirt
+                      }</h5>
+                      <h5 class="totalPrice1" id="totalAmount">Total: $${totalAmount.toFixed(
+                        2
+                      )}</h5>
+                      <h5 class="sizeitem1">Size:${order.size}</h5>
+                      <h5 class="qtyitem1">Quantity:${order.quantity}</h5>
+                      <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">Delete Item
+                             <i class="bi bi-trash"></i>
+                         </button>
+                  </div>
+                  <div class="col-lg-6 col-6">
+                      <div class="cart-preview">
+                          <h5 class="text-dark fw-bold text-right">Cart Preview</h5>
+                           <br/>
+                          <img class="cart-preview-img w-100" src="${
+                            order.image
+                          }"/>
+                      </div>
+                  </div>
+                      `;
+      if (orders.length == 0) {
+        e.innerHTML = "No items";
+      }
+    });
   });
 
   // Update totals display
-  totalOrdersSpan.textContent = orders.length;
-  totalAmountSpan.textContent = `Total Amount: $${totalAmount.toFixed(2)}`;
-  // const totalOrders1 = document.querySelector(".totalOrders1");
-  // totalOrders1.textContent = orders.length;
+  totalOrdersSpan.forEach((e) => {
+    e.textContent = orders.length;
+  });
+  console.log(orders);
 });
 
 function deleteOrder(index) {
@@ -828,3 +814,20 @@ function deleteOrder(index) {
   localStorage.setItem("orders", JSON.stringify(orders));
   location.reload();
 }
+
+// back-to-top
+
+let isScrolling;
+const $backToTop = $(".back-to-top");
+$backToTop.hide();
+$(window).scroll(function () {
+  clearTimeout(isScrolling);
+  $backToTop.fadeIn("slow");
+  isScrolling = setTimeout(function () {
+    $backToTop.fadeOut("slow");
+  }, 1000);
+});
+$backToTop.click(function (e) {
+  e.preventDefault();
+  $("html, body").animate({ scrollTop: 0 }, 1700, "easeInOutExpo");
+});

@@ -31,7 +31,7 @@
 
 <body>
     <!-- Navbar -->
-    <div class="navbar  top-0 w-100 p-3" data-aos="fade-down">
+    <div class="navbar  top-0 w-100 p-3">
         <div class="container p-2">
             <a href="#" class="logo d-flex align-items-center gap-2"><img src="./pic/fashion.png" alt=""
                     style="width: 50px; height:50px;">
@@ -55,7 +55,7 @@
                 </li>
                 <li><a href="./html/KidSection.html" class="listD nav-link">Kids
                     </a></li>
-                <li><a href="#" class=" listE
+                <li><a href="./html/Ac.html" class=" listE
                  nav-link">Accessories
                     </a></li>
             </ul>
@@ -75,7 +75,7 @@
                         </label>
                     </div>
                 </li>
-                <li><a class=" nav-link" href="./html/login.html"><i class="fa-solid fa-user"
+                <li><a class=" nav-link" href="./html/Register.html"><i class="fa-solid fa-user"
                             style="margin-right: 0.5rem;"></i> Login
                     </a></li>
                 <li><a class="listA position-relative nav-link shop-btn" href="#" data-bs-toggle="offcanvas"
@@ -87,8 +87,7 @@
                             </path>
                         </svg>
                         <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result"
-                            id="totalOrders">
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result totalOrders">
                             0
                         </span>
                         </button>
@@ -107,10 +106,7 @@
                                     <li><a href="./html/MenSection.html">All clothes</a></li>
                                     <li><a href="./html/tshirtMen.html">Tops and T-Shirts</a></li>
                                     <li><a href="./html/Short.html">Shorts</a></li>
-                                    <li><a href="">Hoodies and Pullovers</a></li>
-                                    <li><a href="">Jackets & Vests</a></li>
-                                    <li><a href="">Pants and Tights</a></li>
-                                    <li><a href="">Swimwear</a></li>
+                                    <li><a href="./html/Hoodie.html">Hoodies and Pullovers</a></li>
                                 </ul>
                             </div>
                             <div class="col-4 wrapper-item-ul">
@@ -125,7 +121,7 @@
                             <div class="col-4 wrapper-item-ul border-0">
                                 <ul class="navbar-nav">
                                     <a href="./html/Ac.html" class="title-ul">Accessory</a>
-                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="./html/Ac.html">Bag & Bagpack</a></li>
                                     <li><a href="">Hat & Hatwear</a></li>
                                     <li><a href="">Socks</a></li>
                                     <li><a href="">Sunglasses</a></li>
@@ -153,11 +149,11 @@
                             </div>
                             <div class="col-4 wrapper-item-ul">
                                 <ul class="navbar-nav ">
-                                    <a href="" class="title-ul">Shop Now</a>
-                                    <li><a href="">Men</a></li>
-                                    <li><a href="">Women</a></li>
-                                    <li><a href="">Kids</a></li>
-                                    <li><a href="">Shop All</a></li>
+                                    <a href="./html/MenSection.html" class="title-ul">Shop Now</a>
+                                    <li><a href="./html/MenSection.html">Men</a></li>
+                                    <li><a href="./html/womenSection.html">Women</a></li>
+                                    <li><a href="./html/KidSection.html">Kids</a></li>
+                                    <li><a href="./html/MenSection.html">Shop All</a></li>
                                 </ul>
                             </div>
                             <div class="col-4 wrapper-item-ul border-0">
@@ -322,7 +318,7 @@
                                         Shop Now
                                     </div>
                                     <div class="letters">
-                                        <a href="./html/login.html">
+                                        <a href="./html/Register.html">
                                             Shop Now
                                         </a>
                                     </div>
@@ -342,7 +338,7 @@
                             <button class="btn-53 m-auto">
                                 <div class="original">Shop Now</div>
                                 <div class="letters">
-                                    <a href="./html/login.html">
+                                    <a href="./html/Register.html">
                                         Shop Now
                                     </a>
                                 </div>
@@ -361,7 +357,7 @@
                             <button class="btn-53 m-auto">
                                 <div class="original">Shop Now</div>
                                 <div class="letters">
-                                    <a href="./html/login.html">
+                                    <a href="./html/Register.html">
                                         Shop Now
                                     </a>
                                 </div>
@@ -427,7 +423,7 @@
     <!-- staert categories -->
     <div class="container mt-4 mb-4 container-xxl" data-aos="fade-up">
         <div class="container text-center pb-5">
-            <h2>What We Have For You!</h2>
+            <h1 class="text-dark">What We Have For You!</h1>
         </div>
         <div class="row wrapper-cate d-flex justify-content-center">
             <div class="col-lg-3 col-6 mb-lg-0 mb-3">
@@ -454,7 +450,7 @@
                 <div class="wrapper-categories position-relative">
                     <img src="./pic/asho.avif" alt="" class="w-100">
                     <div class="wrapper-btn">
-                        <a href="./html/MenSection.html">
+                        <a href="./html/Hoodie.html">
                             <button>Shop Now</button>
                         </a>
                     </div>
@@ -582,7 +578,7 @@
         </div>
     </section>
     <!-- footer start -->
-    <footer>
+    <footer data-aos="fade-down">
         <div class="container mt-lg-5 ">
             <div class="row d-flex justify-content-center ">
                 <div class="col-lg-2 col-6">
@@ -677,7 +673,9 @@
 
 
 
-
+    <a href="#" class="back-to-top"><i class="fa-solid fa-chevron-up"></i></a>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src=" index.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

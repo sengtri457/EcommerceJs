@@ -70,13 +70,13 @@
     </div>
 
     <script>
-        let islogin = sessionStorage.getItem("islogin");
-        if (islogin != "2025") {
-            sessionStorage.clear();
-            window.location.href = "./login.html";
+        const user = localStorage.getItem("user");
+        if (!user) {
+            localStorage.clear();;
+            window.location.href = "login.html"; // or your login page path
         }
         document.querySelector('.logout').addEventListener('click', function () {
-            sessionStorage.clear();
+            localStorage.clear();
             window.location.href = "./login.html";
         });
         document.addEventListener('DOMContentLoaded', function () {

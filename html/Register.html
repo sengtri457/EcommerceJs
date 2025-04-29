@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Register</title>
+    <style>
+        h1 {
+            font-size: clamp(2rem, 3vw, 4rem);
+            font-weight: 500;
+        }
+
+        .container {
+            transition: all 0.4s ease-in-out;
+
+        }
+
+        .card {
+            margin: 2rem auto;
+            width: 50%;
+            padding: 1.9rem 1.2rem;
+            text-align: center;
+            background: #2a2b38;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px;
+        }
+
+        @media screen and (max-width:768px) {
+
+            .card {
+                width: 90%;
+            }
+        }
+
+
+        .card:hover {
+            transform: scale(10deg) skew(0deg, 5deg);
+            box-shadow: 0 8px 24px 0 rgb(42 43 56 / 20%);
+            box-shadow: rgba(79, 77, 78, 0.4) 5px 5px, rgba(79, 77, 78, 0.3) 10px 10px, rgba(79,
+                    77,
+                    78, 0.2) 15px 15px, rgba(79,
+                    77,
+                    78, 0.1) 20px 20px, rgba(79,
+                    77,
+                    78, 0.05) 25px 25px;
+            transform: skew(-5deg);
+        }
+
+        /*Inputs*/
+        .field {
+            margin-top: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5em;
+            background-color: #1f2029;
+            border-radius: 4px;
+            padding: .5em 1em;
+            transition: all 0.4s ease-in-out;
+            border: 1px solid #1f2029;
+        }
+
+        .field:hover {
+            border: 1px solid #ffeba7;
+        }
+
+        .input-icon {
+            height: 1em;
+            width: 1em;
+            color: #ffeba7;
+        }
+
+        .input-icon1 {
+            height: 1em;
+            width: 1em;
+            color: #ffeba7;
+        }
+
+        .input-icon2 {
+            height: 1em;
+            width: 1em;
+            color: #ffeba7;
+        }
+
+        .input-field {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            color: #d3d3d3;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .bi-eye-fill {
+            height: 1em;
+            width: 1em;
+            color: #ffeba7;
+            transition: all 0.4s ease-in-out;
+        }
+
+        /*Text*/
+        .title {
+            margin-bottom: 1rem;
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #f5f5f5;
+        }
+
+        /*Buttons*/
+        .btn {
+            margin: 1rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: .8em;
+            text-transform: uppercase;
+            padding: 0.6em 1.2em;
+            background-color: #ffeba7;
+            color: #5e6681;
+            box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
+            transition: all .3s ease-in-out;
+        }
+
+        .btn-link {
+            color: #f5f5f5;
+            display: block;
+            font-size: .75em;
+            transition: color .3s ease-out;
+        }
+
+        /*Hover & focus*/
+        .field input:focus::placeholder {
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .btn:hover {
+            background-color: #5e6681;
+            color: #ffeba7;
+            box-shadow: 0 8px 24px 0 rgb(16 39 112 / 20%);
+        }
+
+        .btn-link:hover {
+            color: #ffeba7;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: rgb(0, 0, 0) url(../pic/box\ load.gif) no-repeat center center;
+            background-size: 20%;
+            transition: all 0.4s ease-in-out;
+        }
+
+        @media screen and (max-width:768px) {
+            #preloader {
+                background-size: 50%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- start loading -->
+    <div class="container d-none">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K4DyBUG242c?si=U1REoRaoh7nM7ooc"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe>
+        <iframe width="560" height="315" src="httsps://www.youtube.com/embed/K4DyBUG242c?si=U1REoRaoh7nM7ooc"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe>
+    </div>
+    <!-- end loading -->
+    <div class="container text-center" data-aos="fade-down">
+        <h1 class="fw-bolder m-5">Please SignUps Your Account!</h1>
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <h4 class="title">Sign Up</h4>
+                    <form id="form-register">
+                        <div class="field">
+                            <i class="bi bi-person-fill input-icon1"></i>
+                            <input autocomplete="off" id="logemail" placeholder="Email" class="input-field"
+                                name="logemail" type="email">
+                        </div>
+                        <div class="field position-relative">
+                            <i class="bi bi-eye-slash-fill input-icon" onclick="togglePasswordVisibility()"></i>
+                            <input autocomplete="off" id="logpass" placeholder="Password" class="input-field"
+                                name="logpass" type="password">
+                        </div>
+                        <div class="field position-relative">
+                            <i class="bi bi-eye-slash-fill input-icon2" onclick="togglePasswordVisibility1()"></i>
+                            <input autocomplete="off" id="confirmpass" placeholder="Confirm Passwords"
+                                class="input-field" name="logpass" type="password">
+                        </div>
+                        <button class="btn btn-linkk">SignIn</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+
+    </div>
+    <div id="preloader">
+
+    </div>
+
+    <script>
+        const btnlink = document.querySelector(".btn-linkk");
+        const inputicon = document.querySelector(".input-icon");
+        const inputicon1 = document.querySelector(".input-icon1");
+        const inputicon2 = document.querySelector(".input-icon2");
+        const passwordInput = document.getElementById("logpass");
+        const confirmpass = document.getElementById("confirmpass");
+        const email = document.getElementById("logemail");
+        function togglePasswordVisibility() {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                inputicon.className = "bi-eye-fill";
+            } else {
+                passwordInput.type = "password";
+                inputicon.className = "bi-eye-slash-fill input-icon";
+            }
+        }
+        function togglePasswordVisibility1() {
+            if (confirmpass.type === "password") {
+                confirmpass.type = "text";
+                inputicon2.className = "bi-eye-fill";
+            } else {
+                confirmpass.type = "password";
+                inputicon2.className = "bi-eye-slash-fill input-icon";
+            }
+        }
+        const formregi = document.getElementById("form-register");;
+        console.log(formregi)
+        formregi.addEventListener("submit", function (e) {
+            e.preventDefault()
+            const passValue = passwordInput.value;
+            const emailValue = email.value;
+            const connfrrimValue = confirmpass.value;
+            if (passValue !== connfrrimValue) {
+                alert("padssword not match");
+                return;
+            }
+            const user = {
+                emailValue: emailValue,
+                passValue: passValue
+            };
+            localStorage.setItem(emailValue, JSON.stringify(user));
+            alert("user registered successfully");
+            window.location.href = "./login.html";
+        })
+        var pre = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            pre.style.display = "none";
+        });
+
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+        });
+    </script>
+</body>
+
+</html>

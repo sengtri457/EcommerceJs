@@ -79,6 +79,42 @@ body {
     transition: all 0.4s ease-in-out;
 }
 
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: var(--dark);
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 99;
+    animation: zoomInOut 2s infinite;
+}
+
+.back-to-top i {
+    padding-top: 12px;
+    color: #ffffff;
+}
+
+.btn-lg-square {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+}
+
 /* h5 {
     font-size: clamp(0.7rem, 2vw, 2rem);
     font-weight: var(--weight-medum);
@@ -204,6 +240,48 @@ h1 {
     font-size: 1rem;
 }
 
+/* price */
+.pricecart {
+    padding: 1rem 0rem;
+}
+
+.usPricecart {
+    font-size: var(--font-medum);
+    font-weight: var(--weight-medum);
+    color: var(--danger);
+}
+
+.sizeitem {
+    font-size: var(--font-small);
+    font-weight: var(--weight-small);
+    color: var(--dark);
+}
+
+.qtyitem {
+    font-size: var(--font-small);
+    font-weight: var(--weight-small);
+    color: var(--dark);
+}
+
+.totalPrice {
+    font-size: var(--font-medum);
+    font-weight: var(--weight-medum);
+    color: var(--danger);
+}
+
+.offPricecart {
+    padding: 0rem 0.25rem;
+    font-size: var(--font-medum);
+    font-weight: var(--weight-medum);
+    color: var(--dark);
+}
+
+.usPriceoffcart {
+    font-size: var(--font-medum);
+    font-weight: var(--weight-small);
+    color: var(--gray-dark);
+    text-decoration: line-through;
+}
 
 ::-webkit-scrollbar {
     width: 0;
