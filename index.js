@@ -106,7 +106,7 @@ window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
   if (currentScrollY > lastScrollY) {
     // Scrolling down
-    navbar.style.transform = "translateY(-80px)";
+    navbar.style.transform = "translateY(-101px)";
   } else {
     // Scrolling up
     navbar.style.transform = "translateY(0)";
@@ -125,7 +125,7 @@ const data = [
     usPrice: "$30.99",
     usPriceoff: "$40.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied CropTop",
+    typeOfShirt: "Oversied Tshirt",
   },
   {
     id: 5,
@@ -136,7 +136,7 @@ const data = [
     usPrice: "$30.99",
     usPriceoff: "$40.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied CropTop",
+    typeOfShirt: "Oversied Polo",
   },
   {
     id: 13,
@@ -147,7 +147,7 @@ const data = [
     usPrice: "$30.99",
     usPriceoff: "$40.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied CropTop",
+    typeOfShirt: "Oversied Hoodie",
   },
   {
     id: 17,
@@ -158,7 +158,7 @@ const data = [
     usPrice: "$30.99",
     usPriceoff: "$40.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied CropTop",
+    typeOfShirt: "Oversied Track",
   },
   {
     id: 22,
@@ -169,7 +169,7 @@ const data = [
     usPrice: "$30.99",
     usPriceoff: "$40.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied CropTop",
+    typeOfShirt: "Oversied polo",
   },
   {
     id: 24,
@@ -191,7 +191,7 @@ const data = [
     usPrice: "$30.99",
     usPriceoff: "$40.95",
     Priceoff: "-40%",
-    typeOfShirt: "Oversied CropTop",
+    typeOfShirt: "Oversied Hoddie",
   },
   {
     id: 40,
@@ -745,18 +745,3 @@ setupGallery({
   backBtnClass: "backBtn2",
   nextBtnClass: "nextBtn2",
 });
-
-// script.js
-// const products = [
-//   { id: 1, name: "Shoes", description: "Stylish running shoes." },
-//   { id: 2, name: "Bag", description: "Leather backpack." },
-// ];
-
-// const params = new URLSearchParams(window.location.search);
-// const id = parseInt(params.get("id"));
-// const product = products.find((p) => p.id === id);
-
-// const pname = document.getElementById("product-name");
-// const pd = document.getElementById("product-description");
-// pname.textContent = products[0].name;
-// pd.textContent = products[0].description;

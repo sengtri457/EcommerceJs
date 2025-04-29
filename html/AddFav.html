@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&amp;family=Inter:wght@600&amp;family=Lobster+Two:wght@700&amp;display=swap"
+        rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./css/data.css">
+    <title>Fav</title>
+</head>
+<style>
+    /* Add these styles for the toast notification */
+    .toast-notification {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #333;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 4px;
+        z-index: 1000;
+        animation: fadeInOut 2s ease;
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        15% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        85% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    }
+
+    /* Improve card styling */
+    .card {
+        transition: transform 0.2s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .price {
+        color: #dc3545;
+        font-weight: bold;
+    }
+
+    .price-off {
+        color: #6c757d;
+        font-size: 0.9em;
+    }
+
+    .continue {
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+        border-radius: 25px;
+        transition: all 0.4s ease-in-out;
+        animation: zoomInOut 3s infinite;
+        background-color: dodgerblue;
+        color: white;
+    }
+
+    @keyframes zoomInOut {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.2);
+        }
+    }
+</style>
+
+<body>
+    <div class="navbar  top-0 w-100 p-3">
+        <div class="container p-2">
+            <a href="../index.html" class="logo"><img src="../pic/Logo_NIKE.svg" alt="" style="width: 100px;"></a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu gap-lg-3 gap-2">
+                <li><a class="listA nav-link" href="#">New
+                    </a></li>
+                <li class="dropdown">
+                    <a class="listB  nav-link">Men
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="./womenSection.html" class="listC  nav-link">Women
+                    </a>
+                </li>
+                <li><a href="./KidSection.html" class="listD nav-link">Kids
+                    </a></li>
+                <li><a href="#" class=" listE
+                             nav-link">Accessories
+                    </a></li>
+            </ul>
+            <ul class="menu gap-lg-2 gap-0 ">
+                <li>
+                    <div class="InputContainer">
+                        <input placeholder="Search" class="inputt" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                        <label class="labelforsearch" for="input">
+                            <svg class="searchIcon" viewBox="0 0 512 512">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                                </path>
+                            </svg>
+                        </label>
+                    </div>
+                </li>
+                <li><a class=" nav-link" href="./login.html"><i class="fa-solid fa-user"
+                            style="margin-right: 0.5rem;"></i>
+                        Login
+                    </a></li>
+                <li><a class="listA position-relative nav-link shop-btn" href="#" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="padding: 5px;">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px"
+                            height="24px" fill="none">
+                            <path stroke="currentColor" stroke-width="1.5"
+                                d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5">
+                            </path>
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result">
+                            0
+                        </span>
+                        </button>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="wrapper-ul1 ">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./MenSection.html">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="./ShoesMen.html" class="title-ul">Shoes</a>
+                                    <li><a href="./ShoesMen.html">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul text-left z-3 ">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./MenSection.html">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul2 text-left z-3">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./womenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./womenSection.html">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul3 text-left z-3">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./KidSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./KidSection.html">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul4 text-left z-3">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-block mt-5">
+        <!-- <span class="navbar-text text-dark">
+            My Favorites 
+        </span> -->
+        <h3 class="mb-5">My Favorites(<span id="favCount">0</span>)</h3>
+        <div class="row" id="favoritesContainer">
+            <!-- Favorites will be displayed here -->
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const favoritesContainer = document.getElementById('favoritesContainer');
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+            // Update the favorite count
+            document.getElementById('favCount').textContent = favorites.length;
+
+            if (favorites.length === 0) {
+                favoritesContainer.innerHTML = `
+                <div class="col-12 text-center">
+    <h3 class="fw-bold mb-3">Aww ..Snap. Your wish list is empty!</h3>
+                    <p clas="fw-light mb-5">Check out our latest arrivals and stay up to date with our latest styles!</p>
+                    <a href="../index.html" class="btn-size btn continue"><i class="fa-solid fa-chevron-left mx-2"></i>Continue Shopping</a>
+                </div>`;
+                return;
+            }
+
+            favoritesContainer.innerHTML = favorites.map(item => `
+            <div class="col-lg-3 col-md-4 col-6 mb-4 carddel" data-aos="zoom-in">
+                <div class="card" data-id="${item.id}" data-size="${item.size}">
+                    <img src="${item.img}" class="card-img-top" alt="${item.typeOfShirt}">
+                    <div class="card-body">
+                        <h5 class="card-title">${item.typeOfShirt}</h5>
+                        <p class="card-text">
+                            <span class="price">${item.price}</span>
+                            <span class="price-off">${item.usPriceoff}</span>
+                            <br>
+                            <small>Size: ${item.size}</small>
+                        </p>
+                        <button class="btn btn-danger btn-sm remove-fav mb-lg-0 mb-2">
+                            <i class="bi bi-trash"></i> Remove
+                        </button>
+                        <a href="data.html?id=${item.id}" class="btn btn-primary btn-sm">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+
+            // Add event listener to remove favorite
+            favoritesContainer.addEventListener('click', function (event) {
+                if (event.target.closest('.remove-fav')) {
+                    const card = event.target.closest('.card');
+                    const id = card.getAttribute('data-id');
+                    const size = card.getAttribute('data-size');
+                    removeFavorite(id, size);
+                }
+            });
+        });
+
+        // Function to remove the item directly when clicked
+        function removeFavorite(id, size) {
+            let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+            const index = favorites.findIndex(item => item.id === id && item.size === size);
+            favorites.splice(index, 1);
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+            document.getElementById('favCount').textContent = favorites.length;
+            const cardToRemove = document.querySelector(`.card[data-id="${id}"][data-size="${size}"]`);
+            if (cardToRemove) {
+                cardToRemove.parentElement.remove();
+            }
+        }
+    </script>
+    <script src="../index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+        });
+    </script>
+</body>
+
+</html>

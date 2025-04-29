@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@4s00;500;600&amp;family=Inter:wght@600&amp;family=Lobster+Two:wght@700&amp;display=swap"
+        rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./css/data.css">
+    <title>Data</title>
+</head>
+
+<body>
+    <div class="navbar  top-0 w-100 p-3">
+        <div class="container p-2">
+            <a href="../index.html" class="logo d-flex align-items-center gap-2"><img src="../pic/fashion.png" alt=""
+                    style="width: 50px; height:50px;">
+                <h3 class="mt-3 fw-bolder">Phsar Materk</h3>
+            </a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu gap-lg-3 gap-2">
+                <li><a class="listA nav-link" href="#">New
+                    </a></li>
+                <li class="dropdown">
+                    <a class="listB  nav-link">Men
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="./womenSection.html" class="listC  nav-link">Women
+                    </a>
+                </li>
+                <li><a href="./KidSection.html" class="listD nav-link">Kids
+                    </a></li>
+                <li><a href="#" class=" listE
+                         nav-link">Accessories
+                    </a></li>
+            </ul>
+            <ul class="menu gap-lg-2 gap-0 ">
+                <li>
+                    <div class="InputContainer">
+                        <input placeholder="Search" class="inputt" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                        <label class="labelforsearch" for="input">
+                            <svg class="searchIcon" viewBox="0 0 512 512">
+                                <path
+                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z">
+                                </path>
+                            </svg>
+                        </label>
+                    </div>
+                </li>
+                <li><a class=" nav-link" href="./login.html"><i class="fa-solid fa-user"
+                            style="margin-right: 0.5rem;"></i>
+                        Login
+                    </a></li>
+                <li><a class="listA position-relative nav-link shop-btn" href="#" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" style="padding: 5px;">
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px"
+                            height="24px" fill="none">
+                            <path stroke="currentColor" stroke-width="1.5"
+                                d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5">
+                            </path>
+                        </svg>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result">
+                            0
+                        </span>
+                        </button>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="wrapper-ul1 ">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./MenSection.html">All clothes</a></li>
+                                    <li><a href="./tshirtMen.html">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="./ShoesMen.html" class="title-ul">Shoes</a>
+                                    <li><a href="./ShoesMen.html">All Shoes</a></li>
+                                    <li><a href="./BasketballMen.html">Basketball</a></li>
+                                    <li><a href="./lifeStyle.html">Life Style</a></li>
+                                    <li><a href="./jorrdan.html">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="./Ac.html" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul text-left z-3 ">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./MenSection.html">All clothes</a></li>
+                                    <li><a href="#">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul2 text-left z-3">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./womenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./womenSection.html">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul3 text-left z-3">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./KidSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="./KidSection.html">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-ul4 text-left z-3">
+            <div class="container-lg container-fluid">
+                <div class="container-lg">
+                    <div class="container-lg d-block text-left container-wrapper">
+                        <div class="wrapper-item row pt-3 pb-3 justify-content-center">
+                            <div class="col-4 wrapper-item-ul mb-lg-0 mb-3">
+                                <ul class="navbar-nav">
+                                    <a href="./MenSection.html" class="title-ul">Clothing</a>
+                                    <li><a href="">All clothes</a></li>
+                                    <li><a href="">Tops and T-Shirts</a></li>
+                                    <li><a href="">Shorts</a></li>
+                                    <li><a href="">Hoodies and Pullovers</a></li>
+                                    <li><a href="">Jackets & Vests</a></li>
+                                    <li><a href="">Pants and Tights</a></li>
+                                    <li><a href="">Swimwear</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul">
+                                <ul class="navbar-nav ">
+                                    <a href="" class="title-ul">Shoes</a>
+                                    <li><a href="">All Shoes</a></li>
+                                    <li><a href="">Basketball</a></li>
+                                    <li><a href="">Life Style</a></li>
+                                    <li><a href="">Jordan</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 wrapper-item-ul border-0">
+                                <ul class="navbar-nav">
+                                    <a href="" class="title-ul">Accessory</a>
+                                    <li><a href="">Bag & Bagpack</a></li>
+                                    <li><a href="">Hat & Hatwear</a></li>
+                                    <li><a href="">Socks</a></li>
+                                    <li><a href="">Sunglasses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body p-3">
+                    <div class="input-container">
+                        <input class="input" name="text" type="text" placeholder="Search the internet..." />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header pb-0">
+            <h5 class="offcanvas-title text-dark fw-bolder" id="offcanvasRightLabel"><i class="fa-regular fa-heart"></i>
+            </h5>
+            <button type="button" class="btn-close fw-bolder" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body wrapper-items pt-0">
+            <hr class="text-bg-dark border-2 ">
+            <article class="pricecart p-0 mt-2">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h5 class="text-dark fw-bold">Ordered Review</h5>
+                        <span class="usPricecart"></span>
+                        <span class="offPricecart "></span>
+                        <span class="usPriceoffcart"></span><br>
+                        <span class="totalPrice"></span>
+                        <h5 class="typeOfShirtcart " style="color: black;padding: 0.5rem 0rem;"></h5>
+                        <h5 class="sizeitem"></h5>
+                        <h5 class="qtyitem"></h5>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="cart-preview w-100">
+                            <h5 class="text-dark fw-bold text-right">Cart Preview</h5>
+                            <img class="cart-preview-img" src="" width="100" />
+                            <p class="cart-preview-size"></p>
+                            <p class="cart-preview-qty"></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-clear btn-size"><i class="bi bi-trash3-fill"></i></button>
+            </article>
+        </div>
+    </div>
+    <!-- eend Nav -->
+    <!-- start Product -->
+    <div class="container-fluid container-xxl">
+        <div class="row" data-aos="zoom-in">
+            <div class="col-lg-5 col-12">
+                <div class="row">
+                    <div class="col-lg-3 col-2">
+                        <div class="thumbnails" id="thumbnailContainer"></div>
+                    </div>
+                    <div class="col-lg-9 col-10">
+                        <div class="main-display">
+                            <img id="mainImage" src="" alt="Main Image" class="w-100  mainimg">
+                            <div class="buttons">
+                                <button class="Previous" onclick="prevImage()"><i
+                                        class="fa-solid fa-chevron-left"></i></button>
+                                <button class="next" onclick="nextImage()"><i
+                                        class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-12">
+                <article class="price">
+                    <span class="usPrice"></span>
+                    <span class="offPrice "></span>
+                    <span class="usPriceoff"></span>
+                    <h4 class="fw-medium nameP m-0 text-dark"></h4>
+                    <h6 class="typeOfShirt fw-light " style="color: black;"></h6>
+                </article>
+                <article class="size">
+                    <h5 style="color: black;padding: 0.5rem 0rem 0rem 0rem">Size</h5>
+                    <button class="btn-size size-Xs">XS</button>
+                    <button class="btn-size size-S">S</button>
+                    <button class="btn-size size-M">M</button>
+                    <button class="btn-size size-L">L</button>
+                </article>
+                <br>
+                <article>
+                    <h5 style="color: black;padding: 0.5rem 0rem;">Quantity</h5>
+                    <button class="btn-size decrement">-</button>
+                    <button class="btn-size resultQTY">0</button>
+                    <button class="btn-size increment">+</button>
+
+                </article>
+                <div class="row">
+                    <div class="col-lg-8 mt-4 col-8">
+                        <button class="btn btn-outline-dark btn-sub bg-dark text-white w-100" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            Add To Card
+                        </button>
+                        <!-- Replace the existing Add Fav button with this -->
+                        <button class="btn btn-outline-dark btnFav bg-dark text-white w-100 mt-2"
+                            onclick="addToFavorites()">
+                            <i class="fa-heart fa-regular"></i> Add to Favorites
+                        </button>
+                    </div>
+                </div>
+                <!-- dropdown info -->
+                <div class="container my-4">
+                    <div class="row w-100 wrapper-drop">
+                        <div class="col-lg-12">
+                            <!-- Dropdown Item 1 -->
+                            <div class="dropdown-header">
+                                <div class="wrapper-info-header">
+                                    <h5 style="color: black;padding: 0.5rem 0rem;">Model info</h5>
+                                    <i class="fa-solid fa-chevron-down chevron"></i>
+                                </div>
+                                <div class="wrapper-infoText overflow-scroll">
+                                    <div class="icon-text">
+                                        <h3>
+                                            <i class="bi bi-truck"></i>
+                                        </h3>
+                                        <div class="w-100">
+                                            <h6 class="m-0 fw-bold mb-1">Fast Delivery</h6>
+                                            <p>From 1 - 2 days</p>
+                                        </div>
+                                    </div>
+                                    <div class=" icon-text">
+                                        <h3>
+                                            <i class="bi bi-headset"></i>
+                                        </h3>
+                                        <div class="w-100">
+                                            <h6 class="m-0 fw-bold mb-1">Support hotline</h6>
+                                            <p>(+855) 081 999 716</p>
+                                        </div>
+                                    </div>
+                                    <div class="icon-text">
+                                        <h3>
+                                            <i class="bi bi-credit-card"></i>
+                                        </h3>
+                                        <div class="w-100">
+                                            <h6 class="m-0 fw-bold mb-1">Easy payment</h6>
+                                            <p>Many forms</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-header">
+                                <div class="wrapper-info-header">
+                                    <h5 style="color: black;padding: 0.5rem 0rem;">More info</h5>
+                                    <i class="fa-solid fa-chevron-down chevron"></i>
+                                </div>
+                                <div class="wrapper-infoText d-block overflow-hidden">
+                                    <div class="w-100">
+                                        <br>
+                                        <h6 class="m-0 fw-light mb-1 text-dark">Model is 161 cm tall / 43 kg weight
+                                            and is
+                                            wearing size S.</h6><br><br>
+                                        <p>Code. 2222410990</p><br>
+                                        <p>Oversized t-shirt featuring short sleeves with front graphic <br> design
+                                            printed
+                                            and round neck
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-header">
+                                <div class="wrapper-info-header">
+                                    <h5 style="color: black;padding: 0.5rem 0rem;">Size Chart</h5>
+                                    <a href="./size.html" class="text-dark">
+                                        <i class="fa-solid fa-chevron-down chevron"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-0">
+            </div>
+        </div>
+        <!-- end dropdown info -->
+        <!-- end items -->
+        <article class="similar mt-4 mb-4">
+            <h3 class="fw-bold">Similar item</h3>
+        </article>
+        <div class="row wrapper-similar" data-aos="fade-up">
+            <div class="col-lg-3 mb-3 col-6 ">
+                <div class="image-card-wrapper w-100 overflow-hidden">
+                    <a href="data.html?id=${a.id}">
+                        <img src="${a.img}" class="${a.class}" alt="${a.name}">
+                    </a>
+                </div>
+                <div class="wrapper-similar-text mt-5">
+                    <!-- <div class="wrapper-hover">
+                        <img src="" alt="" style="width: 100px;height: 100px;" class="img-price">
+                        <h5 class="fw-bold"></h5>
+                    <p class="fw-light"></p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container w-75 mt-5 m-auto d-block text-center" style="padding: 3rem;">
+
+
+
+    </div>
+
+
+    <img id="product-img" class="img-fluid" />
+    <!-- <h2 id="product-name"></h2> -->
+    <script src="../index.js">
+    </script>
+    <script src="data2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

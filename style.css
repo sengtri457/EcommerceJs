@@ -51,7 +51,7 @@ h3 {
 
 h4 {
     font-family: "Product Sans", Poppins;
-    font-size: clamp(1.5rem, 4vw, 1.5rem);
+    font-size: clamp(0.9rem, 4vw, 1.3rem);
     /* min: 24px, max: 40px */
 }
 
@@ -987,6 +987,10 @@ h1 {
     display: inline-flex;
 }
 
+.btn-53 .letters a {
+    text-decoration: none;
+}
+
 .btn-53 span {
     opacity: 0;
     transform: translateY(-15px);
@@ -1165,7 +1169,12 @@ h1 {
 
 footer {
     padding: 2rem;
-    background-color: var(--gray-dark);
+    background-color: #FFFFFF;
+    color: black;
+}
+
+footer>h4 {
+    font-size: var(--font-small);
 }
 
 .btn-square,
@@ -1184,8 +1193,8 @@ footer {
 
 .primary {
     color: var(--light);
-    background-color: var(--color-main);
-    border-color: var(--color-main);
+    background-color: black;
+    border-color: black;
     transition: all 0.4s ease-in-out;
 }
 
@@ -1228,9 +1237,9 @@ footer {
 
 .list-unstyled li a {
     line-height: 1.5;
-    font-size: var(--font-small);
+    font-size: 0.9rem;
     text-decoration: none;
-    color: var(--light);
+    color: black;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
 }
@@ -1240,6 +1249,14 @@ footer {
     text-decoration: solid underline;
 }
 
+.wrapper-underd p {
+    transition: all 0.4s ease-in-out;
+}
+
+.wrapper-underd p:hover {
+    letter-spacing: 2px;
+    color: gray;
+}
 
 
 /* recent-product */
@@ -1457,7 +1474,9 @@ footer {
 
 @media (max-width: 1000px) {
 
-
+    .carousel-item img {
+        height: 300px;
+    }
 
     .btn-53 .original {
         font-size: 0.8rem;
