@@ -87,7 +87,8 @@
                             </path>
                         </svg>
                         <span
-                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result">
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger result"
+                            id="totalOrders">
                             0
                         </span>
                         </button>
@@ -395,27 +396,8 @@
         <div class="offcanvas-body wrapper-items pt-0">
             <hr class="text-bg-dark border-2 ">
             <article class="pricecart p-0 mt-2">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <h5 class="text-dark fw-bold">Ordered Review</h5>
-                        <span class="usPricecart"></span>
-                        <span class="offPricecart "></span>
-                        <span class="usPriceoffcart"></span><br>
-                        <span class="totalPrice"></span>
-                        <h5 class="typeOfShirtcart " style="color: black;padding: 0.5rem 0rem;"></h5>
-                        <h5 class="sizeitem"></h5>
-                        <h5 class="qtyitem"></h5>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="cart-preview w-100">
-                            <h5 class="text-dark fw-bold text-right">Cart Preview</h5>
-                            <img class="cart-preview-img" src="" width="100" />
-                            <p class="cart-preview-size"></p>
-                            <p class="cart-preview-qty"></p>
-                        </div>
-                    </div>
+                <div class="row wrapper-canvas">
                 </div>
-                <button class="btn-clear btn-size"><i class="bi bi-trash3-fill"></i></button>
             </article>
         </div>
     </div>
