@@ -745,3 +745,86 @@ setupGallery({
   backBtnClass: "backBtn2",
   nextBtnClass: "nextBtn2",
 });
+
+// cart store
+document.addEventListener("DOMContentLoaded", function () {
+  // Get orders from localStorage
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  // const ordersTable = document.getElementById("ordersList");
+  const totalOrdersSpan = document.getElementById("totalOrders");
+  const totalAmountSpan = document.getElementById("totalAmount");
+  const wrappecanvas = document.querySelector(".wrapper-canvas");
+  console.log(orders);
+
+  // Calculate totals
+  let totalAmount = 0;
+
+  // Display orders
+  orders.forEach((order, index) => {
+    // const row = document.createElement("tr");
+    const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
+    const total = price * order.quantity;
+    totalAmount += total;
+
+    wrappecanvas.innerHTML = `<div class="col-lg-6">
+                        <h5 class="text-dark fw-bold">Ordered Review</h5>
+                        <span class="usPricecart1">$${price.toFixed(2)}</span>
+                        <span class="offPricecart1"></span>
+                        <span class="usPriceoffcart1"></span><br>
+                        <span class="totalPrice1" id="totalAmount"></span>
+                        <h5 class="typeOfShirtcart1" style="color: black;padding: 0.5rem 0rem;">${
+                          order.typeOfShirt
+                        }</h5>
+                        <h5 class="sizeitem1">Size:${order.size}</h5>
+                        <h5 class="qtyitem1">Quantity:${order.quantity}</h5>
+                        <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
+                               <i class="bi bi-trash"></i>
+                           </button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="cart-preview w-100">
+                            <h5 class="text-dark fw-bold text-right">Cart Preview</h5>
+                            <img class="cart-preview-img" src="${
+                              order.image
+                            }" width="100" />
+                        </div>
+                    </div>
+                        `;
+
+    // row.innerHTML = `
+    //                 <td data-aos="zoom-in">${order.id || index + 1}</td>
+    //                 <td>
+    //                     <img src="${order.image}" alt="${
+    //   order.typeOfShirt
+    // }" width="50" class="me-2">
+    //                     ${order.typeOfShirt}
+    //                 </td>
+    //                 <td>${order.size}</td>
+    //                 <td>${order.quantity}</td>
+    //                 <td>$${price.toFixed(2)}</td>
+    //                 <td>$${total.toFixed(2)}</td>
+    //                 <td>${new Date(
+    //                   order.date || Date.now()
+    //                 ).toLocaleDateString()}</td>
+    //                 <td>
+    //                     <button class="btn btn-danger btn-sm" onclick="deleteOrder(${index})">
+    //                         <i class="bi bi-trash"></i>
+    //                     </button>
+    //                 </td>
+    //             `;
+    // ordersTable.appendChild(row);
+  });
+
+  // Update totals display
+  totalOrdersSpan.textContent = orders.length;
+  totalAmountSpan.textContent = `Total Amount: $${totalAmount.toFixed(2)}`;
+  // const totalOrders1 = document.querySelector(".totalOrders1");
+  // totalOrders1.textContent = orders.length;
+});
+
+function deleteOrder(index) {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.splice(index, 1);
+  localStorage.setItem("orders", JSON.stringify(orders));
+  location.reload();
+}
