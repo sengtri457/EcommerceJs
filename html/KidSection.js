@@ -141,7 +141,7 @@ const dataSmall = [
       usPrice: "$8.99",
       usPriceoff: "$14.95",
       Priceoff: "-40%",
-      typeOfShirt: "hoddies",
+      typeOfShirt: "Hoddies",
       MaxQuantity: 5,
       similar: "Hoddies",
       section: "top",
