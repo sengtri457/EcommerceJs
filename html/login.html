@@ -58,7 +58,14 @@
             border: 1px solid #1f2029;
         }
 
+        body {
+            background: #2A2B38;
+            background: linear-gradient(0deg rgba(42, 43, 56, 1) 0%, rgb(0, 0, 0) 68%);
+
+        }
+
         h1 {
+            color: white;
             font-size: clamp(2rem, 3vw, 4rem);
             font-weight: 500;
         }
@@ -187,7 +194,8 @@
                                 name="logpass" type="password">
                         </div>
                         <button class="btn btn-linkk">Login</button>
-                        <a href="./Register.html" class="btn-link">Sign Up</a>
+                        <br>
+                        <a href="./Register.html" class="text-white text-decoration-none">Sign Up</a>
                     </form>
                 </div>
             </div>
@@ -216,13 +224,13 @@
             btnlink.addEventListener("click", function (e) {
                 const passValue = passwordInput.value;
                 const emailValue = email.value;
-                var user = localStorage.getItem(emailValue);
+                var user = sessionStorage.getItem(emailValue);
                 if (user) {
                     var parseUser = JSON.parse(user);
                     if (parseUser.passValue === passValue && parseUser.emailValue === emailValue) {
-                        localStorage.setItem("user", JSON.stringify(parseUser));
+                        sessionStorage.setItem("user", JSON.stringify(parseUser));
                         alert("Login Success");
-                        window.location.href = "./DashBoard.html";
+                        window.location.href = "./Payment.html";
                     } else {
                         alert("Incorrect Password");
                     }
@@ -230,6 +238,7 @@
                     console.log(user);
                     alert("Login Failed");
                 }
+
                 e.preventDefault();
             });
         }

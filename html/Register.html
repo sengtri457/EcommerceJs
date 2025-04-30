@@ -12,7 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Register</title>
     <style>
+        body {
+            background: #2A2B38;
+            background: linear-gradient(0deg rgba(42, 43, 56, 1) 0%, rgb(0, 0, 0) 68%);
+        }
+
         h1 {
+            color: white;
             font-size: clamp(2rem, 3vw, 4rem);
             font-weight: 500;
         }
@@ -210,6 +216,8 @@
                                 class="input-field" name="logpass" type="password">
                         </div>
                         <button class="btn btn-linkk">SignIn</button>
+                        <br>
+                        <a href="./login.html" class="text-white text-decoration-none">Already have Account!</a>
                     </form>
                 </div>
             </div>
@@ -267,7 +275,7 @@
                 emailValue: emailValue,
                 passValue: passValue
             };
-            localStorage.setItem(emailValue, JSON.stringify(user));
+            sessionStorage.setItem(emailValue, JSON.stringify(user));
             alert("user registered successfully");
             window.location.href = "./login.html";
         })

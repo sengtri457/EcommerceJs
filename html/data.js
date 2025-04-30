@@ -5300,9 +5300,12 @@ if (udprice || offPrice || usPriceoff) {
   offPrice.textContent = product.Priceoff;
   typeOfShirt.textContent = product.typeOfShirt;
   nameP.textContent = product.name;
-}
-// Bag
-let totalQuantity = 0; // Keep track of all items added
+} // Bag
+let totalQuantity = 0;
+let orders = JSON.parse(localStorage.getItem("orders")) || []; // ✅ changed to let
+const ordersQty = document.querySelector(".orderqty");
+ordersQty.innerHTML = orders.length;
+
 btnSub.addEventListener("click", function () {
   const quantity = parseInt(resultQTY.innerHTML);
   const selectedSize = document.querySelector(".sizeSelected");
@@ -5315,14 +5318,11 @@ btnSub.addEventListener("click", function () {
     return;
   }
 
-  // ✅ Update total result
   totalQuantity += quantity;
   result.innerHTML = totalQuantity;
 
-  // ✅ Get selected image
   const selectedImageSrc = document.getElementById("mainImage").src;
 
-  // ✅ Add to cart
   const cartItem = {
     id: product.id,
     name: product.name,
@@ -5335,9 +5335,8 @@ btnSub.addEventListener("click", function () {
     typeOfShirt: product.typeOfShirt,
     MaxQty: product.MaxQuantity,
   };
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // ✅ Check if same size already in cart — if so, update quantity
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const existingItem = cart.find(
     (item) => item.id === product.id && item.size === cartItem.size
   );
@@ -5347,53 +5346,14 @@ btnSub.addEventListener("click", function () {
   } else {
     cart.push(cartItem);
   }
+
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  // ✅ Add UI preview
-  const sizeDiv = document.createElement("div");
-  sizeDiv.classList.add("ordered-size");
-  sizeDiv.setAttribute("data-size", selectedSize.textContent);
-  sizeDiv.innerHTML = `Your Ordered: [${selectedSize.textContent}: ${quantity}] 
-    <button class="removeSizeBtn btn-size mt-2" data-size="${selectedSize.textContent}"><i class="bi bi-trash3-fill"></i></button>`;
-  sizeitem.appendChild(sizeDiv);
-  // ✅ Add remove handler
-  sizeDiv
-    .querySelector(".removeSizeBtn")
-    .addEventListener("click", function () {
-      const sizeToRemove = this.getAttribute("data-size");
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart = cart.filter((item) => item.size !== sizeToRemove);
-      localStorage.setItem("cart", JSON.stringify(cart));
-
-      sizeDiv.remove();
-
-      // Recalculate totals
-      totalQuantity = 0;
-      let totalCost = 0;
-      cart.forEach((item) => {
-        totalQuantity += item.quantity;
-        const price = parseFloat(item.usPriceoff.replace("$", ""));
-        totalCost += price * item.quantity;
-      });
-
-      result.innerHTML = totalQuantity;
-      qtryitem.innerHTML = "Quantity: " + totalQuantity;
-      totalPrice.innerHTML = "Total US $" + totalCost.toFixed(2);
-      alert(`Removed size ${sizeToRemove} from cart.`);
-      const previewImg1 = document.querySelector(".cart-preview-img");
-      if (previewImg1 && totalQuantity == 0) {
-        previewImg1.src = "";
-      }
-    });
-
-  // ✅ Update quantity and price
   qtryitem.innerHTML = "Quantity: " + totalQuantity;
-
   const cleanPrice = parseFloat(product.usPrice.replace("$", ""));
   const itemTotalPrice = cleanPrice * totalQuantity;
   totalPrice.textContent = "Total US $" + itemTotalPrice.toFixed(2);
 
-  // ✅ Show preview
   let previewImg = document.querySelector(".cart-preview-img");
   if (!previewImg) {
     previewImg = document.createElement("img");
@@ -5402,7 +5362,6 @@ btnSub.addEventListener("click", function () {
   }
   previewImg.src = selectedImageSrc;
 
-  // ✅ Display product details
   if (udpricevart || offPricecart || usPriceoffcart) {
     udpricevart.textContent = product.usPrice;
     offPricecart.textContent = product.Priceoff;
@@ -5410,14 +5369,13 @@ btnSub.addEventListener("click", function () {
     typeOfShirtcart.textContent = product.typeOfShirt;
   }
 
-  // ✅ Reset input
   resultQTY.innerHTML = 0;
   selectedSize.classList.remove("sizeSelected");
 
-  // ✅ Activate clear button
   const btnclear = document.querySelector(".btn-clear");
-  // btnclear.innerHTML = "ClearForm";
+  const btncheck = document.querySelector(".btn-sm2");
   btnclear.classList.add("active");
+  btncheck.classList.add("active");
 
   btnclear.addEventListener("click", function () {
     localStorage.removeItem("cart");
@@ -5435,25 +5393,27 @@ btnSub.addEventListener("click", function () {
     if (previewImg) {
       previewImg.src = "";
     }
-    // Reset size buttons
+
     document.querySelector(".size-Xs")?.classList.remove("sizeSelected");
     document.querySelector(".size-S")?.classList.remove("sizeSelected");
     document.querySelector(".size-M")?.classList.remove("sizeSelected");
     document.querySelector(".size-L")?.classList.remove("sizeSelected");
+
     document.querySelector(".size-Xs").textContent = "XS";
     document.querySelector(".size-S").textContent = "S";
     document.querySelector(".size-M").textContent = "M";
     document.querySelector(".size-L").textContent = "L";
-    // Clear localStorage for orders
-    const orders = JSON.parse(localStorage.getItem("orders")) || [];
-    const updatedOrders = orders.filter((order) => order.id !== product.id);
-    localStorage.setItem("orders", JSON.stringify(updatedOrders));
-    // If on dashboard.html, reload the page to reflect changes
+
+    orders = orders.filter((order) => order.id !== product.id); // ✅ update orders
+    localStorage.setItem("orders", JSON.stringify(orders));
+
     if (window.location.pathname.includes("dashboard.html")) {
       location.reload();
     }
+
     alert("Cart has been cleared.");
     btnclear.classList.remove("active");
+    btncheck.classList.remove("active");
   });
 
   alert(
@@ -5461,16 +5421,16 @@ btnSub.addEventListener("click", function () {
       `Price per item: ${product.usPrice}\n` +
       `Total for this item: $${itemTotalPrice.toFixed(2)}`
   );
-  console.log(quantity);
-  console.log(totalQuantity);
-  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
   const orderItem = {
     ...cartItem,
     date: Date.now(),
   };
   orders.push(orderItem);
   localStorage.setItem("orders", JSON.stringify(orders));
+  ordersQty.innerHTML = orders.length;
 });
+
 // similar
 const wrappersimilar = document.querySelector(".wrapper-similar");
 const productNot = document.querySelector(".productNot");

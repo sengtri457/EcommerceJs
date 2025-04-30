@@ -515,7 +515,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         <h5 class="qtyitem1">Quantity:${order.quantity}</h5>
                         <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">Delete Item
                                <i class="bi bi-trash"></i>
-                           </button>
+                            </button>
+                                                    <button class=" btn-sm2 mt-3 text-white">
+        <a href="./Register.html" class="btn-sm1">
+            Check Out <i class="fa-solid fa-bag-shopping" style="margin-left:2px"></i>
+        </a>
+    </button>
                     </div>
                     <div class="col-lg-6 col-6">
                         <div class="cart-preview">
