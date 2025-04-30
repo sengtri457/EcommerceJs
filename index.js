@@ -617,9 +617,9 @@ wrapperrecent.innerHTML = data
                             <div class="product-action">
                                 <a class="btn btn-outline-primary btn-square"  href="./html/data.html?id=${a.id}"><i
                                         class="fa fa-shopping-cart"></i></a>
-                                <a class="btn btn-outline-primary btn-square btnFav" href=""s><i class="far fa-heart"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fa fa-sync-alt"></i></a>
-                                <a class="btn btn-outline-primary btn-square" href=""><i class="fa fa-search"></i></a>
+                                <a class="btn btn-outline-primary btn-square btnFav"  href="./html/AddFav.html"><i class="far fa-heart"></i></a>
+                                <a class="btn btn-outline-primary btn-square" href="" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"><i class="fa fa-search"></i></a>
                             </div>
                         </div>
                         <div class="wrapper-text text-center p-3">

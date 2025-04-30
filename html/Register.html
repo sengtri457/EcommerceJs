@@ -256,7 +256,11 @@
             const emailValue = email.value;
             const connfrrimValue = confirmpass.value;
             if (passValue !== connfrrimValue) {
-                alert("padssword not match");
+                Swal.fire({
+                    title: "Passwords Not Match!",
+                    icon: "error",
+                    draggable: true
+                });
                 return;
             }
             const user = {

@@ -70,13 +70,7 @@ const dataSmall = [
     MaxQuantity: 50,
     similar: "top",
   },
-
-  // {
-  //   name: "img1",
-  //   img: "../../pic/T-Shirts (10).jpg",
-  //   class: "img1",
-  //   categoies: "Khmer New Year Sale!",
-  // },
+  ,
   {
     id: 5,
     subId: 22,
@@ -373,6 +367,34 @@ const dataSmall = [
     MaxQuantity: 50,
     similar: "top",
   },
+  {
+    id: 17,
+    subId: 13,
+    name: "White Pants",
+    img: "../../pic/submenn5.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale4",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Pants And Tights",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 72,
+    subId: 22,
+    name: "White Polo",
+    img: "../../pic/subpolomen3-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale15",
+    usPrice: "$50.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-50%",
+    typeOfShirt: "Pants And Tights",
+    MaxQuantity: 50,
+    similar: "top",
+  },
 ];
 const wrappersimilar = document.querySelector(".wrapper-similar");
 // wrappersimilar.innerHTML = dataSmall
@@ -446,7 +468,7 @@ const displayItems = (items) => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  displayItems(dataSmall.filter((item) => item.id < 100));
+  displayItems(dataSmall.filter((item) => item.id > 0));
 });
 
 li.forEach((item) => {
@@ -455,7 +477,7 @@ li.forEach((item) => {
     const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
 
     if (categories === "all") {
-      displayItems(dataSmall.filter((item) => item.id < 100));
+      displayItems(dataSmall.filter((item) => item.id > 0));
     } else {
       displayItems(newdata);
     }
@@ -470,7 +492,7 @@ li.forEach((item) => {
     const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
 
     if (categories === "all") {
-      displayItems(dataSmall.filter((item) => item.id < 100));
+      displayItems(dataSmall.filter((item) => item.id > 0));
     } else {
       displayItems(newdata);
     }

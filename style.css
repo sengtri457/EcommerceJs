@@ -29,7 +29,7 @@ section {
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 6rem);
+    font-size: clamp(2.5rem, 5vw, 6rem);
     font-family: "Modak", system-ui;
     font-weight: 500;
 }
@@ -58,12 +58,12 @@ h4 {
 h5 {
     color: var(--dark);
     font-family: "Product Sans", Poppins;
-    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
     /* min: 24px, max: 40px */
 }
 
 p {
-    font-size: clamp(1rem, 2.5vw, 1rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
     /* min: 16px, max: 20px */
 }
 
@@ -78,6 +78,7 @@ body {
     background-color: #FFFFFF;
     transition: all 0.4s ease-in-out;
 }
+
 
 .back-to-top {
     position: fixed;
@@ -453,7 +454,7 @@ h1 {
 .wrapper-ul2,
 .wrapper-ul3,
 .wrapper-ul4 {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 
@@ -1602,7 +1603,6 @@ footer>h4 {
         top: 70px;
         height: 380px;
         overflow: scroll;
-        background-color: var(--light);
         z-index: 9999;
     }
 
@@ -1649,7 +1649,6 @@ footer>h4 {
         top: 70px;
         height: 380px;
         overflow: scroll;
-        background-color: var(--light);
         z-index: 9999;
     }
 
@@ -1674,13 +1673,6 @@ footer>h4 {
     .menu {
         align-items: start;
     }
-
-    /* .navbar .menu li {
-        margin: 10px 0;
-    } */
-    /* li {
-        padding: 10px 0px;
-    } */
 
     .list-unstyled li {
 
@@ -1779,5 +1771,9 @@ footer>h4 {
     .image-card1,
     .image-card2 {
         width: 30%;
+    }
+
+    .carousel-indicators {
+        bottom: 1%;
     }
 }
