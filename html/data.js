@@ -5132,7 +5132,6 @@ const dataSmall = [
     section: "top",
   },
   {
-<<<<<<< HEAD
     name: "img1",
     img: "../pic/Jordan Monogram 3.avif",
     class: "img1",
@@ -5242,7 +5241,6 @@ const dataSmall = [
     img: "../pic/Nike Utility Power 4.avif",
     class: "img1",
     categoies: "Khmer New Year Sale406",
-=======
     id:308,
     name: "img1",
     img: "../pic/kidhoddiebluewhite3.avif",
@@ -5269,7 +5267,6 @@ const dataSmall = [
     MaxQuantity: 5,
     similar: "Hoddies",
     section: "top",
->>>>>>> 95a87b0ff34c6bbf84c6262b2cccf4aa75517238
   },
 
 ];
