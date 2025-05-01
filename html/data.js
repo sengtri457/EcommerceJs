@@ -5633,7 +5633,3 @@ headers.forEach((header) => {
     }
   });
 });
-
-
-
-const dataFetch =
