@@ -209,7 +209,7 @@
   }
 
   .offPricecart {
-      padding: 0rem 0.25rem;
+      /* padding: 0rem 0.25rem; */
       font-size: var(--font-medum);
       font-weight: var(--weight-medum);
       color: var(--dark);
@@ -363,4 +363,22 @@
       50% {
           transform: scale(1.2);
       }
+  }
+
+
+  .btn-sm2 {
+      font-size: var(--font-small);
+      font-weight: var(--weight-small);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      border: none;
+      background-color: var(--dark);
+      transition: all 0.4s ease-in-out;
+      opacity: 1;
+      /* margin-top: 2.2rem; */
+  }
+
+  .btn-sm2.active {
+      opacity: 1;
   }

@@ -134,7 +134,6 @@ const dataSmall = [
     },
     {
       id:308,
-      subId: 308,
       name: "img1",
       img: "../pic/kidhoddiebluewhite1.avif",
       class: "img1",
@@ -147,112 +146,6 @@ const dataSmall = [
       similar: "Hoddies",
       section: "top",
     },
-    {
-      id:309,
-      subId: 300,
-      name: "img1",
-      img: "../pic/kidhoddieblue1.avif",
-      class: "img1",
-      categoies: "Khmer New Year Sale309",
-      usPrice: "$8.99",
-      usPriceoff: "$14.95",
-      Priceoff: "-40%",
-      typeOfShirt: "Hoddies",
-      MaxQuantity: 5,
-      similar: "Hoddies",
-      section: "top",
-    },
-    {
-      id:310,
-      subId: 308,
-      name: "img1",
-      img: "../pic/kidhoddiegirlorange1.avif",
-      class: "img1",
-      categoies: "Khmer New Year Sale310",
-      usPrice: "$8.99",
-      usPriceoff: "$14.95",
-      Priceoff: "-40%",
-      typeOfShirt: "Hoddies",
-      MaxQuantity: 5,
-      similar: "Hoddies",
-      section: "top",
-    },
-    {
-      id:311,
-      subId: 308,
-      name: "img1",
-      img: "../pic/kidhoddiegirlpink1.avif",
-      class: "img1",
-      categoies: "Khmer New Year Sale311",
-      usPrice: "$8.99",
-      usPriceoff: "$14.95",
-      Priceoff: "-40%",
-      typeOfShirt: "Hoddies",
-      MaxQuantity: 5,
-      similar: "Hoddies",
-      section: "top",
-    },
-    {
-      id:312,
-      subId: 308,
-      name: "img1",
-      img: "../pic/kidhoddiegirlyellow1.avif",
-      class: "img1",
-      categoies: "Khmer New Year Sale312",
-      usPrice: "$8.99",
-      usPriceoff: "$14.95",
-      Priceoff: "-40%",
-      typeOfShirt: "Hoddies",
-      MaxQuantity: 5,
-      similar: "Hoddies",
-      section: "top",
-    },
-    {
-      id:313,
-      subId: 308,
-      name: "img1",
-      img: "../pic/kidhoddiegirlpouple1.avif",
-      class: "img1",
-      categoies: "Khmer New Year Sale313",
-      usPrice: "$8.99",
-      usPriceoff: "$14.95",
-      Priceoff: "-40%",
-      typeOfShirt: "Hoddies",
-      MaxQuantity: 5,
-      similar: "Hoddies",
-      section: "top",
-    },
-    {
-      id:314,
-      subId: 308,
-      name: "img1",
-      img: "../pic/kidhoddiegray2.avif",
-      class: "img1",
-      categoies: "Khmer New Year Sale314",
-      usPrice: "$8.99",
-      usPriceoff: "$14.95",
-      Priceoff: "-40%",
-      typeOfShirt: "Hoddies",
-      MaxQuantity: 5,
-      similar: "Hoddies",
-      section: "top",
-    },
-    {
-      id:315,
-      subId: 308,
-      name: "img1",
-      img: "../pic/kidhoddieorage1.avif",
-      class: "img1",
-      categoies: "Khmer New Year Sale315",
-      usPrice: "$8.99",
-      usPriceoff: "$14.95",
-      Priceoff: "-40%",
-      typeOfShirt: "Hoddies",
-      MaxQuantity: 5,
-      similar: "Hoddies",
-      section: "top",
-    },
-   
     
  
     // {
@@ -332,40 +225,109 @@ const dataSmall = [
               </div>
         </div>
         `;
-      })
-      .join("");
-    wrappersimilar.innerHTML = showing;
-  };
-  
-  window.addEventListener("DOMContentLoaded", () => {
-    displayItems(dataSmall.filter((item) => item.id >= 300));
+    })
+    .join("");
+  wrappersimilar.innerHTML = showing;
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  displayItems(dataSmall.filter((item) => item.id >= 300));
+});
+
+li.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const categories = e.target.dataset.id;
+    const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
+
+    if (categories === "all") {
+      displayItems(dataSmall.filter((item) => item.id >= 300));
+    } else {
+      displayItems(newdata);
+    }
   });
-  
-  li.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      const categories = e.target.dataset.id;
-      const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
-  
-      if (categories === "all") {
-        displayItems(dataSmall.filter((item) => item.id >= 300));
-      } else {
-        displayItems(newdata);
-      }
-    });
+});
+li.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    li.forEach((el) => el.classList.remove("active"));
+    e.target.classList.add("active");
+
+    const categories = e.target.dataset.id;
+    const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
+
+    if (categories === "all") {
+      displayItems(dataSmall.filter((item) => item.id >= 300));
+    } else {
+      displayItems(newdata);
+    }
   });
-  li.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      li.forEach((el) => el.classList.remove("active"));
-      e.target.classList.add("active");
-  
-      const categories = e.target.dataset.id;
-      const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
-  
-      if (categories === "all") {
-        displayItems(dataSmall.filter((item) => item.id >= 300));
-      } else {
-        displayItems(newdata);
-      }
-    });
+});
+
+// cart store
+document.addEventListener("DOMContentLoaded", function () {
+  // Get orders from localStorage
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  // const ordersTable = document.getElementById("ordersList");
+  const totalOrdersSpan = document.querySelectorAll(".totalOrders");
+  // const totalAmountSpan = document.getElementById("totalAmount");
+  const wrappecanvas = document.querySelector(".wrapper-canvas");
+  console.log(orders);
+
+  // Calculate totals
+  let totalAmount = 0;
+
+  // Display orders
+  orders.forEach((order, index) => {
+    // const row = document.createElement("tr");
+    const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
+    const total = price * order.quantity;
+    totalAmount += total;
+
+    wrappecanvas.innerHTML = `<div class="col-lg-6 col-6">
+                        <h5 class="text-dark fw-bold">Ordered Review</h5>
+                        <br/>
+                        <span class="usPricecart">Price: $${price.toFixed(
+                          2
+                        )}</span>
+                        <h5 class="offPricecart">Discount: ${
+                          order.offPrice
+                        }</h5>
+                        <h5 class="typeOfShirtcart" style="color: black;padding: 0.5rem 0rem;">${
+                          order.typeOfShirt
+                        }</h5>
+                        <h5 class="totalPrice1" id="totalAmount">Total: $${totalAmount.toFixed(
+                          2
+                        )}</h5>
+                        <h5 class="sizeitem1">Size:${order.size}</h5>
+                        <h5 class="qtyitem1">Quantity:${order.quantity}</h5>
+                        <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">Delete Item
+                               <i class="bi bi-trash"></i>
+                           </button>
+                    </div>
+                    <div class="col-lg-6 col-6">
+                        <div class="cart-preview">
+                            <h5 class="text-dark fw-bold text-right">Cart Preview</h5>
+                             <br/>
+                            <img class="cart-preview-img w-100" src="${
+                              order.image
+                            }"/>
+                        </div>
+                    </div>
+                        `;
+    if (orders.length == 0) {
+      wrappecanvas.innerHTML = "No items";
+    }
   });
-  
+
+  // Update totals display
+  totalOrdersSpan.forEach((e) => {
+    e.textContent = orders.length;
+  });
+  console.log(orders);
+});
+
+function deleteOrder(index) {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.splice(index, 1);
+  localStorage.setItem("orders", JSON.stringify(orders));
+  location.reload();
+}
