@@ -71,12 +71,10 @@
 
     <script>
         const user = localStorage.getItem("user");
-        if (!user) {
-            localStorage.clear();;
-            window.location.href = "../index.html"; // or your login page path
-        }
+
+
         document.querySelector('.logout').addEventListener('click', function () {
-            localStorage.clear();
+
             window.location.href = "../index.html";
         });
         document.addEventListener('DOMContentLoaded', function () {

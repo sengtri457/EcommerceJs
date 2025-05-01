@@ -271,7 +271,7 @@ h1 {
 }
 
 .offPricecart {
-    padding: 0rem 0.25rem;
+    /* padding: 0rem 0.25rem; */
     font-size: var(--font-medum);
     font-weight: var(--weight-medum);
     color: var(--dark);

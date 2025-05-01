@@ -220,28 +220,27 @@
             }
         }
         console.log(btnlink)
-        if (btnlink) {
-            btnlink.addEventListener("click", function (e) {
-                const passValue = passwordInput.value;
-                const emailValue = email.value;
-                var user = sessionStorage.getItem(emailValue);
-                if (user) {
-                    var parseUser = JSON.parse(user);
-                    if (parseUser.passValue === passValue && parseUser.emailValue === emailValue) {
-                        sessionStorage.setItem("user", JSON.stringify(parseUser));
-                        alert("Login Success");
-                        window.location.href = "./Payment.html";
-                    } else {
-                        alert("Incorrect Password");
-                    }
+        btnlink.addEventListener("click", function (e) {
+            const passValue = passwordInput.value;
+            const emailValue = email.value;
+            var user = sessionStorage.getItem(emailValue);
+            if (user) {
+                var parseUser = JSON.parse(user);
+                if (parseUser.passValue === passValue && parseUser.emailValue === emailValue) {
+                    sessionStorage.setItem("user", JSON.stringify(parseUser));
+                    alert("Login Success");
+                    window.location.href = "./Payment.html";
                 } else {
-                    console.log(user);
-                    alert("Login Failed");
+                    alert("Incorrect Password");
                 }
+            } else {
+                console.log(user);
+                alert("Login Failed");
+            }
 
-                e.preventDefault();
-            });
-        }
+            e.preventDefault();
+        });
+
     </script>
 
 </html>

@@ -5269,7 +5269,7 @@ const qtryitem = document.querySelector(".qtyitem");
 
 resultQTY.innerHTML = 0;
 result.innerHTML = 0;
-sizeitem.innerHTML = "";
+// sizeitem.innerHTML = "";
 increment.addEventListener("click", function () {
   if (resultQTY.innerHTML >= product.MaxQuantity) {
     alert("Please input Low qty");
@@ -5300,135 +5300,201 @@ if (udprice || offPrice || usPriceoff) {
   offPrice.textContent = product.Priceoff;
   typeOfShirt.textContent = product.typeOfShirt;
   nameP.textContent = product.name;
-} // Bag
-let totalQuantity = 0;
-let orders = JSON.parse(localStorage.getItem("orders")) || []; // ✅ changed to let
-const ordersQty = document.querySelector(".orderqty");
-ordersQty.innerHTML = orders.length;
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const ordersQty = document.querySelector(".orderqty");
+  const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
+  const totalOrdersElements = document.querySelectorAll(".totalOrders");
 
-btnSub.addEventListener("click", function () {
-  const quantity = parseInt(resultQTY.innerHTML);
-  const selectedSize = document.querySelector(".sizeSelected");
-  if (!selectedSize) {
-    alert("Please select a size before adding to cart.");
-    return;
-  }
-  if (quantity <= 0) {
-    alert("Please choose a quantity greater than 0.");
-    return;
-  }
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-  totalQuantity += quantity;
-  result.innerHTML = totalQuantity;
+  // Render orders on page load
+  renderOrdersUI();
 
-  const selectedImageSrc = document.getElementById("mainImage").src;
+  // Add to Cart Button
+  btnSub.addEventListener("click", () => {
+    const quantity = parseInt(resultQTY.innerHTML);
+    const selectedSize = document.querySelector(".sizeSelected");
 
-  const cartItem = {
-    id: product.id,
-    name: product.name,
-    size: selectedSize.textContent,
-    quantity: quantity,
-    image: selectedImageSrc,
-    usPriceoff: product.usPriceoff,
-    udprice: product.price,
-    offPrice: product.Priceoff,
-    typeOfShirt: product.typeOfShirt,
-    MaxQty: product.MaxQuantity,
-  };
-
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const existingItem = cart.find(
-    (item) => item.id === product.id && item.size === cartItem.size
-  );
-
-  if (existingItem) {
-    existingItem.quantity += quantity;
-  } else {
-    cart.push(cartItem);
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  qtryitem.innerHTML = "Quantity: " + totalQuantity;
-  const cleanPrice = parseFloat(product.usPrice.replace("$", ""));
-  const itemTotalPrice = cleanPrice * totalQuantity;
-  totalPrice.textContent = "Total US $" + itemTotalPrice.toFixed(2);
-
-  let previewImg = document.querySelector(".cart-preview-img");
-  if (!previewImg) {
-    previewImg = document.createElement("img");
-    previewImg.classList.add("cart-preview-img");
-    document.body.appendChild(previewImg);
-  }
-  previewImg.src = selectedImageSrc;
-
-  if (udpricevart || offPricecart || usPriceoffcart) {
-    udpricevart.textContent = product.usPrice;
-    offPricecart.textContent = product.Priceoff;
-    usPriceoffcart.textContent = product.usPriceoff;
-    typeOfShirtcart.textContent = product.typeOfShirt;
-  }
-
-  resultQTY.innerHTML = 0;
-  selectedSize.classList.remove("sizeSelected");
-
-  const btnclear = document.querySelector(".btn-clear");
-  const btncheck = document.querySelector(".btn-sm2");
-  btnclear.classList.add("active");
-  btncheck.classList.add("active");
-
-  btnclear.addEventListener("click", function () {
-    localStorage.removeItem("cart");
-    totalQuantity = 0;
-    result.innerHTML = 0;
-    qtryitem.innerHTML = 0;
-    sizeitem.innerHTML = "";
-    usPriceoffcart.innerHTML = "";
-    offPricecart.innerHTML = "";
-    udpricevart.innerHTML = "";
-    totalPrice.innerHTML = "";
-    typeOfShirtcart.textContent = "No Information";
-
-    const previewImg = document.querySelector(".cart-preview-img");
-    if (previewImg) {
-      previewImg.src = "";
+    if (!selectedSize) {
+      alert("Please select a size before adding to cart.");
+      return;
     }
 
-    document.querySelector(".size-Xs")?.classList.remove("sizeSelected");
-    document.querySelector(".size-S")?.classList.remove("sizeSelected");
-    document.querySelector(".size-M")?.classList.remove("sizeSelected");
-    document.querySelector(".size-L")?.classList.remove("sizeSelected");
+    if (quantity <= 0) {
+      alert("Please choose a quantity greater than 0.");
+      return;
+    }
 
-    document.querySelector(".size-Xs").textContent = "XS";
-    document.querySelector(".size-S").textContent = "S";
-    document.querySelector(".size-M").textContent = "M";
-    document.querySelector(".size-L").textContent = "L";
+    const selectedImageSrc = document.getElementById("mainImage").src;
 
-    orders = orders.filter((order) => order.id !== product.id); // ✅ update orders
+    const cartItem = {
+      id: product.id,
+      name: product.name,
+      size: selectedSize.textContent,
+      quantity: quantity,
+      image: selectedImageSrc,
+      usPriceoff: product.usPriceoff,
+      udprice: product.price,
+      offPrice: product.Priceoff,
+      typeOfShirt: product.typeOfShirt,
+      MaxQty: product.MaxQuantity,
+    };
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingItem = cart.find(
+      (item) => item.id === product.id && item.size === cartItem.size
+    );
+
+    if (existingItem) {
+      existingItem.quantity += quantity;
+    } else {
+      cart.push(cartItem);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Update Orders
+    const orderItem = { ...cartItem, date: Date.now() };
+    orders.push(orderItem);
     localStorage.setItem("orders", JSON.stringify(orders));
+    ordersQty.innerHTML = orders.length;
 
-    if (window.location.pathname.includes("dashboard.html")) {
-      location.reload();
-    }
+    // Reset UI
+    resultQTY.innerHTML = 0;
+    selectedSize.classList.remove("sizeSelected");
 
-    alert("Cart has been cleared.");
-    btnclear.classList.remove("active");
-    btncheck.classList.remove("active");
+    // Show alert
+    alert(
+      `Added to cart: ${cartItem.name} [Size: ${cartItem.size}, Qty: ${cartItem.quantity}]`
+    );
+
+    // Re-render UI
+    renderOrdersUI();
   });
 
-  alert(
-    `Added to cart: ${cartItem.name} [Size: ${cartItem.size}, Qty: ${cartItem.quantity}]\n` +
-      `Price per item: ${product.usPrice}\n` +
-      `Total for this item: $${itemTotalPrice.toFixed(2)}`
-  );
+  // Render all orders to UI
+  function renderOrdersUI() {
+    orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-  const orderItem = {
-    ...cartItem,
-    date: Date.now(),
-  };
-  orders.push(orderItem);
+    let totalAmount = 0;
+    let allOrdersHTML = "";
+
+    if (orders.length === 0) {
+      wrapperCanvases.forEach((wrapper) => {
+        wrapper.innerHTML = "<p>No items</p>";
+      });
+    } else {
+      orders.forEach((order, index) => {
+        const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
+        const total = price * order.quantity;
+        totalAmount += total;
+        const orderHTML = `
+        <div class="row mt-5">
+        <div class="col-lg-6 col-6">
+          <span class="usPricecart">Price: $${price.toFixed(2)}</span>
+          <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
+          <h5 class="typeOfShirtcart" style="color: black; padding: 0.5rem 0;">
+            ${order.typeOfShirt}
+          </h5>
+          <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
+          <h5 class="sizeitem1">Size: ${order.size}</h5>
+          <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
+          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
+            Delete Item <i class="bi bi-trash"></i>
+          </button>
+                      <button class="btn-sm2 text-white mt-3">
+            <a href="./Register.html" class="btn-sm1">
+              Check Out <i class="fa-solid fa-bag-shopping" style="margin-left: 2px;"></i>
+            </a>
+          </button>
+        </div>
+        <div class="col-lg-6 col-6">
+          <div class="cart-preview">
+            <img class="cart-preview-img w-100" src="${order.image}" />
+          </div>
+           <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        </div>`;
+
+        allOrdersHTML += orderHTML;
+      });
+
+      wrapperCanvases.forEach((wrapper) => {
+        wrapper.innerHTML = allOrdersHTML;
+      });
+    }
+
+    totalOrdersElements.forEach((el) => {
+      el.textContent = orders.length;
+    });
+  }
+});
+// Delete order
+function deleteOrder(index) {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.splice(index, 1);
   localStorage.setItem("orders", JSON.stringify(orders));
-  ordersQty.innerHTML = orders.length;
+  location.reload(); // or call renderOrdersUI() if you remove reload
+}
+function renderOrdersUI() {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
+  const totalOrdersElements = document.querySelectorAll(".totalOrders");
+
+  totalOrdersElements.forEach((el) => (el.textContent = orders.length));
+  if (orders.length === 0) {
+    wrapperCanvases.forEach((wrapper) => {
+      wrapper.innerHTML = "<p>No items</p>";
+    });
+    return;
+  }
+
+  let totalAmount = 0;
+  let html = "";
+
+  orders.forEach((order, index) => {
+    const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
+    const total = price * order.quantity;
+    totalAmount += total;
+
+    html += `
+       <div class="row mt-5">
+        <div class="col-lg-6 col-6">
+          <span class="usPricecart">Price: $${price.toFixed(2)}</span>
+          <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
+          <h5 class="typeOfShirtcart" style="color: black; padding: 0.5rem 0;">
+            ${order.typeOfShirt}
+          </h5>
+          <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
+          <h5 class="sizeitem1">Size: ${order.size}</h5>
+          <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
+          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
+            Delete Item <i class="bi bi-trash"></i>
+          </button>
+                      <button class="btn-sm2 text-white mt-3">
+            <a href="./Register.html" class="btn-sm1">
+              Check Out <i class="fa-solid fa-bag-shopping" style="margin-left: 2px;"></i>
+            </a>
+          </button>
+        </div>
+        <div class="col-lg-6 col-6">
+          <div class="cart-preview">
+            <img class="cart-preview-img w-100" src="${order.image}" />
+          </div>
+        </div>
+        </div>`;
+  });
+
+  wrapperCanvases.forEach((wrapper) => {
+    wrapper.innerHTML = html;
+  });
+}
+document.addEventListener("DOMContentLoaded", () => {
+  renderOrdersUI();
 });
 
 // similar
@@ -5480,7 +5546,7 @@ if (product.subId !== id) {
 }
 
 // Add after your existing code
-
+console.log(result);
 function addToFavorites() {
   const mainImage = document.getElementById("mainImage");
   const selectedSize = document.querySelector(".sizeSelected");
@@ -5525,7 +5591,6 @@ function addToFavorites() {
 
   localStorage.setItem("favorites", JSON.stringify(favorites));
 }
-
 function showToast(message) {
   const toast = document.createElement("div");
   toast.className = "toast-notification";
