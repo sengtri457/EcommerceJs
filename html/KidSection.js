@@ -222,6 +222,37 @@ const dataSmall = [
       similar: "Hoddies",
       section: "top",
     },
+    {
+      id:314,
+      subId: 308,
+      name: "img1",
+      img: "../pic/kidhoddiegray2.avif",
+      class: "img1",
+      categoies: "Khmer New Year Sale314",
+      usPrice: "$8.99",
+      usPriceoff: "$14.95",
+      Priceoff: "-40%",
+      typeOfShirt: "Hoddies",
+      MaxQuantity: 5,
+      similar: "Hoddies",
+      section: "top",
+    },
+    {
+      id:315,
+      subId: 308,
+      name: "img1",
+      img: "../pic/kidhoddieorage1.avif",
+      class: "img1",
+      categoies: "Khmer New Year Sale315",
+      usPrice: "$8.99",
+      usPriceoff: "$14.95",
+      Priceoff: "-40%",
+      typeOfShirt: "Hoddies",
+      MaxQuantity: 5,
+      similar: "Hoddies",
+      section: "top",
+    },
+   
     
  
     // {
