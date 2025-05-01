@@ -1935,11 +1935,11 @@ const dataSmall = [
   },
   {
     id: 106,
-    subId: 103,
+    subId: 105,
     name: "Nike Sportswear",
     img: "../../pic/gra4.avif",
     class: "img1",
-    categoies: "Khmer New Year Sale104",
+    categoies: "Khmer New Year Sale106",
     usPrice: "$50.99",
     usPriceoff: "$100.95",
     Priceoff: "-50%",
@@ -1971,55 +1971,941 @@ const dataSmall = [
     class: "img1",
     categoies: "Khmer New Year Sale106",
   },
+
   {
-    name: "img1",
-    img: "../pic/subleg1.avif",
+    id: 107,
+    subId: 103,
+    name: "Nike Sportswear",
+    img: "../../pic/long1.avif",
     class: "img1",
-    categoies: "Khmer New Year Sale26",
-    usPrice: "$30.99",
-    usPriceoff: "$50.95",
-    Priceoff: "-40%",
-    typeOfShirt: "Legging",
+    categoies: "Khmer New Year Sale107",
+    usPrice: "$50.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-50%",
+    typeOfShirt: "long",
     MaxQuantity: 50,
     similar: "top",
   },
   {
     name: "img1",
-    img: "../pic/subleg2.avif",
+    img: "../pic/long2.avif",
     class: "img1",
-    categoies: "Khmer New Year Sale26",
-    usPrice: "$30.99",
+    categoies: "Khmer New Year Sale107",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale107",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale107",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale107",
+  },
+  {
+    id: 108,
+    subId: 103,
+    name: "Nike Pro",
+    img: "../../pic/long3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale108",
+    usPrice: "$25.99",
     usPriceoff: "$50.95",
-    Priceoff: "-40%",
-    typeOfShirt: "Legging",
+    Priceoff: "-50%",
+    typeOfShirt: "long",
     MaxQuantity: 50,
     similar: "top",
   },
   {
     name: "img1",
-    img: "../pic/subleg3.avif",
+    img: "../pic/sublong3-1.avif",
     class: "img1",
-    categoies: "Khmer New Year Sale26",
+    categoies: "Khmer New Year Sale108",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong3-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale108",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong3-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale108",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong3-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale108",
+  },
+  {
+    id: 109,
+    subId: 110,
+    name: "Nike Primary",
+    img: "../../pic/long4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale109",
     usPrice: "$30.99",
-    usPriceoff: "$50.95",
+    usPriceoff: "$70.95",
     Priceoff: "-40%",
-    typeOfShirt: "Legging",
+    typeOfShirt: "long",
     MaxQuantity: 50,
     similar: "top",
   },
   {
     name: "img1",
-    img: "../pic/subleg4.avif",
+    img: "../pic/sublong4-1.avif",
     class: "img1",
-    categoies: "Khmer New Year Sale26",
-    usPrice: "$30.99",
-    usPriceoff: "$50.95",
-    Priceoff: "-40%",
-    typeOfShirt: "Legging",
+    categoies: "Khmer New Year Sale109",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong4-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale109",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong4-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale109",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong4-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale109",
+  },
+  {
+    id: 110,
+    subId: 109,
+    name: "Nike ACG",
+    img: "../../pic/long5.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale110",
+    usPrice: "$50.99",
+    usPriceoff: "$70.95",
+    Priceoff: "-20%",
+    typeOfShirt: "long",
     MaxQuantity: 50,
     similar: "top",
   },
-  // jacket
+  {
+    id: 111,
+    subId: 112,
+    name: "Nike Sportwear",
+    img: "../../pic/short1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale111",
+    usPrice: "$50.99",
+    usPriceoff: "$70.95",
+    Priceoff: "-20%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subshort1-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale111",
+  },
+  {
+    name: "img1",
+    img: "../pic/subshort1-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale111",
+  },
+  {
+    name: "img1",
+    img: "../pic/subshort1-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale111",
+  },
+  {
+    name: "img1",
+    img: "../pic/subshort1-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale111",
+  },
+  {
+    id: 112,
+    subId: 111,
+    name: "Nike Primary",
+    img: "../../pic/short2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale112",
+    usPrice: "$60.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subshhort2-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale112",
+  },
+  {
+    name: "img1",
+    img: "../pic/subshort2-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale112",
+  },
+  {
+    name: "img1",
+    img: "../pic/subshort2-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale112",
+  },
+  {
+    name: "img1",
+    img: "../pic/subshort2-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale112",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong5.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale110",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong5-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale110",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong5-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale110",
+  },
+  {
+    name: "img1",
+    img: "../pic/sublong5-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale110",
+  },
+  {
+    id: 113,
+    name: "Nike Primary",
+    img: "../../pic/bt1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale113",
+    usPrice: "$60.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt1-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale113",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbtn1-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale113",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt1-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale113",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt1-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale113",
+  },
+  {
+    id: 114,
+    subId: 113,
+    name: "Nike Primary",
+    img: "../../pic/bt2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale114",
+    usPrice: "$50.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-50%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt2-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale114",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt2-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale114",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt3-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale114",
+  },
+  {
+    id: 115,
+    subId: 114,
+    name: "Nike Primary",
+    img: "../../pic/bt3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale115",
+    usPrice: "$70.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-30%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt3-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale115",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt3-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale115",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt3-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale115",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale115",
+  },
+  {
+    id: 116,
+    subId: 115,
+    name: "Nike Primary",
+    img: "../../pic/bt4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale116",
+    usPrice: "$100.99",
+    usPriceoff: "$150.95",
+    Priceoff: "-20%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt4-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale116",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt4-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale116",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt4-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale116",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt4-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale116",
+  },
+  {
+    id: 117,
+    subId: 116,
+    name: "Nike Primary",
+    img: "../../pic/bt5.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale117",
+    usPrice: "$60.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt55-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale117",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt5-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale117",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt5-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale117",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt5-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale117",
+  },
+  {
+    id: 118,
+    subId: 117,
+    name: "Nike Primary",
+    img: "../../pic/bt6.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale118",
+    usPrice: "$70.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-30%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt6-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale118",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt6-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale118",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt6-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale118",
+  },
+  {
+    name: "img1",
+    img: "../pic/subbt6-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale118",
+  },
+  // hoodies
+  {
+    id: 128,
+    name: "Nike Club",
+    img: "../../pic/h1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale128",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Hoodie",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh1-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale128",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh1-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale128",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh1-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale128",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh1-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale128",
+  },
+  {
+    id: 129,
+    name: "Nike Tech",
+    img: "../../pic/h2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale129",
+    usPrice: "$50.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-50%",
+    typeOfShirt: "Hoodie",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh2-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale129",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh2-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale129",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh2-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale129",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh2-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale129",
+  },
+  {
+    id: 130,
+    name: "Nike Club",
+    img: "../../pic/h3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale130",
+    usPrice: "$70.99",
+    usPriceoff: "$140.95",
+    Priceoff: "-50%",
+    typeOfShirt: "Hoodie",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh3-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale130",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh3-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale130",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh3-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale130",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh3-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale130",
+  },
+  {
+    id: 131,
+    name: "Nike Teach",
+    img: "../../pic/h4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale131",
+    usPrice: "$90.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-10%",
+    typeOfShirt: "Hoodie",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh4-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale131",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh4-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale131",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh4-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale131",
+  },
+  {
+    name: "img1",
+    img: "../pic/subh4-5.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale131",
+  },
+  {
+    id: 132,
+    name: "Nike Blone",
+    img: "../../pic/cr1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale132",
+    usPrice: "$90.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-10%",
+    typeOfShirt: "Sweatshirts",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr1-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale132",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr1-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale132",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr1-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale132",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr1-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale132",
+  },
+  {
+    id: 133,
+    name: "Nike Paris",
+    img: "../../pic/cr2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale133",
+    usPrice: "$60.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Sweatshirts",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr2-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale133",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr2-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale133",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr2-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale133",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr2-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale133",
+  },
+  {
+    id: 134,
+    name: "Nike Malin",
+    img: "../../pic/cr3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale134",
+    usPrice: "$70.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-30%",
+    typeOfShirt: "Sweatshirts",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr3-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale134",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr3-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale134",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr3-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale134",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr3-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale134",
+  },
+  {
+    id: 135,
+    name: "Nike Teach",
+    img: "../../pic/cr4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale135",
+    usPrice: "$90.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-10%",
+    typeOfShirt: "Sweatshirts",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr4-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale135",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr4-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale135",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr4-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale135",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr4-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale135",
+  },
+  {
+    id: 136,
+    name: "Nike Teach",
+    img: "../../pic/cr5.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale136",
+    usPrice: "$80.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-20%",
+    typeOfShirt: "Sweatshirts",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr5-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale136",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr5-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale136",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr5-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale136",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr5-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale136",
+  },
+  {
+    id: 137,
+    name: "Nike paris Sant",
+    img: "../../pic/cr1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale137",
+    usPrice: "$90.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-10%",
+    typeOfShirt: "Sweatshirts",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr1-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale137",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr1-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale137",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr1-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale137",
+  },
+  {
+    name: "img1",
+    img: "../pic/subcr1-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale137",
+  },
+  {
+    id: 138,
+    subId: 139,
+    name: "Nike paris Sant",
+    img: "../../pic/fle1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale138",
+    usPrice: "$90.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-10%",
+    typeOfShirt: "Fleece",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle1-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale138",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle1-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale138",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle1-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale138",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle1-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale138",
+  },
+  {
+    id: 139,
+    subId: 138,
+    name: "Nike Standard Sant",
+    img: "../../pic/fle2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale139",
+    usPrice: "$100.99",
+    usPriceoff: "$200.95",
+    Priceoff: "-50%",
+    typeOfShirt: "Fleece",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle2-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale139",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle2-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale139",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle2-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale139",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle2-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale139",
+  },
+  {
+    id: 140,
+    subId: 139,
+    name: "Nike Issue Sant",
+    img: "../../pic/fle3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale140",
+    usPrice: "$80.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-20%",
+    typeOfShirt: "Fleece",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle2-1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale140",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle2-2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale140",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle2-3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale140",
+  },
+  {
+    name: "img1",
+    img: "../pic/subfle2-4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale140",
+  },
 
   // Recent Product
   {
@@ -3969,13 +4855,66 @@ const dataSmall = [
     section: "Men",
   },
   {
+    subId: 305,
+    name: "img1",
+    img: "../pic/subkidblue4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale304",
+    usPrice: "$8.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+    section: "Men",
+  },
+  {
     id: 305,
     subId: 301,
     name: "img1",
     img: "../pic/subkidgray1.avif",
     class: "img1",
     categoies: "Khmer New Year Sale305",
+    usPrice: "$10.09",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+    section: "Men",
+  },
+  {
+    name: "img1",
+    img: "../pic/subkidgray2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale305",
     usPrice: "$8.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+    section: "Men",
+  },
+  {
+    name: "img1",
+    img: "../pic/subkidgray3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale305",
+    usPrice: "$8.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+    section: "Men",
+  },
+  {
+    name: "img1",
+    img: "../pic/subkidgray4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale305",
+    usPrice: "$10.09",
     usPriceoff: "$14.95",
     Priceoff: "-40%",
     typeOfShirt: "Oversied T-Shirt",
@@ -4040,8 +4979,50 @@ const dataSmall = [
     section: "Men",
   },
   {
+    subId: 307,
+    name: "img1",
+    img: "../pic/subkidgray1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale305",
+    usPrice: "$8.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+    section: "Men",
+  },
+  {
+    subId: 306,
+    name: "img1",
+    img: "../pic/subkidgray1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale305",
+    usPrice: "$8.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+    section: "Men",
+  },
+  {
     id: 306,
     subId: 301,
+    name: "img1",
+    img: "../pic/subkidyellow1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale306",
+    usPrice: "$8.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Oversied T-Shirt",
+    MaxQuantity: 5,
+    similar: "tshirt",
+    section: "Men",
+  },
+  {
+    subId: 307,
     name: "img1",
     img: "../pic/subkidyellow1.avif",
     class: "img1",
@@ -4123,176 +5104,33 @@ const dataSmall = [
     section: "Men",
   },
   {
-    id: 400,
-    subId: 401,
+    id: 308,
     name: "img1",
-    img: "../pic/ac1.avif",
+    img: "../pic/kidhoddiebluewhite1.avif",
     class: "img1",
-    categoies: "Khmer New Year Sale400",
-    usPrice: "$69.99",
-    // usPriceoff: "$60.95",
-    // Priceoff: "-40%",
-    typeOfShirt: "Nike Aura",
-    MaxQuantity: 50,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/ac2.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale400",
-    usPrice: "$30.99",
-    usPriceoff: "$50.95",
+    categoies: "Khmer New Year Sale308",
+    usPrice: "$8.99",
+    usPriceoff: "$14.95",
     Priceoff: "-40%",
-    typeOfShirt: "Legging",
-    MaxQuantity: 50,
-    similar: "top",
+    typeOfShirt: "Hoddies",
+    MaxQuantity: 5,
+    similar: "Hoddies",
+    section: "top",
   },
   {
+    id: 320,
+    subId: 300,
     name: "img1",
-    img: "../pic/Nike Aura3.avif",
+    img: "../pic/kidhoddiebluewhite1.avif",
     class: "img1",
-    categoies: "Khmer New Year Sale400",
-    usPrice: "$30.99",
-    usPriceoff: "$50.95",
+    categoies: "Khmer New Year Sale320!",
+    usPrice: "$10.99",
+    usPriceoff: "$14.95",
     Priceoff: "-40%",
-    typeOfShirt: "Legging",
-    MaxQuantity: 50,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/Nike Aura4.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale400",
-    usPrice: "$30.99",
-    usPriceoff: "$50.95",
-    Priceoff: "-40%",
-    typeOfShirt: "Legging",
-    MaxQuantity: 50,
-    similar: "top",
-  },
-  // Ac Bag Nike Utility
-  {
-    id: 401,
-    subId: 400,
-    name: "img1",
-    img: "../pic/Nike Utility Speed 1.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale401",
-    usPrice: "$84.99",
-    usPriceoff: "$99.99",
-    // Priceoff: "-40%",
-    typeOfShirt: "Nike Utility Speed",
-    MaxQuantity: 50,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/Nike Utility Speed 2.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale401",
-    usPrice: "$30.99",
-    usPriceoff: "$50.95",
-    Priceoff: "-40%",
-    typeOfShirt: "Legging",
-    MaxQuantity: 50,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/Nike Utility Speed 3.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale401",
-    usPrice: "$30.99",
-    usPriceoff: "$50.95",
-    Priceoff: "-40%",
-    typeOfShirt: "Legging",
-    MaxQuantity: 50,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/Nike Utility Speed 4.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale401",
-    usPrice: "$30.99",
-    usPriceoff: "$50.95",
-    Priceoff: "-40%",
-    typeOfShirt: "Legging",
-    MaxQuantity: 50,
-    similar: "top",
-  },
-  // Jordan alpha
-  {
-    id: 402,
-    subId: 401,
-    name: "img1",
-    img: "../pic/Jordan Alpha 1.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale402",
-    usPrice: "$54.99",
-    usPriceoff: "$35.97",
-    Priceoff: "-34%",
-    typeOfShirt: "Jordan Alpha Mini Backpack (9L)",
-    MaxQuantity: 50,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/Jordan Alpha 2.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale402",
-  },
-  {
-    name: "img1",
-    img: "../pic/Jordan Alpha 3.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale402",
-  },
-  {
-    name: "img1",
-    img: "../pic/Jordan Alpha 4.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale402",
-  },
-  // // Nike Sportswear Essentials
-  // {
-  //   id: 403,
-  //   subId: 400,
-  //   name: "img1",
-  //   img: "../pic/Jordan Alpha 1.avif",
-  //   class: "img1",
-  //   categoies: "Khmer New Year Sale402",
-  //   usPrice: "$54.99",
-  //   usPriceoff: "$35.97",
-  //   Priceoff: "-34%",
-  //   typeOfShirt: "Jordan Alpha Mini Backpack (9L)",
-  //   MaxQuantity: 50,
-  //   similar: "top",
-  // },
-
-
-  //Jordan Monogram
-  {
-    id: 403,
-    subId: 400,
-    name: "Jordan Monogram",
-    img: "../pic/Jordan Monogram 1.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale403",
-    usPrice: "$81.97",
-    usPriceoff: "$125",
-    Priceoff: "-34%",
-    typeOfShirt: "Duffle Bag",
-    MaxQuantity: 50,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/Jordan Monogram 2.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale403",
+    typeOfShirt: "Hoddies",
+    MaxQuantity: 5,
+    similar: "tshirt",
+    section: "Kid",
   },
   {
     name: "img1",
@@ -4405,105 +5243,7 @@ const dataSmall = [
     class: "img1",
     categoies: "Khmer New Year Sale406",
   },
-  // Nike Sportswear
-  {
-    id: 407,
-    subId: 400,
-    name: "Nike Sportswear",
-    img: "../pic/Nike Sportswear RPM Tote 1.avif",
-    class: "Mesh Training Backpack (26L)",
-    categoies: "Khmer New Year Sale407",
-    usPrice: "$58.97",
-    usPriceoff: "$90",
-    Priceoff: "-34%",
-    typeOfShirt: "RPM Tote (26L)",
-    MaxQuantity: 15,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/Nike Sportswear RPM Tote 2.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale407",
-  },
-  {
-    name: "img1",
-    img: "../pic/Nike Sportswear RPM Tote 3.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale407",
-  },
-  {
-    name: "img1",
-    img: "../pic/Nike Sportswear RPM Tote 4.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale407",
-  },
-  // Franchise Crossbody Bag
-  {
-    id: 408,
-    subId: 400,
-    name: "Jordan",
-    img: "../pic/Franchise Crossbody Bag 1.avif",
-    class: "Mesh Training Backpack (26L)",
-    categoies: "Khmer New Year Sale408",
-    usPrice: "$30.97",
-    usPriceoff: "$40",
-    Priceoff: "-22%",
-    typeOfShirt: "Franchise Crossbody Bag",
-    MaxQuantity: 15,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/Franchise Crossbody Bag 2.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale408",
-  },
-  {
-    name: "img1",
-    img: "../pic/Franchise Crossbody Bag 3.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale408",
-  },
-  {
-    name: "img1",
-    img: "../pic/Franchise Crossbody Bag 4.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale408",
-  },
-  // Monogram Duffel
-  {
-    id: 409,
-    subId: 400,
-    name: "Jordan",
-    img: "../pic/Monogram Duffel 1.avif",
-    class: "Mesh Training Backpack (26L)",
-    categoies: "Khmer New Year Sale409",
-    usPrice: "$97.97",
-    usPriceoff: "$150",
-    Priceoff: "-34%",
-    typeOfShirt: "Monogram Duffel",
-    MaxQuantity: 15,
-    similar: "top",
-  },
-  {
-    name: "img1",
-    img: "../pic/Monogram Duffel 2.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale409",
-  },
-  {
-    name: "img1",
-    img: "../pic/Monogram Duffel 3.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale409",
-  },
-  {
-    name: "img1",
-    img: "../pic/Monogram Duffel 4.avif",
-    class: "img1",
-    categoies: "Khmer New Year Sale409",
-  },
+
 ];
 
 let imageList = [];
@@ -4641,7 +5381,7 @@ const qtryitem = document.querySelector(".qtyitem");
 
 resultQTY.innerHTML = 0;
 result.innerHTML = 0;
-sizeitem.innerHTML = "";
+// sizeitem.innerHTML = "";
 increment.addEventListener("click", function () {
   if (resultQTY.innerHTML >= product.MaxQuantity) {
     alert("Please input Low qty");
@@ -4673,176 +5413,202 @@ if (udprice || offPrice || usPriceoff) {
   typeOfShirt.textContent = product.typeOfShirt;
   nameP.textContent = product.name;
 }
-// Bag
-let totalQuantity = 0; // Keep track of all items added
-btnSub.addEventListener("click", function () {
-  const quantity = parseInt(resultQTY.innerHTML);
-  const selectedSize = document.querySelector(".sizeSelected");
-  if (!selectedSize) {
-    alert("Please select a size before adding to cart.");
-    return;
-  }
-  if (quantity <= 0) {
-    alert("Please choose a quantity greater than 0.");
-    return;
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const ordersQty = document.querySelector(".orderqty");
+  const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
+  const totalOrdersElements = document.querySelectorAll(".totalOrders");
 
-  // ✅ Update total result
-  totalQuantity += quantity;
-  result.innerHTML = totalQuantity;
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
-  // ✅ Get selected image
-  const selectedImageSrc = document.getElementById("mainImage").src;
+  // Render orders on page load
+  renderOrdersUI();
 
-  // ✅ Add to cart
-  const cartItem = {
-    id: product.id,
-    name: product.name,
-    size: selectedSize.textContent,
-    quantity: quantity,
-    image: selectedImageSrc,
-    usPriceoff: product.usPriceoff,
-    udprice: product.price,
-    offPrice: product.Priceoff,
-    typeOfShirt: product.typeOfShirt,
-    MaxQty: product.MaxQuantity,
-  };
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  // Add to Cart Button
+  btnSub.addEventListener("click", () => {
+    const quantity = parseInt(resultQTY.innerHTML);
+    const selectedSize = document.querySelector(".sizeSelected");
 
-  // ✅ Check if same size already in cart — if so, update quantity
-  const existingItem = cart.find(
-    (item) => item.id === product.id && item.size === cartItem.size
-  );
-
-  if (existingItem) {
-    existingItem.quantity += quantity;
-  } else {
-    cart.push(cartItem);
-  }
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  // ✅ Add UI preview
-  const sizeDiv = document.createElement("div");
-  sizeDiv.classList.add("ordered-size");
-  sizeDiv.setAttribute("data-size", selectedSize.textContent);
-  sizeDiv.innerHTML = `Your Ordered: [${selectedSize.textContent}: ${quantity}] 
-    <button class="removeSizeBtn btn-size mt-2" data-size="${selectedSize.textContent}"><i class="bi bi-trash3-fill"></i></button>`;
-  sizeitem.appendChild(sizeDiv);
-  // ✅ Add remove handler
-  sizeDiv
-    .querySelector(".removeSizeBtn")
-    .addEventListener("click", function () {
-      const sizeToRemove = this.getAttribute("data-size");
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart = cart.filter((item) => item.size !== sizeToRemove);
-      localStorage.setItem("cart", JSON.stringify(cart));
-
-      sizeDiv.remove();
-
-      // Recalculate totals
-      totalQuantity = 0;
-      let totalCost = 0;
-      cart.forEach((item) => {
-        totalQuantity += item.quantity;
-        const price = parseFloat(item.usPriceoff.replace("$", ""));
-        totalCost += price * item.quantity;
-      });
-
-      result.innerHTML = totalQuantity;
-      qtryitem.innerHTML = "Quantity: " + totalQuantity;
-      totalPrice.innerHTML = "Total US $" + totalCost.toFixed(2);
-      alert(`Removed size ${sizeToRemove} from cart.`);
-      const previewImg1 = document.querySelector(".cart-preview-img");
-      if (previewImg1 && totalQuantity == 0) {
-        previewImg1.src = "";
-      }
-    });
-
-  // ✅ Update quantity and price
-  qtryitem.innerHTML = "Quantity: " + totalQuantity;
-
-  const cleanPrice = parseFloat(product.usPrice.replace("$", ""));
-  const itemTotalPrice = cleanPrice * totalQuantity;
-  totalPrice.textContent = "Total US $" + itemTotalPrice.toFixed(2);
-
-  // ✅ Show preview
-  let previewImg = document.querySelector(".cart-preview-img");
-  if (!previewImg) {
-    previewImg = document.createElement("img");
-    previewImg.classList.add("cart-preview-img");
-    document.body.appendChild(previewImg);
-  }
-  previewImg.src = selectedImageSrc;
-
-  // ✅ Display product details
-  if (udpricevart || offPricecart || usPriceoffcart) {
-    udpricevart.textContent = product.usPrice;
-    offPricecart.textContent = product.Priceoff;
-    usPriceoffcart.textContent = product.usPriceoff;
-    typeOfShirtcart.textContent = product.typeOfShirt;
-  }
-
-  // ✅ Reset input
-  resultQTY.innerHTML = 0;
-  selectedSize.classList.remove("sizeSelected");
-
-  // ✅ Activate clear button
-  const btnclear = document.querySelector(".btn-clear");
-  // btnclear.innerHTML = "ClearForm";
-  btnclear.classList.add("active");
-
-  btnclear.addEventListener("click", function () {
-    localStorage.removeItem("cart");
-    totalQuantity = 0;
-    result.innerHTML = 0;
-    qtryitem.innerHTML = 0;
-    sizeitem.innerHTML = "";
-    usPriceoffcart.innerHTML = "";
-    offPricecart.innerHTML = "";
-    udpricevart.innerHTML = "";
-    totalPrice.innerHTML = "";
-    typeOfShirtcart.textContent = "No Information";
-
-    const previewImg = document.querySelector(".cart-preview-img");
-    if (previewImg) {
-      previewImg.src = "";
+    if (!selectedSize) {
+      alert("Please select a size before adding to cart.");
+      return;
     }
-    // Reset size buttons
-    document.querySelector(".size-Xs")?.classList.remove("sizeSelected");
-    document.querySelector(".size-S")?.classList.remove("sizeSelected");
-    document.querySelector(".size-M")?.classList.remove("sizeSelected");
-    document.querySelector(".size-L")?.classList.remove("sizeSelected");
-    document.querySelector(".size-Xs").textContent = "XS";
-    document.querySelector(".size-S").textContent = "S";
-    document.querySelector(".size-M").textContent = "M";
-    document.querySelector(".size-L").textContent = "L";
-    // Clear localStorage for orders
-    const orders = JSON.parse(localStorage.getItem("orders")) || [];
-    const updatedOrders = orders.filter((order) => order.id !== product.id);
-    localStorage.setItem("orders", JSON.stringify(updatedOrders));
-    // If on dashboard.html, reload the page to reflect changes
-    if (window.location.pathname.includes("dashboard.html")) {
-      location.reload();
+
+    if (quantity <= 0) {
+      alert("Please choose a quantity greater than 0.");
+      return;
     }
-    alert("Cart has been cleared.");
-    btnclear.classList.remove("active");
+
+    const selectedImageSrc = document.getElementById("mainImage").src;
+
+    const cartItem = {
+      id: product.id,
+      name: product.name,
+      size: selectedSize.textContent,
+      quantity: quantity,
+      image: selectedImageSrc,
+      usPriceoff: product.usPriceoff,
+      udprice: product.price,
+      offPrice: product.Priceoff,
+      typeOfShirt: product.typeOfShirt,
+      MaxQty: product.MaxQuantity,
+    };
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingItem = cart.find(
+      (item) => item.id === product.id && item.size === cartItem.size
+    );
+
+    if (existingItem) {
+      existingItem.quantity += quantity;
+    } else {
+      cart.push(cartItem);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Update Orders
+    const orderItem = { ...cartItem, date: Date.now() };
+    orders.push(orderItem);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    ordersQty.innerHTML = orders.length;
+
+    // Reset UI
+    resultQTY.innerHTML = 0;
+    selectedSize.classList.remove("sizeSelected");
+
+    // Show alert
+    alert(
+      `Added to cart: ${cartItem.name} [Size: ${cartItem.size}, Qty: ${cartItem.quantity}]`
+    );
+
+    // Re-render UI
+    renderOrdersUI();
   });
 
-  alert(
-    `Added to cart: ${cartItem.name} [Size: ${cartItem.size}, Qty: ${cartItem.quantity}]\n` +
-      `Price per item: ${product.usPrice}\n` +
-      `Total for this item: $${itemTotalPrice.toFixed(2)}`
-  );
-  console.log(quantity);
-  console.log(totalQuantity);
-  const orders = JSON.parse(localStorage.getItem("orders")) || [];
-  const orderItem = {
-    ...cartItem,
-    date: Date.now(),
-  };
-  orders.push(orderItem);
-  localStorage.setItem("orders", JSON.stringify(orders));
+  // Render all orders to UI
+  function renderOrdersUI() {
+    orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    let totalAmount = 0;
+    let allOrdersHTML = "";
+
+    if (orders.length === 0) {
+      wrapperCanvases.forEach((wrapper) => {
+        wrapper.innerHTML = "<p>No items</p>";
+      });
+    } else {
+      orders.forEach((order, index) => {
+        const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
+        const total = price * order.quantity;
+        totalAmount += total;
+        const orderHTML = `
+        <div class="row mt-5">
+        <div class="col-lg-6 col-6">
+          <span class="usPricecart">Price: $${price.toFixed(2)}</span>
+          <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
+          <h5 class="typeOfShirtcart" style="color: black; padding: 0.5rem 0;">
+            ${order.typeOfShirt}
+          </h5>
+          <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
+          <h5 class="sizeitem1">Size: ${order.size}</h5>
+          <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
+          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
+            Delete Item <i class="bi bi-trash"></i>
+          </button>
+                      <button class="btn-sm2 text-white mt-3">
+            <a href="./Register.html" class="btn-sm1">
+              Check Out <i class="fa-solid fa-bag-shopping" style="margin-left: 2px;"></i>
+            </a>
+          </button>
+        </div>
+        <div class="col-lg-6 col-6">
+          <div class="cart-preview">
+            <img class="cart-preview-img w-100" src="${order.image}" />
+          </div>
+           <br>
+        <br>
+        <br>
+        <br>
+        </div>
+        </div>`;
+
+        allOrdersHTML += orderHTML;
+      });
+
+      wrapperCanvases.forEach((wrapper) => {
+        wrapper.innerHTML = allOrdersHTML;
+      });
+    }
+
+    totalOrdersElements.forEach((el) => {
+      el.textContent = orders.length;
+    });
+  }
 });
+// Delete order
+function deleteOrder(index) {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.splice(index, 1);
+  localStorage.setItem("orders", JSON.stringify(orders));
+  location.reload(); // or call renderOrdersUI() if you remove reload
+}
+function renderOrdersUI() {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
+  const totalOrdersElements = document.querySelectorAll(".totalOrders");
+
+  totalOrdersElements.forEach((el) => (el.textContent = orders.length));
+  if (orders.length === 0) {
+    wrapperCanvases.forEach((wrapper) => {
+      wrapper.innerHTML = "<p>No items</p>";
+    });
+    return;
+  }
+
+  let totalAmount = 0;
+  let html = "";
+
+  orders.forEach((order, index) => {
+    const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
+    const total = price * order.quantity;
+    totalAmount += total;
+
+    html += `
+       <div class="row mt-5">
+        <div class="col-lg-6 col-6">
+          <span class="usPricecart">Price: $${price.toFixed(2)}</span>
+          <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
+          <h5 class="typeOfShirtcart" style="color: black; padding: 0.5rem 0;">
+            ${order.typeOfShirt}
+          </h5>
+          <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
+          <h5 class="sizeitem1">Size: ${order.size}</h5>
+          <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
+          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
+            Delete Item <i class="bi bi-trash"></i>
+          </button>
+                      <button class="btn-sm2 text-white mt-3">
+            <a href="./Register.html" class="btn-sm1">
+              Check Out <i class="fa-solid fa-bag-shopping" style="margin-left: 2px;"></i>
+            </a>
+          </button>
+        </div>
+        <div class="col-lg-6 col-6">
+          <div class="cart-preview">
+            <img class="cart-preview-img w-100" src="${order.image}" />
+          </div>
+        </div>
+        </div>`;
+  });
+
+  wrapperCanvases.forEach((wrapper) => {
+    wrapper.innerHTML = html;
+  });
+}
+document.addEventListener("DOMContentLoaded", () => {
+  renderOrdersUI();
+});
+
 // similar
 const wrappersimilar = document.querySelector(".wrapper-similar");
 const productNot = document.querySelector(".productNot");
@@ -4892,7 +5658,7 @@ if (product.subId !== id) {
 }
 
 // Add after your existing code
-
+console.log(result);
 function addToFavorites() {
   const mainImage = document.getElementById("mainImage");
   const selectedSize = document.querySelector(".sizeSelected");
@@ -4937,7 +5703,6 @@ function addToFavorites() {
 
   localStorage.setItem("favorites", JSON.stringify(favorites));
 }
-
 function showToast(message) {
   const toast = document.createElement("div");
   toast.className = "toast-notification";

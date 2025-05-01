@@ -7,160 +7,241 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>Login</title>
     <style>
-        /* From Uiverse.io by Yaya12085 */
-        .form {
-            background-color: #fff;
-            display: block;
-            padding: 1rem;
-            max-width: 350px;
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-
-        .form-title {
-            font-size: 1.25rem;
-            line-height: 1.75rem;
-            font-weight: 600;
+        .card {
+            margin: 2rem auto;
+            width: 50%;
+            padding: 1.9rem 1.2rem;
             text-align: center;
-            color: #000;
+            background: #2a2b38;
+            transition: all 0.4s ease-in-out;
+            cursor: pointer;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px;
         }
 
-        .input-container {
-            position: relative;
+        @media screen and (max-width:768px) {
+
+            .card {
+                width: 90%;
+            }
         }
 
-        .input-container input,
-        .form button {
-            outline: none;
-            border: 1px solid #e5e7eb;
-            margin: 8px 0;
+
+        .card:hover {
+            transform: scale(10deg) skew(0deg, 5deg);
+            box-shadow: 0 8px 24px 0 rgb(42 43 56 / 20%);
+            box-shadow: rgba(79, 77, 78, 0.4) 5px 5px, rgba(79, 77, 78, 0.3) 10px 10px, rgba(79,
+                    77,
+                    78, 0.2) 15px 15px, rgba(79,
+                    77,
+                    78, 0.1) 20px 20px, rgba(79,
+                    77,
+                    78, 0.05) 25px 25px;
+            transform: skew(-5deg);
         }
 
-        .input-container input {
-            background-color: #fff;
-            padding: 1rem;
-            padding-right: 3rem;
-            font-size: 0.875rem;
-            line-height: 1.25rem;
-            width: 300px;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        /*Inputs*/
+        .field {
+            margin-top: .5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5em;
+            background-color: #1f2029;
+            border-radius: 4px;
+            padding: .5em 1em;
+            transition: all 0.4s ease-in-out;
+            border: 1px solid #1f2029;
         }
 
-        .input-container span {
-            display: grid;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            place-content: center;
+        body {
+            background: #2A2B38;
+            background: linear-gradient(0deg rgba(42, 43, 56, 1) 0%, rgb(0, 0, 0) 68%);
+
         }
 
-        .input-container span svg {
-            color: #9CA3AF;
-            width: 1rem;
-            height: 1rem;
-        }
-
-        .submit {
-            display: block;
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-            background-color: #4F46E5;
-            color: #ffffff;
-            font-size: 0.875rem;
-            line-height: 1.25rem;
+        h1 {
+            color: white;
+            font-size: clamp(2rem, 3vw, 4rem);
             font-weight: 500;
+        }
+
+        .field:hover {
+            border: 1px solid #ffeba7;
+        }
+
+        .input-icon {
+            height: 1em;
+            width: 1em;
+            color: #ffeba7;
+        }
+
+        .input-icon1 {
+            height: 1em;
+            width: 1em;
+            color: #ffeba7;
+        }
+
+        .input-icon2 {
+            height: 1em;
+            width: 1em;
+            color: #ffeba7;
+        }
+
+        .input-field {
+            background: none;
+            border: none;
+            outline: none;
             width: 100%;
-            border-radius: 0.5rem;
+            color: #d3d3d3;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .bi-eye-fill {
+            height: 1em;
+            width: 1em;
+            color: #ffeba7;
+            transition: all 0.4s ease-in-out;
+        }
+
+        /*Text*/
+        .title {
+            margin-bottom: 1rem;
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #f5f5f5;
+        }
+
+        /*Buttons*/
+        .btn {
+            margin: 1rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: .8em;
             text-transform: uppercase;
+            padding: 0.6em 1.2em;
+            background-color: #ffeba7;
+            color: #5e6681;
+            box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
+            transition: all .3s ease-in-out;
         }
 
-        .signup-link {
-            color: #6B7280;
-            font-size: 0.875rem;
-            line-height: 1.25rem;
-            text-align: center;
+        .btn-link {
+            color: #f5f5f5;
+            display: block;
+            font-size: .75em;
+            transition: color .3s ease-out;
         }
 
-        .signup-link a {
-            text-decoration: underline;
+        /*Hover & focus*/
+        .field input:focus::placeholder {
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .btn:hover {
+            background-color: #5e6681;
+            color: #ffeba7;
+            box-shadow: 0 8px 24px 0 rgb(16 39 112 / 20%);
+        }
+
+        .btn-link:hover {
+            color: #ffeba7;
+        }
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: rgb(0, 0, 0) url(../pic/box\ load.gif) no-repeat center center;
+            background-size: 100%;
+            transition: all 0.4s ease-in-out;
+        }
+
+        @media screen and (min-width:768px) {
+            #preloader {
+                background-size: 20%;
+            }
+
         }
     </style>
 </head>
 
 <body>
-    <div class="contianer m-auto">
-        <div class="row m-auto">
+    <div class="container text-center m-auto">
+        <h1 class="fw-bolder m-5">Please Login Your Account!</h1>
+        <div class="row sm-auto">
             <div class="col-12">
-                <!-- From Uiverse.io by Yaya12085 -->
-                <form class="form m-auto mt-5">
-                    <p class="form-title">Sign in to your account</p>
-                    <div class="input-container">
-                        <input placeholder="Enter email" type="email" class="email">
-                        <span>
-                            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                                    stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="input-container">
-                        <input placeholder="Enter password" type="password" class="pass">
-                        <span>
-                            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round"
-                                    stroke-linecap="round"></path>
-                                <path
-                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                                    stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-                            </svg>
-                        </span>
-                    </div>
-                    <button class="submit" type="submit">
-                        Sign in
-                    </button>
-                    <p class="signup-link">
-                        No account?
-                        <a href="">Sign up</a>
-                    </p>
-                </form>
+                <div class="card">
+                    <h1 class="title">LOGIN</h1>
+                    <form>
+                        <div class="field">
+                            <i class="bi bi-person-fill input-icon1"></i>
+                            <input autocomplete="off" id="logemail" placeholder="Email" class="input-field"
+                                name="logemail" type="email">
+                        </div>
+                        <div class="field position-relative">
+                            <i class="bi bi-eye-slash-fill input-icon" onclick="togglePasswordVisibility()"></i>
+                            <input autocomplete="off" id="logpass" placeholder="Password" class="input-field"
+                                name="logpass" type="password">
+                        </div>
+                        <button class="btn btn-linkk">Login</button>
+                        <br>
+                        <a href="./Register.html" class="text-white text-decoration-none">Sign Up</a>
+                    </form>
+                </div>
             </div>
         </div>
+
     </div>
+
     <script>
-        const email = document.querySelector(".email");
-        const pass = document.querySelector(".pass");
-        const submit = document.querySelector(".submit")
-
-        submit.addEventListener("click", (e) => {
-            e.preventDefault();
-            if (email.value == "admin" && pass.value == "123") {
-                sessionStorage.setItem("islogin", "2025");
-                window.location.href = "./DashBoard.html";
-                console.log(sessionStorage.getItem("islogin"));
+        const btnlink = document.querySelector(".btn-linkk");
+        const inputicon = document.querySelector(".input-icon");
+        const inputicon1 = document.querySelector(".input-icon1");
+        const inputicon2 = document.querySelector(".input-icon2");
+        const passwordInput = document.getElementById("logpass");
+        const email = document.getElementById("logemail");
+        function togglePasswordVisibility() {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                inputicon.className = "bi-eye-fill";
             } else {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Invalid email or password!',
-                })
+                passwordInput.type = "password";
+                inputicon.className = "bi-eye-slash-fill input-icon";
             }
-        })
+        }
+        console.log(btnlink)
+        btnlink.addEventListener("click", function (e) {
+            const passValue = passwordInput.value;
+            const emailValue = email.value;
+            var user = sessionStorage.getItem(emailValue);
+            if (user) {
+                var parseUser = JSON.parse(user);
+                if (parseUser.passValue === passValue && parseUser.emailValue === emailValue) {
+                    sessionStorage.setItem("user", JSON.stringify(parseUser));
+                    alert("Login Success");
+                    window.location.href = "./Payment.html";
+                } else {
+                    alert("Incorrect Password");
+                }
+            } else {
+                console.log(user);
+                alert("Login Failed");
+            }
 
+            e.preventDefault();
+        });
 
     </script>
 
 </html>
-
-</script>
-</body>
+</body>s

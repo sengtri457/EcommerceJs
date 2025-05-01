@@ -24,12 +24,12 @@ section {
     --secondary: #fe5d37;
     --danger: #dc3545;
     --light: #ECF4FF;
-    --dark: #120F2D;
+    --dark: #000000;
     --podium-cds-typography-960-to-1919-display2: 800 4.75rem / .9 'Nike Futura ND', 'Helvetica Now Text Medium', Helvetica, Arial, sans-serif;
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 6rem);
+    font-size: clamp(2.5rem, 5vw, 6rem);
     font-family: "Modak", system-ui;
     font-weight: 500;
 }
@@ -58,12 +58,12 @@ h4 {
 h5 {
     color: var(--dark);
     font-family: "Product Sans", Poppins;
-    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
     /* min: 24px, max: 40px */
 }
 
 p {
-    font-size: clamp(1rem, 2.5vw, 1rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
     /* min: 16px, max: 20px */
 }
 
@@ -77,6 +77,43 @@ body {
     text-align: left;
     background-color: #FFFFFF;
     transition: all 0.4s ease-in-out;
+}
+
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: var(--dark);
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 99;
+    animation: zoomInOut 2s infinite;
+}
+
+.back-to-top i {
+    padding-top: 12px;
+    color: #ffffff;
+}
+
+.btn-lg-square {
+    width: 50px;
+    height: 50px;
+}
+
+.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0;
+
 }
 
 /* h5 {
@@ -204,6 +241,48 @@ h1 {
     font-size: 1rem;
 }
 
+/* price */
+.pricecart {
+    padding: 1rem 0rem;
+}
+
+.usPricecart {
+    font-size: var(--font-medum);
+    font-weight: var(--weight-medum);
+    color: var(--danger);
+}
+
+.sizeitem {
+    font-size: var(--font-small);
+    font-weight: var(--weight-small);
+    color: var(--dark);
+}
+
+.qtyitem {
+    font-size: var(--font-small);
+    font-weight: var(--weight-small);
+    color: var(--dark);
+}
+
+.totalPrice {
+    font-size: var(--font-medum);
+    font-weight: var(--weight-medum);
+    color: var(--danger);
+}
+
+.offPricecart {
+    /* padding: 0rem 0.25rem; */
+    font-size: var(--font-medum);
+    font-weight: var(--weight-medum);
+    color: var(--dark);
+}
+
+.usPriceoffcart {
+    font-size: var(--font-medum);
+    font-weight: var(--weight-small);
+    color: var(--gray-dark);
+    text-decoration: line-through;
+}
 
 ::-webkit-scrollbar {
     width: 0;
@@ -375,7 +454,7 @@ h1 {
 .wrapper-ul2,
 .wrapper-ul3,
 .wrapper-ul4 {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 
@@ -987,6 +1066,10 @@ h1 {
     display: inline-flex;
 }
 
+.btn-53 .letters a {
+    text-decoration: none;
+}
+
 .btn-53 span {
     opacity: 0;
     transform: translateY(-15px);
@@ -1180,6 +1263,41 @@ footer>h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn-sm {
+    font-size: var(--font-small);
+    font-weight: var(--weight-small);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+}
+
+.offcanvas {
+    /* filter: blur(2px); */
+    backdrop-filter: blur(10px);
+    background-color: rgba(237, 237, 237, 0.3);
+}
+
+.btn-sm2 {
+    font-size: var(--font-small);
+    font-weight: var(--weight-small);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--dark);
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-sm2:hover {
+    background-color: #0056b3;
+}
+
+.btn-sm1 {
+    text-decoration: none;
+    color: white;
 }
 
 .btn-square {
@@ -1470,7 +1588,9 @@ footer>h4 {
 
 @media (max-width: 1000px) {
 
-
+    .carousel-item img {
+        height: 300px;
+    }
 
     .btn-53 .original {
         font-size: 0.8rem;
@@ -1518,7 +1638,6 @@ footer>h4 {
         top: 70px;
         height: 380px;
         overflow: scroll;
-        background-color: var(--light);
         z-index: 9999;
     }
 
@@ -1565,7 +1684,6 @@ footer>h4 {
         top: 70px;
         height: 380px;
         overflow: scroll;
-        background-color: var(--light);
         z-index: 9999;
     }
 
@@ -1590,13 +1708,6 @@ footer>h4 {
     .menu {
         align-items: start;
     }
-
-    /* .navbar .menu li {
-        margin: 10px 0;
-    } */
-    /* li {
-        padding: 10px 0px;
-    } */
 
     .list-unstyled li {
 
@@ -1695,5 +1806,9 @@ footer>h4 {
     .image-card1,
     .image-card2 {
         width: 30%;
+    }
+
+    .carousel-indicators {
+        bottom: 1%;
     }
 }

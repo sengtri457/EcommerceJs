@@ -429,6 +429,320 @@ const dataSmall = [
     MaxQuantity: 50,
     similar: "top",
   },
+  {
+    id: 107,
+    subId: 103,
+    name: "Nike Sportswear",
+    img: "../../pic/long1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale107",
+    usPrice: "$50.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-50%",
+    typeOfShirt: "long",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 108,
+    subId: 103,
+    name: "Nike Pro",
+    img: "../../pic/long3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale108",
+    usPrice: "$25.99",
+    usPriceoff: "$50.95",
+    Priceoff: "-50%",
+    typeOfShirt: "long",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 109,
+    subId: 103,
+    name: "Nike Primary",
+    img: "../../pic/long4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale109",
+    usPrice: "$30.99",
+    usPriceoff: "$70.95",
+    Priceoff: "-40%",
+    typeOfShirt: "long",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 110,
+    subId: 103,
+    name: "Nike ACG",
+    img: "../../pic/long5.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale110",
+    usPrice: "$50.99",
+    usPriceoff: "$70.95",
+    Priceoff: "-20%",
+    typeOfShirt: "long",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 111,
+    subId: 103,
+    name: "Nike Sportwear",
+    img: "../../pic/short1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale111",
+    usPrice: "$50.99",
+    usPriceoff: "$70.95",
+    Priceoff: "-20%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 112,
+    subId: 103,
+    name: "Nike Primary",
+    img: "../../pic/short2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale112",
+    usPrice: "$60.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  // short
+  {
+    id: 1,
+    subId: 5,
+    name: "Black Tee",
+    img: "../../pic/main1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale!",
+    usPrice: "$8.99",
+    usPriceoff: "$14.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 5,
+    similar: "tshirt",
+    section: "Men",
+  },
+  {
+    id: 56,
+    subId: 1,
+    name: "Crop Tshirt",
+    img: "../../pic/tshirtmen1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale10",
+    usPrice: "$60.99",
+    usPriceoff: "$80.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 103,
+    subId: 104,
+    name: "Nike Sportswear",
+    img: "../../pic/gra1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale103",
+    usPrice: "$40.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-60%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 104,
+    subId: 105,
+    name: "Nike Sportswear",
+    img: "../../pic/gra2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale104",
+    usPrice: "$30.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-70%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 105,
+    subId: 104,
+    name: "Nike Sportswear",
+    img: "../../pic/sgra3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale105",
+    usPrice: "$40.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-60%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 106,
+    subId: 103,
+    name: "Nike Sportswear",
+    img: "../../pic/gra4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale106",
+    usPrice: "$50.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-50%",
+    typeOfShirt: "Sleeve",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  // polo
+  {
+    id: 5,
+    subId: 22,
+    name: "Oversied Polo",
+    img: "../../pic/menn2.avif",
+    class: "img2",
+    categoies: "Khmer New Year Sale1",
+    usPrice: "$10.99",
+    usPriceoff: "$20.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Polo",
+    MaxQuantity: 50,
+    similar: "Polo",
+  },
+  {
+    id: 92,
+    name: "Nike Club",
+    img: "../../pic/s5.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale92",
+    usPrice: "$60.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Polo",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 96,
+    name: "Nike 24.7 Club",
+    img: "../../pic/s10.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale96",
+    usPrice: "$95.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-5%",
+    typeOfShirt: "Polo",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  // botton
+  {
+    id: 40,
+    subId: 24,
+    name: "Crop Jacket",
+    img: "../../pic/submenn10.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale8",
+    usPrice: "$30.99",
+    usPriceoff: "$40.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 60,
+    name: "Green Jacket",
+    img: "../../pic/jacketmen1.avif",
+    categoies: "Khmer New Year Sale2",
+    usPrice: "$70.99",
+    usPriceoff: "$90.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Button",
+  },
+  {
+    id: 113,
+    name: "Nike Primary",
+    img: "../../pic/bt1.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale113",
+    usPrice: "$60.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 114,
+    name: "Nike Primary",
+    img: "../../pic/bt2.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale114",
+    usPrice: "$50.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-50%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 115,
+    name: "Nike Primary",
+    img: "../../pic/bt3.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale115",
+    usPrice: "$70.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-30%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 116,
+    name: "Nike Primary",
+    img: "../../pic/bt4.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale116",
+    usPrice: "$100.99",
+    usPriceoff: "$150.95",
+    Priceoff: "-20%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 117,
+    name: "Nike Primary",
+    img: "../../pic/bt5.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale117",
+    usPrice: "$60.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-40%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 118,
+    name: "Nike Primary",
+    img: "../../pic/bt6.avif",
+    class: "img1",
+    categoies: "Khmer New Year Sale118",
+    usPrice: "$70.99",
+    usPriceoff: "$100.95",
+    Priceoff: "-30%",
+    typeOfShirt: "Button",
+    MaxQuantity: 50,
+    similar: "top",
+  },
 ];
 const wrappersimilar = document.querySelector(".wrapper-similar");
 //   btn-filter
@@ -499,3 +813,78 @@ li.forEach((item) => {
     }
   });
 });
+
+// cart store
+document.addEventListener("DOMContentLoaded", function () {
+  // Get orders from localStorage
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  // const ordersTable = document.getElementById("ordersList");
+  const totalOrdersSpan = document.querySelectorAll(".totalOrders");
+  // const totalAmountSpan = document.getElementById("totalAmount");
+  const wrappecanvas = document.querySelector(".wrapper-canvas");
+  console.log(orders);
+
+  // Calculate totals
+  let totalAmount = 0;
+
+  // Display orders
+  orders.forEach((order, index) => {
+    // const row = document.createElement("tr");
+    const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
+    const total = price * order.quantity;
+    totalAmount += total;
+
+    wrappecanvas.innerHTML = `<div class="col-lg-6 col-6">
+                        <h5 class="text-dark fw-bold">Ordered Review</h5>
+                        <br/>
+                        <span class="usPricecart">Price: $${price.toFixed(
+                          2
+                        )}</span>
+                        <h5 class="offPricecart">Discount: ${
+                          order.offPrice
+                        }</h5>
+                        <h5 class="typeOfShirtcart" style="color: black;padding: 0.5rem 0rem;">${
+                          order.typeOfShirt
+                        }</h5>
+                        <h5 class="totalPrice1" id="totalAmount">Total: $${totalAmount.toFixed(
+                          2
+                        )}</h5>
+                        <h5 class="sizeitem1">Size:${order.size}</h5>
+                        <h5 class="qtyitem1">Quantity:${order.quantity}</h5>
+                        <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">Delete Item
+                               <i class="bi bi-trash"></i>
+                           </button>
+                                                    <button class=" btn-sm2 mt-3 text-white">
+        <a href="./Register.html" class="btn-sm1">
+            Check Out <i class="fa-solid fa-bag-shopping" style="margin-left:2px"></i>
+        </a>
+    </button>
+                    </div>
+                    <div class="col-lg-6 col-6">
+                        <div class="cart-preview">
+                            <h5 class="text-dark fw-bold text-right">Cart Preview</h5>
+                             <br/>
+                            <img class="cart-preview-img w-100" src="${
+                              order.image
+                            }"/>
+                        </div>
+                    </div>
+                        `;
+    if (orders.length == 0) {
+      wrappecanvas.innerHTML = "No items";
+    }
+  });
+
+  // Update totals display
+  totalOrdersSpan.forEach((e) => {
+    e.textContent = orders.length;
+  });
+  console.log(orders);
+});
+
+function deleteOrder(index) {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.splice(index, 1);
+  localStorage.setItem("orders", JSON.stringify(orders));
+  location.reload();
+}
