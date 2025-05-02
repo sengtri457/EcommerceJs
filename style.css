@@ -1789,6 +1789,11 @@ footer>h4 {
         width: 80%;
     }
 
+    .offcanvas {
+        backdrop-filter: blur(0px);
+        background-color: rgba(255, 255, 255, 1);
+    }
+
 
 }
 
