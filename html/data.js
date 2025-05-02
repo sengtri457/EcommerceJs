@@ -5118,7 +5118,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:308,
+    id: 308,
     name: "img1",
     img: "../pic/kidhoddiebluewhite2.avif",
     class: "img1",
@@ -5176,7 +5176,7 @@ const dataSmall = [
     class: "img1",
     categoies: "Khmer New Year Sale404",
   },
-  // Flight Carryall Tote 
+  // Flight Carryall Tote
   {
     id: 405,
     subId: 400,
@@ -5241,7 +5241,7 @@ const dataSmall = [
     img: "../pic/Nike Utility Power 4.avif",
     class: "img1",
     categoies: "Khmer New Year Sale406",
-    id:308,
+    id: 308,
     name: "img1",
     img: "../pic/kidhoddiebluewhite3.avif",
     class: "img1",
@@ -5255,7 +5255,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:308,
+    id: 308,
     name: "img1",
     img: "../pic/kidhoddiebluewhite4.avif",
     class: "img1",
@@ -5268,7 +5268,6 @@ const dataSmall = [
     similar: "Hoddies",
     section: "top",
   },
-
 ];
 
 let imageList = [];
@@ -5527,7 +5526,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const total = price * order.quantity;
         totalAmount += total;
         const orderHTML = `
-        <div class="row mt-5">
+         <div class="col-12">
+       <div class="row mt-4">
         <div class="col-lg-6 col-6">
           <span class="usPricecart">Price: $${price.toFixed(2)}</span>
           <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
@@ -5550,10 +5550,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="cart-preview">
             <img class="cart-preview-img w-100" src="${order.image}" />
           </div>
-           <br>
-        <br>
-        <br>
-        <br>
+        </div>
         </div>
         </div>`;
 
@@ -5599,7 +5596,8 @@ function renderOrdersUI() {
     totalAmount += total;
 
     html += `
-       <div class="row mt-5">
+    <div class="col-12">
+       <div class="row mt-4">
         <div class="col-lg-6 col-6">
           <span class="usPricecart">Price: $${price.toFixed(2)}</span>
           <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
@@ -5622,6 +5620,7 @@ function renderOrdersUI() {
           <div class="cart-preview">
             <img class="cart-preview-img w-100" src="${order.image}" />
           </div>
+        </div>
         </div>
         </div>`;
   });

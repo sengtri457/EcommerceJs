@@ -209,9 +209,7 @@
   }
 
   .offPricecart {
-      /* padding: 0rem 0.25rem; */
-      font-size: var(--font-medum);
-      font-weight: var(--weight-medum);
+      font-weight: var(--weight-small);
       color: var(--dark);
   }
 
