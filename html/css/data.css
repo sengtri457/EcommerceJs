@@ -332,9 +332,9 @@
       transition: all 0.4s ease-out;
   }
 
-  .image-card-wrapper img:hover {
+  /* .image-card-wrapper img:hover {
       transform: scale(1.05);
-  }
+  } */
 
   .typeOfShirt {
       font-size: var(--font-small);

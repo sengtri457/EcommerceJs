@@ -1137,8 +1137,55 @@ h1 {
     transition: all 0.4s ease-in-out;
 }
 
-.image-card img:hover {
-    transform: scale(1.05);
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.img1:hover {
+    transform: translateY(-5px);
+    /* Optional: adds a slight fade effect */
+}
+
+.img2:hover {
+    transform: translateY(-5px);
+    /* Optional: adds a slight fade effect */
+}
+
+.img3:hover {
+    transform: translateY(-5px);
+    /* Optional: adds a slight fade effect */
+}
+
+.img4:hover {
+    transform: translateY(-5px);
+    /* Optional: adds a slight fade effect */
+}
+
+.img5:hover {
+    transform: translateY(-5px);
+    /* Optional: adds a slight fade effect */
+}
+
+.img6:hover {
+    transform: translateY(-5px);
+    /* Optional: adds a slight fade effect */
+}
+
+.img7:hover {
+    transform: translateY(-5px);
+    /* Optional: adds a slight fade effect */
+}
+
+.img8:hover {
+    transform: translateY(-5px);
+    /* Optional: adds a slight fade effect */
 }
 
 .image-card2 img:hover {

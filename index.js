@@ -640,6 +640,104 @@ wrapperrecent.innerHTML = data
         `;
   })
   .join("");
+
+const img1 = document.querySelectorAll(".img1");
+img1.forEach((e) => {
+  const originalSrc = e.src;
+
+  e.addEventListener("mouseenter", function () {
+    e.src = "./pic/main2.avif";
+  });
+
+  e.addEventListener("mouseleave", function () {
+    e.src = originalSrc;
+  });
+});
+const img2 = document.querySelectorAll(".img2");
+img2.forEach((e) => {
+  const originalSrc = e.src;
+
+  e.addEventListener("mouseenter", function () {
+    e.src = "./pic/submen2.avif";
+  });
+
+  e.addEventListener("mouseleave", function () {
+    e.src = originalSrc;
+  });
+});
+const img3 = document.querySelectorAll(".img3");
+img3.forEach((e) => {
+  const originalSrc = e.src;
+
+  e.addEventListener("mouseenter", function () {
+    e.src = "./pic/submenn6-1.avif";
+  });
+
+  e.addEventListener("mouseleave", function () {
+    e.src = originalSrc;
+  });
+});
+const img4 = document.querySelectorAll(".img4");
+img4.forEach((e) => {
+  const originalSrc = e.src;
+
+  e.addEventListener("mouseenter", function () {
+    e.src = "./pic/submenn7-1.avif";
+  });
+
+  e.addEventListener("mouseleave", function () {
+    e.src = originalSrc;
+  });
+});
+const img5 = document.querySelectorAll(".img5");
+img5.forEach((e) => {
+  const originalSrc = e.src;
+
+  e.addEventListener("mouseenter", function () {
+    e.src = "./pic/submenn2.avif";
+  });
+
+  e.addEventListener("mouseleave", function () {
+    e.src = originalSrc;
+  });
+});
+const img6 = document.querySelectorAll(".img6");
+img6.forEach((e) => {
+  const originalSrc = e.src;
+
+  e.addEventListener("mouseenter", function () {
+    e.src = "./pic/submenn8-1.avif";
+  });
+
+  e.addEventListener("mouseleave", function () {
+    e.src = originalSrc;
+  });
+});
+const img7 = document.querySelectorAll(".img7");
+img7.forEach((e) => {
+  const originalSrc = e.src;
+
+  e.addEventListener("mouseenter", function () {
+    e.src = "./pic/submenn9-1.avif";
+  });
+
+  e.addEventListener("mouseleave", function () {
+    e.src = originalSrc;
+  });
+});
+const img8 = document.querySelectorAll(".img8");
+img8.forEach((e) => {
+  const originalSrc = e.src;
+
+  e.addEventListener("mouseenter", function () {
+    e.src = "./pic/submenn10-1.avif";
+  });
+
+  e.addEventListener("mouseleave", function () {
+    e.src = originalSrc;
+  });
+});
+
 // Favorite Icon Click
 const clickFav = document.querySelectorAll(".clickFav");
 clickFav.forEach((fav) => {
