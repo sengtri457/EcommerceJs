@@ -86,21 +86,6 @@ const navbar = document.querySelector(".navbar");
 const a = document.querySelectorAll(".nav-link");
 const dropbtn = document.querySelector(".dropbtn");
 console.log(a);
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > 40) {
-//     navbar.classList.add("active");
-//     dropbtn.classList.add("active");
-//     a.forEach((item) => {
-//       item.classList.add("active");
-//     });
-//   } else {
-//     navbar.classList.remove("active");
-//     a.forEach((item) => {
-//       item.classList.remove("active");
-//     });
-//     dropbtn.classList.remove("active");
-//   }
-// });
 let lastScrollY = window.scrollY;
 window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
@@ -849,22 +834,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
 
   // order Cart
-
   let totalAmount = 0;
-
-  // Update total orders count
   totalOrdersElements.forEach((el) => {
     el.textContent = orders.length;
   });
-
-  // If no orders, show "No items" message
   if (orders.length === 0) {
     wrapperCanvases.forEach((wrapper) => {
       wrapper.innerHTML = "<p>No items</p>";
     });
     return;
   }
-
   // Display each order
   orders.forEach((order, index) => {
     const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
@@ -984,3 +963,11 @@ $backToTop.click(function (e) {
   e.preventDefault();
   $("html, body").animate({ scrollTop: 0 }, 1700, "easeInOutExpo");
 });
+
+// video option
+const video = document.getElementById("myVideo");
+
+video.addEventListener("pause", () => {
+  video.play();
+});
+video.addEventListener("contextmenu", (e) => e.preventDefault());

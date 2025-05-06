@@ -13,6 +13,12 @@
         background-color: black;
     }
 
+    h5 {
+        font-family: "Product Sans", Poppins;
+        font-size: clamp(0.8rem, 2vw, 1.2rem);
+        /* min: 24px, max: 40px */
+    }
+
     tr,
     td {
         color: white;
@@ -27,6 +33,10 @@
         padding: 0.7rem 1.5rem;
         color: white;
     }
+
+    table {
+        table-layout: auto;
+    }
 </style>
 
 <body>
@@ -38,9 +48,9 @@
                 <div class="card bg-dark text-white">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h5 class="mb-0 text-white">Orders List</h5>
-                        <div>
-                            <span class="badge bg-primary" id="totalOrders">Total Orders: 0</span>
-                            <span class="badge bg-success ms-2" id="totalAmount">Total Amount: $0</span>
+                        <div style="text-align: right;width: 80%;">
+                            <span class="badge bg-primary mb-3 mb-lg-0" id="totalOrders">Total Orders: 0</span>
+                            <span class="badge bg-success ms-2 " id="totalAmount">Total Amount: $0</span>
                         </div>
                     </div>
                     <div class="card-body text-white">
