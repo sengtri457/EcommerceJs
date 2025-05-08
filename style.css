@@ -1892,6 +1892,7 @@ footer>h4 {
     opacity: 0;
 }
 
+
 @media (max-width: 1000px) {
     .wrapper-btn-53 {
         top: 73%;
@@ -2112,6 +2113,12 @@ footer>h4 {
     }
 
 
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper-btn-53 {
+        top: 68%;
+    }
 }
 
 .btn-clear {
