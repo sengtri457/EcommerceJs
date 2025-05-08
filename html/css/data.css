@@ -405,4 +405,8 @@
       .usPricecart {
           font-size: var(--font-small);
       }
+
+      .wrapper-btn-53 {
+          top: 68%;
+      }
   }
