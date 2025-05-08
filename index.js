@@ -922,9 +922,6 @@ function renderOrdersUI() {
           <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
           <h5 class="sizeitem1">Size: ${order.size}</h5>
           <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
-          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
-            Delete Item <i class="bi bi-trash"></i>
-          </button>
         </div>
         <div class="col-lg-6 col-6">
           <div class="cart-preview">
