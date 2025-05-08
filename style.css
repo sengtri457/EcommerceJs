@@ -58,7 +58,7 @@ h4 {
 h5 {
     color: var(--dark);
     font-family: "Product Sans", Poppins;
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    font-size: clamp(1rem, 2vw, 1.1rem);
     padding-bottom: 0.5rem;
     font-weight: 500;
     /* min: 24px, max: 40px */
@@ -1881,6 +1881,7 @@ footer>h4 {
 }
 
 .wrapper-btn-53 {
+    width: 100%;
     top: 65%;
     left: 0;
     opacity: 1;
