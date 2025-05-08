@@ -1328,6 +1328,7 @@ footer>h4 {
 
 #offcanvasRight {
     width: 40%;
+    overflow: hidden;
 }
 
 .btn-sm2 {
