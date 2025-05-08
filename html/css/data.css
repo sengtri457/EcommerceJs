@@ -17,6 +17,15 @@
       --dark: #120F2D;
   }
 
+  h5 {
+      color: var(--dark);
+      font-family: "Product Sans", Poppins;
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      padding-bottom: 0.5rem;
+      font-weight: 500;
+      /* min: 24px, max: 40px */
+  }
+
   body {
       background-color: var(--white)
   }
@@ -391,5 +400,9 @@
       .pricecart .row {
           margin-left: 0;
           margin-right: 0;
+      }
+
+      .usPricecart {
+          font-size: var(--font-small);
       }
   }
