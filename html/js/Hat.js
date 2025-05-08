@@ -1,0 +1,361 @@
+const dataSmall = [
+  {
+    id: 407,
+    name: "Nike Brasilia",
+    img: "../pic/hat1.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale407",
+    usPrice: "$7.99",
+    usPriceoff: "$9.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Caps",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 408,
+    subId: 407,
+    name: "Nike club",
+    img: "../pic/hat2.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale408",
+    usPrice: "$9.99",
+    usPriceoff: "$19.99",
+    Priceoff: "-20%",
+    typeOfShirt: "Caps",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 409,
+    subId: 407,
+    name: "Nike Brasilia",
+    img: "../pic/hat3.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale409",
+    usPrice: "$49.99",
+    usPriceoff: "$59.99",
+    Priceoff: "-34%",
+    typeOfShirt: "Caps",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 410,
+    name: "Nike Pro",
+    img: "../pic/hat4.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale410",
+    usPrice: "8.99",
+    usPriceoff: "$9.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Caps",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 411,
+    subId: 412,
+    name: "Nike club",
+    img: "../pic/hat5.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale411",
+    usPrice: "$4.99",
+    usPriceoff: "$5.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Caps",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 412,
+    subId: 407,
+    name: "Nike Brasilia",
+    img: "../pic/hat6.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale412",
+    usPrice: "$9.99",
+    usPriceoff: "$10.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Caps",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 413,
+    name: "Nike Brasilia",
+    img: "../pic/bu1.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale413",
+    usPrice: "$9.99",
+    usPriceoff: "$10.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Buck Hat",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 414,
+    subId: 415,
+    name: "Nike Pro",
+    img: "../pic/bu2.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale414",
+    usPrice: "$9.99",
+    usPriceoff: "$10.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Buck Hat",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 415,
+    subId: 414,
+    name: "Nike Brasilia",
+    img: "../pic/bu3.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale415",
+    usPrice: "$9.99",
+    usPriceoff: "$10.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Buck Hat",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 416,
+    name: "Nike club",
+    img: "../pic/be1.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale416",
+    usPrice: "$9.99",
+    usPriceoff: "$10.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Beanie",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 417,
+    subId: 418,
+    name: "Nike Brasilia",
+    img: "../pic/be2.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale417",
+    usPrice: "$9.99",
+    usPriceoff: "$10.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Beanie",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+  {
+    id: 418,
+    subId: 417,
+    name: "Nike Brasilia",
+    img: "../pic/be3.avif",
+    class: "Mesh Training Backpack (26L)",
+    categoies: "Khmer New Year Sale418",
+    usPrice: "$9.99",
+    usPriceoff: "$10.99",
+    Priceoff: "-10%",
+    typeOfShirt: "Beanie",
+    MaxQuantity: 50,
+    similar: "top",
+  },
+];
+const wrappersimilar = document.querySelector(".wrapper-similar");
+
+//   btn-filter
+const ul = document.querySelector(".clothes-flters");
+const li = document.querySelectorAll(".custom-cursor-on-hover");
+const displayItems = (items) => {
+  const showing = items
+    .map((a) => {
+      return `
+   <div class="col-lg-4 mb-4 col-6 " data-aos="zoom-in-up">
+                  <div class="image-card-wrapper w-100 overflow-hidden">
+                      <a href="data.html?id=${a.id}">
+                          <img src="${a.img}" class="${a.class}" alt="${a.name}">
+                      </a>
+                  </div>
+                  <div class="wrapper-similar-text mt-3 overflow-hidden">
+                      <div class="wrapper-hover">
+                      <div class="wrapper-flex-text d-flex justify-content-between align-items-center ">
+                          <h5 class="fw-bold text-dark m-0 price-text">US ${a.usPrice}</h5>
+          <h5 class=" text-dark fw-bolder clickFav" id="offcanvasRightLabel"><i class="fa-regular fa-heart clickHeart"></i>
+          </h5>
+      </div>
+      <span class="offPriceShow">${a.usPriceoff}</span>
+                                      <div class="flex-img d-flex justify-content-between align-items-center"> 
+                                      <p class="fw-light pt-1 mb-0">${a.typeOfShirt}</p>
+                                      <a href="data.html?id=${a.id}">
+                          <img src="${a.img}" class="${a.class} img-price" alt="${a.name}" style="width:35px;height: 35px;">
+                      </a>
+                  </div>
+                  </div>
+                  </div>
+              </div>
+        </div>
+        `;
+    })
+    .join("");
+  wrappersimilar.innerHTML = showing;
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  displayItems(dataSmall.filter((item) => item.id >= 400));
+});
+
+li.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const categories = e.target.dataset.id;
+    const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
+
+    if (categories === "all") {
+      displayItems(dataSmall.filter((item) => item.id >= 400));
+    } else {
+      displayItems(newdata);
+    }
+  });
+});
+li.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    li.forEach((el) => el.classList.remove("active"));
+    e.target.classList.add("active");
+
+    const categories = e.target.dataset.id;
+    const newdata = dataSmall.filter((item) => item.typeOfShirt === categories);
+
+    if (categories === "all") {
+      displayItems(dataSmall.filter((item) => item.id >= 400));
+    } else {
+      displayItems(newdata);
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const totalOrdersElements = document.querySelectorAll(".totalOrders");
+  const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
+
+  // order Cart
+
+  let totalAmount = 0;
+
+  // Update total orders count
+  totalOrdersElements.forEach((el) => {
+    el.textContent = orders.length;
+  });
+
+  // If no orders, show "No items" message
+  if (orders.length === 0) {
+    wrapperCanvases.forEach((wrapper) => {
+      wrapper.innerHTML = "<p>No items</p>";
+    });
+    return;
+  }
+
+  // Display each order
+  orders.forEach((order, index) => {
+    const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
+    const total = price * order.quantity;
+    totalAmount += total;
+    const orderHTML = `
+       <div class="col-lg-6 col-6">
+        <span class="usPricecart">Price: $${price.toFixed(2)}</span>
+       <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
+        <h5 class="typeOfShirtcart">${order.typeOfShirt}</h5>
+        <h5 class="totalPrice1">Total: $${total.toFixed(2)}</h5>
+        <h5 class="sizeitem1">Size: ${order.size}</h5>
+        <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
+        <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
+          Delete Item <i class="bi bi-trash"></i>
+        </button>
+      </div>
+      <div class="col-lg-6 col-6">
+        <div class="cart-preview">
+          <img class="cart-preview-img w-100" src="${order.image}" />
+          <button class="btn-sm2 mt-3 text-white">
+          <a href="./Register.html" class="btn-sm1">
+            Check Out <i class="fa-solid fa-bag-shopping"></i>
+          </a>
+        </button>
+        </div>
+        <br>
+        <br>
+      </div>
+    `;
+
+    // Insert into each wrapper canvas
+    wrapperCanvases.forEach((wrapper) => {
+      wrapper.innerHTML = orderHTML;
+    });
+  });
+});
+
+// Delete item from orders
+function deleteOrder(index) {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  orders.splice(index, 1);
+  localStorage.setItem("orders", JSON.stringify(orders));
+  location.reload(); // Reload to reflect updated cart
+}
+
+function renderOrdersUI() {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
+  const totalOrdersElements = document.querySelectorAll(".totalOrders");
+
+  totalOrdersElements.forEach((el) => (el.textContent = orders.length));
+  if (orders.length === 0) {
+    wrapperCanvases.forEach((wrapper) => {
+      wrapper.innerHTML = "<p>No items</p>";
+    });
+    return;
+  }
+
+  let totalAmount = 0;
+  let html = "";
+
+  orders.forEach((order, index) => {
+    const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
+    const total = price * order.quantity;
+    totalAmount += total;
+
+    html += `
+      <div class="row mt-5">
+        <div class="col-lg-6 col-6">
+          <span class="usPricecart">Price: $${price.toFixed(2)}</span>
+          <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
+          <h5 class="typeOfShirtcart" style="color: black; padding: 0.5rem 0;">
+            ${order.typeOfShirt}
+          </h5>
+          <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
+          <h5 class="sizeitem1">Size: ${order.size}</h5>
+          <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
+          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
+            Delete Item <i class="bi bi-trash"></i>
+          </button>
+        </div>
+        <div class="col-lg-6 col-6">
+          <div class="cart-preview">
+            <img class="cart-preview-img w-100" src="${order.image}" />
+             <button class="btn-sm2 text-white ">
+            <a href="./Register.html" class="btn-sm1">
+              Check Out <i class="fa-solid fa-bag-shopping" style="margin-left: 2px;"></i>
+            </a>
+          </button>
+          </div>
+        </div>
+        </div>`;
+  });
+
+  wrapperCanvases.forEach((wrapper) => {
+    wrapper.innerHTML = html;
+  });
+}
+document.addEventListener("DOMContentLoaded", () => {
+  renderOrdersUI();
+});

@@ -912,25 +912,25 @@ function renderOrdersUI() {
     totalAmount += total;
 
     html += `
-      <div class="row mt-5">
+      <div class="row mt-2">
         <div class="col-lg-6 col-6">
           <span class="usPricecart">Price: $${price.toFixed(2)}</span>
           <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
           <h5 class="typeOfShirtcart" style="color: black; padding: 0.5rem 0;">
-            ${order.typeOfShirt}
+            type: ${order.typeOfShirt}
           </h5>
           <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
           <h5 class="sizeitem1">Size: ${order.size}</h5>
           <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
+
+          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
+          Delete Item <i class="bi bi-trash"></i>
+        </button>
         </div>
         <div class="col-lg-6 col-6">
           <div class="cart-preview">
+
             <img class="cart-preview-img w-100" src="${order.image}" />
-             <button class="btn-sm2 text-white ">
-            <a href="./html/Register.html" class="btn-sm1">
-              Check Out <i class="fa-solid fa-bag-shopping" style="margin-left: 2px;"></i>
-            </a>
-          </button>
           </div>
         </div>
         </div>`;
