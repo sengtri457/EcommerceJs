@@ -933,6 +933,7 @@ decrement.addEventListener("click", function () {
     resultQTY.innerHTML = parseInt(resultQTY.innerHTML) - 1;
   }
 });
+
 const nameP = document.querySelector(".nameP");
 const udprice = document.querySelector(".usPrice");
 const offPrice = document.querySelector(".offPrice");
@@ -954,6 +955,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const ordersQty = document.querySelector(".orderqty");
   const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
   const totalOrdersElements = document.querySelectorAll(".totalOrders");
+  const wra = document.querySelectorAll(".wrapper-btn-53");
+  const lastPrice = document.querySelectorAll(".lastPrice");
+  const quan = document.querySelectorAll(".quan");
 
   let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
@@ -989,35 +993,28 @@ document.addEventListener("DOMContentLoaded", () => {
       typeOfShirt: product.typeOfShirt,
       MaxQty: product.MaxQuantity,
     };
-
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     const existingItem = cart.find(
       (item) => item.id === product.id && item.size === cartItem.size
     );
-
     if (existingItem) {
       existingItem.quantity += quantity;
     } else {
       cart.push(cartItem);
     }
-
     localStorage.setItem("cart", JSON.stringify(cart));
-
     // Update Orders
     const orderItem = { ...cartItem, date: Date.now() };
     orders.push(orderItem);
     localStorage.setItem("orders", JSON.stringify(orders));
-    // ordersQty.innerHTML = orders.length;
-
+    ordersQty.innerHTML = orders.length;
     // Reset UI
     resultQTY.innerHTML = 0;
     selectedSize.classList.remove("sizeSelected");
-
     // Show alert
     alert(
       `Added to cart: ${cartItem.name} [Size: ${cartItem.size}, Qty: ${cartItem.quantity}]`
     );
-
     // Re-render UI
     renderOrdersUI();
   });
@@ -1032,38 +1029,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (orders.length === 0) {
       wrapperCanvases.forEach((wrapper) => {
         wrapper.innerHTML = "<p>No items</p>";
+        wra.forEach((e) => {
+          e.classList.add("active");
+        });
       });
     } else {
       orders.forEach((order, index) => {
         const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
         const total = price * order.quantity;
         totalAmount += total;
+        lastPrice.forEach((e) => {
+          e.innerHTML = "$" + totalAmount.toFixed(2);
+        });
+        quan.forEach((e) => {
+          e.innerHTML = orders.length;
+        });
         const orderHTML = `
-         <div class="col-12">
-       <div class="row mt-4">
+         <div class="row mt-4">
         <div class="col-lg-6 col-6">
           <span class="usPricecart">Price: $${price.toFixed(2)}</span>
           <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
-          <h5 class="typeOfShirtcart" style="color: black; padding: 0.5rem 0;">
-            ${order.typeOfShirt}
+          <h5 class="typeOfShirtcart">
+            type: ${order.typeOfShirt}
           </h5>
           <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
           <h5 class="sizeitem1">Size: ${order.size}</h5>
           <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
-          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
-            Delete Item <i class="bi bi-trash"></i>
-          </button>
-                      <button class="btn-sm2 text-white mt-3">
-            <a href="./Register.html" class="btn-sm1">
-              Check Out <i class="fa-solid fa-bag-shopping" style="margin-left: 2px;"></i>
-            </a>
-          </button>
+<button class="button1" onclick="deleteOrder(${index})">
+  <svg viewBox="0 0 448 512" class="svgIcon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+</button>
         </div>
         <div class="col-lg-6 col-6">
           <div class="cart-preview">
             <img class="cart-preview-img w-100" src="${order.image}" />
           </div>
-        </div>
         </div>
         </div>`;
 
@@ -1091,11 +1090,15 @@ function renderOrdersUI() {
   const orders = JSON.parse(localStorage.getItem("orders")) || [];
   const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
   const totalOrdersElements = document.querySelectorAll(".totalOrders");
+  const wra = document.querySelectorAll(".wrapper-btn-53");
 
   totalOrdersElements.forEach((el) => (el.textContent = orders.length));
   if (orders.length === 0) {
     wrapperCanvases.forEach((wrapper) => {
       wrapper.innerHTML = "<p>No items</p>";
+      wra.forEach((e) => {
+        e.classList.add("active");
+      });
     });
     return;
   }
@@ -1109,31 +1112,24 @@ function renderOrdersUI() {
     totalAmount += total;
 
     html += `
-    <div class="col-12">
-       <div class="row mt-4">
+    <div class="row mt-4">
         <div class="col-lg-6 col-6">
           <span class="usPricecart">Price: $${price.toFixed(2)}</span>
           <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
-          <h5 class="typeOfShirtcart" style="color: black; padding: 0.5rem 0;">
-            ${order.typeOfShirt}
+          <h5 class="typeOfShirtcart">
+            type: ${order.typeOfShirt}
           </h5>
           <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
           <h5 class="sizeitem1">Size: ${order.size}</h5>
           <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
-          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
-            Delete Item <i class="bi bi-trash"></i>
-          </button>
-                      <button class="btn-sm2 text-white mt-3">
-            <a href="./Register.html" class="btn-sm1">
-              Check Out <i class="fa-solid fa-bag-shopping" style="margin-left: 2px;"></i>
-            </a>
-          </button>
+<button class="button1" onclick="deleteOrder(${index})">
+  <svg viewBox="0 0 448 512" class="svgIcon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+</button>
         </div>
         <div class="col-lg-6 col-6">
           <div class="cart-preview">
             <img class="cart-preview-img w-100" src="${order.image}" />
           </div>
-        </div>
         </div>
         </div>`;
   });
@@ -1151,35 +1147,32 @@ const wrappersimilar = document.querySelector(".wrapper-similar");
 const productNot = document.querySelector(".productNot");
 
 if (product.id == id) {
-  wrappersimilar.innerHTML = dataSmall2
+  wrappersimilar.innerHTML = dataSmall
     .filter((e) => {
       return e.subId == id;
     })
     .map((a) => {
       return ` 
-            <div class="col-lg-3 mb-4 col-6">
-                <div class="image-card-wrapper w-100 overflow-hidden">
-                    <a href="data.html?id=${a.id}">
-                        <img src="${a.img}" class="${a.class}" alt="${a.name}">
-                    </a>
-                </div>
-                <div class="wrapper-similar-text mt-3 overflow-hidden">
-                    <div class="wrapper-hover">
-                    <div class="wrapper-flex-text d-flex justify-content-between align-items-center ">
-                        <h5 class="fw-bold text-dark m-0 price-text">US ${a.usPrice}</h5>
-        <h5 class=" text-dark fw-bolder clickFav" id="offcanvasRightLabel"><i class="fa-regular fa-heart clickHeart"></i>
-        </h5>
-    </div>
-    <span class="offPriceShow">${a.usPriceoff}</span>
-                                    <div class="flex-img d-flex justify-content-between align-items-center"> 
-                                    <p class="fw-light pt-1 mb-0">${a.typeOfShirt}</p>
-                                    <a href="data.html?id=${a.id}">
-                        <img src="${a.img}" class="${a.class} img-price" alt="${a.name}" style="width:35px;height: 35px;">
-                    </a>
-                </div>
-                </div>
-                </div>
-            </div>
+           <div class="row mt-4">
+        <div class="col-lg-6 col-6">
+          <span class="usPricecart">Price: $${price.toFixed(2)}</span>
+          <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
+          <h5 class="typeOfShirtcart">
+            type: ${order.typeOfShirt}
+          </h5>
+          <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
+          <h5 class="sizeitem1">Size: ${order.size}</h5>
+          <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
+<button class="button1" onclick="deleteOrder(${index})">
+  <svg viewBox="0 0 448 512" class="svgIcon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+</button>
+        </div>
+        <div class="col-lg-6 col-6">
+          <div class="cart-preview">
+            <img class="cart-preview-img w-100" src="${order.image}" />
+          </div>
+        </div>
+        </div>
           `;
     })
     .join("");

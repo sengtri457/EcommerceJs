@@ -58,7 +58,9 @@ h4 {
 h5 {
     color: var(--dark);
     font-family: "Product Sans", Poppins;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    padding-bottom: 0.5rem;
+    font-weight: 500;
     /* min: 24px, max: 40px */
 }
 
@@ -1321,9 +1323,7 @@ footer>h4 {
 }
 
 .offcanvas {
-    /* filter: blur(2px); */
     backdrop-filter: blur(10px);
-    background-color: rgba(237, 237, 237, 0.3);
 }
 
 #offcanvasRight {
@@ -1550,6 +1550,10 @@ footer>h4 {
     padding: 2rem;
 }
 
+.pricecart {
+    margin-bottom: 50%;
+}
+
 .btn-caption {
     font-size: var(--font-button);
     padding: 0.8rem 2rem;
@@ -1710,7 +1714,187 @@ footer>h4 {
     transform: scale(1.4) translateY(0) translateZ(0);
 }
 
+/* fancy */
+/* From Uiverse.io by cssbuttons-io */
+.fancy {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    width: 100%;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+}
+
+.fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #e8e8e8;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: black;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+}
+
+.fancy:hover .text {
+    color: white;
+    padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+
+/* delete btn */
+/* From Uiverse.io by vinodjangid07 */
+.button1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button1:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+}
+
+.button1:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(60%);
+}
+
+.button1::before {
+    position: absolute;
+    top: -20px;
+    content: "Delete";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+}
+
+.button1:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}
+
+.wrapper-btn-53 {
+    top: 65%;
+    left: 0;
+    opacity: 1;
+    transition: all 0.4s ease-in-out;
+}
+
+.wrapper-btn-53.active {
+    opacity: 0;
+}
+
 @media (max-width: 1000px) {
+    .wrapper-btn-53 {
+        top: 73%;
+    }
+
     #offcanvasRight {
         width: 90%
     }
@@ -1947,4 +2131,16 @@ footer>h4 {
     .carousel-indicators {
         bottom: 1%;
     }
+
+    .wrapper-btn-53 {
+        top: 80%;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+    }
+}
+
+.pricecart .row {
+    --bs-gutter-x: 0rem
 }

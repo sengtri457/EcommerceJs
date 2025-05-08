@@ -147,7 +147,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:309,
+    id: 309,
     subId: 308,
     name: "img1",
     img: "../pic/kidhoddieblue1.avif",
@@ -160,8 +160,9 @@ const dataSmall = [
     MaxQuantity: 5,
     similar: "Hoddies",
     section: "top",
-  }, {
-    id:310,
+  },
+  {
+    id: 310,
     subId: 308,
     name: "img1",
     img: "../pic/kidhoddiegirlorange1.avif",
@@ -176,7 +177,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:311,
+    id: 311,
     subId: 308,
     name: "img1",
     img: "../pic/kidhoddiegirlpink1.avif",
@@ -191,7 +192,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:312,
+    id: 312,
     subId: 308,
     name: "img1",
     img: "../pic/kidhoddiegirlyellow1.avif",
@@ -206,7 +207,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:313,
+    id: 313,
     subId: 308,
     name: "img1",
     img: "../pic/kidhoddiegirlpouple1.avif",
@@ -221,7 +222,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:314,
+    id: 314,
     subId: 308,
     name: "img1",
     img: "../pic/kidhoddiegray1.avif",
@@ -236,7 +237,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:315,
+    id: 315,
     subId: 308,
     name: "img1",
     img: "../pic/kidhoddieorage1.avif",
@@ -251,7 +252,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:316,
+    id: 316,
     subId: 308,
     name: "img1",
     img: "../pic/kidhoddieblack1.avif",
@@ -266,7 +267,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:317,
+    id: 317,
     subId: 308,
     name: "img1",
     img: "../pic/kidhoddielfc.avif",
@@ -281,7 +282,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:318,
+    id: 318,
     subId: 308,
     name: "img1",
     img: "../pic/kidjacked1.avif",
@@ -296,7 +297,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:319,
+    id: 319,
     subId: 308,
     name: "img1",
     img: "../pic/kidjacked11.avif",
@@ -311,7 +312,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:320,
+    id: 320,
     subId: 308,
     name: "img1",
     img: "../pic/kidjackedblack1.avif",
@@ -326,7 +327,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:321,
+    id: 321,
     subId: 308,
     name: "img1",
     img: "../pic/kidjackedblue1.avif",
@@ -341,7 +342,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:322,
+    id: 322,
     subId: 308,
     name: "img1",
     img: "../pic/kidjackedbrown1.avif",
@@ -356,7 +357,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:323,
+    id: 323,
     subId: 308,
     name: "img1",
     img: "../pic/kidjackedbrody1.avif",
@@ -371,7 +372,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:324,
+    id: 324,
     subId: 308,
     name: "img1",
     img: "../pic/kidjackedegg1.avif",
@@ -386,7 +387,7 @@ const dataSmall = [
     section: "top",
   },
   {
-    id:325,
+    id: 325,
     subId: 308,
     name: "img1",
     img: "../pic/kidjackedpurple1.avif",
@@ -410,38 +411,6 @@ const dataSmall = [
   // big
 ];
 const wrappersimilar = document.querySelector(".wrapper-similar");
-// wrappersimilar.innerHTML = dataSmall
-//   .filter((e) => {
-//     return e.section == "Men";
-//   })
-//   .map((a) => {
-//     return `
-//             <div class="col-lg-4 mb-4 col-6">
-//                 <div class="image-card-wrapper w-100 overflow-hidden">
-//                     <a href="data.html?id=${a.id}">
-//                         <img src="${a.img}" class="${a.class}" alt="${a.name}">
-//                     </a>
-//                 </div>
-//                 <div class="wrapper-similar-text mt-3 overflow-hidden">
-//                     <div class="wrapper-hover">
-//                     <div class="wrapper-flex-text d-flex justify-content-between align-items-center ">
-//                         <h5 class="fw-bold text-dark m-0 price-text">US ${a.usPrice}</h5>
-//         <h5 class=" text-dark fw-bolder clickFav" id="offcanvasRightLabel"><i class="fa-regular fa-heart clickHeart"></i>
-//         </h5>
-//     </div>
-//     <span class="offPriceShow">${a.usPriceoff}</span>
-//                                     <div class="flex-img d-flex justify-content-between align-items-center">
-//                                     <p class="fw-light pt-1 mb-0">${a.typeOfShirt}</p>
-//                                     <a href="data.html?id=${a.id}">
-//                         <img src="${a.img}" class="${a.class} img-price" alt="${a.name}" style="width:35px;height: 35px;">
-//                     </a>
-//                 </div>
-//                 </div>
-//                 </div>
-//             </div>
-//           `;
-//   })
-//   .join("");
 
 //   btn-filter
 const ul = document.querySelector(".clothes-flters");
@@ -516,24 +485,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const orders = JSON.parse(localStorage.getItem("orders")) || [];
   const totalOrdersElements = document.querySelectorAll(".totalOrders");
   const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
+  const wra = document.querySelectorAll(".wrapper-btn-53");
 
   // order Cart
-
   let totalAmount = 0;
-
-  // Update total orders count
   totalOrdersElements.forEach((el) => {
     el.textContent = orders.length;
   });
-
-  // If no orders, show "No items" message
   if (orders.length === 0) {
     wrapperCanvases.forEach((wrapper) => {
       wrapper.innerHTML = "<p>No items</p>";
     });
+    wra.forEach((e) => {
+      e.classList.add("active");
+    });
     return;
   }
-
   // Display each order
   orders.forEach((order, index) => {
     const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
@@ -555,7 +522,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="cart-preview">
           <img class="cart-preview-img w-100" src="${order.image}" />
           <button class="btn-sm2 mt-3 text-white">
-          <a href="./Register.html" class="btn-sm1">
+          <a href="./html/Register.html" class="btn-sm1">
             Check Out <i class="fa-solid fa-bag-shopping"></i>
           </a>
         </button>
@@ -584,46 +551,47 @@ function renderOrdersUI() {
   const orders = JSON.parse(localStorage.getItem("orders")) || [];
   const wrapperCanvases = document.querySelectorAll(".wrapper-canvas");
   const totalOrdersElements = document.querySelectorAll(".totalOrders");
+  const lastPrice = document.querySelector(".lastPrice");
+  const quan = document.querySelector(".quan");
+  const wra = document.querySelectorAll(".wrapper-btn-53");
 
   totalOrdersElements.forEach((el) => (el.textContent = orders.length));
   if (orders.length === 0) {
     wrapperCanvases.forEach((wrapper) => {
       wrapper.innerHTML = "<p>No items</p>";
     });
+    wra.forEach((e) => {
+      e.classList.add("active");
+    });
     return;
   }
 
   let totalAmount = 0;
   let html = "";
-
   orders.forEach((order, index) => {
     const price = parseFloat(order.usPriceoff?.replace("$", "") || 0);
     const total = price * order.quantity;
     totalAmount += total;
-
+    lastPrice.innerHTML = "$" + totalAmount.toFixed(2);
+    quan.innerHTML = orders.length;
     html += `
-      <div class="row mt-5">
+      <div class="row mt-4">
         <div class="col-lg-6 col-6">
           <span class="usPricecart">Price: $${price.toFixed(2)}</span>
           <h5 class="offPricecart">Discount: ${order.offPrice}</h5>
-          <h5 class="typeOfShirtcart" style="color: black; padding: 0.5rem 0;">
-            ${order.typeOfShirt}
+          <h5 class="typeOfShirtcart">
+            type: ${order.typeOfShirt}
           </h5>
           <h5 class="totalPrice1">Total: $${totalAmount.toFixed(2)}</h5>
           <h5 class="sizeitem1">Size: ${order.size}</h5>
           <h5 class="qtyitem1">Quantity: ${order.quantity}</h5>
-          <button class="btn btn-danger btn-sm mt-3" onclick="deleteOrder(${index})">
-            Delete Item <i class="bi bi-trash"></i>
-          </button>
+<button class="button1" onclick="deleteOrder(${index})">
+  <svg viewBox="0 0 448 512" class="svgIcon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+</button>
         </div>
         <div class="col-lg-6 col-6">
           <div class="cart-preview">
             <img class="cart-preview-img w-100" src="${order.image}" />
-             <button class="btn-sm2 text-white ">
-            <a href="./Register.html" class="btn-sm1">
-              Check Out <i class="fa-solid fa-bag-shopping" style="margin-left: 2px;"></i>
-            </a>
-          </button>
           </div>
         </div>
         </div>`;

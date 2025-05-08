@@ -332,6 +332,11 @@
       transition: all 0.4s ease-out;
   }
 
+  .row {
+      margin-left: 0;
+      margin-right: 0;
+  }
+
   /* .image-card-wrapper img:hover {
       transform: scale(1.05);
   } */

@@ -145,7 +145,7 @@ li:hover {
     }
 
     #clothes-flters li:nth-child(2n) {
-        min-width: 50%;
+        min-width: 60%;
     }
 
     #clothes-flters li:nth-child(3n) {
@@ -153,11 +153,11 @@ li:hover {
     }
 
     #clothes-flters li:nth-child(4n) {
-        min-width: 30%;
+        min-width: 50%;
     }
 
     #clothes-flters li:nth-child(5n) {
-        min-width: 60%;
+        min-width: 80%;
     }
 
     #clothes-flters li:nth-child(6n) {
@@ -165,7 +165,7 @@ li:hover {
     }
 
     #clothes-flters li:nth-child(7n) {
-        min-width: 40%;
+        min-width: 60%;
     }
 
     .wrapper-ul-men {
