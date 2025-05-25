@@ -1892,6 +1892,11 @@ footer>h4 {
     opacity: 0;
 }
 
+@media only screen and (min-width: 1920px) {
+    .wrapper-btn-53 {
+        top: 78%;
+    }
+}
 
 @media (max-width: 1000px) {
     .wrapper-btn-53 {
